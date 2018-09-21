@@ -20,6 +20,6 @@ noremap <A-/> <ESC>mzI//<ESC>`z
 noremap <A-?> <ESC>mz^xx<ESC>`z
 "	alt-o clears line, doesn't work with last line version
 noremap <A-o> <ESC>ddO
-"	alt-o clears line, doesn't work with first line version
-"	noremap <A-o> <ESC>ddko
+"	toggle folding
+noremap <space> za
 
