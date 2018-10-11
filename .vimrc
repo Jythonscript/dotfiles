@@ -18,8 +18,6 @@ set so=7
 set mouse=a
 noremap <A-/> <ESC>mzI//<ESC>`z
 noremap <A-?> <ESC>mz^xx<ESC>`z
-"	alt-o clears line, doesn't work with last line version
-noremap <A-o> <ESC>ddO
 "	toggle folding
 noremap <space> za
 
