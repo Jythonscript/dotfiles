@@ -20,4 +20,7 @@ noremap <A-/> <ESC>mzI//<ESC>`z
 noremap <A-?> <ESC>mz^xx<ESC>`z
 "	toggle folding
 noremap <space> za
+"	toggle relative number
+noremap + :set relativenumber!<Enter>
+set relativenumber
 
