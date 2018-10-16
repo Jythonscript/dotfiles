@@ -23,4 +23,5 @@ noremap <space> za
 "	toggle relative number
 noremap + :set relativenumber!<Enter>
 set relativenumber
+set hlsearch
 
