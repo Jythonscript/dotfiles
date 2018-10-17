@@ -21,7 +21,7 @@ noremap <A-?> <ESC>mz^xx<ESC>`z
 "	toggle folding
 noremap <space> za
 "	toggle relative number
-noremap + :set relativenumber!<Enter>
+noremap + :set relativenumber!<Enter>:set number!<Enter>
 set relativenumber
 set number
 set hlsearch
