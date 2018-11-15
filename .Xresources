@@ -1,0 +1,39 @@
+URxvt*font: xft:Fira Mono:size=11, xft:DejaVu Sans Mono:size=11
+URxvt*depth: 32
+!URxvt*background: rgba:0000/0000/0000/e300
+URxvt*background: rgba:0000/0000/0000/d000
+URxvt*foreground: rgb:FF/FF/FF
+!URxvt*color4: rgb:5c/bb/ff
+!URxvt*color12: rgb:5c/5c/ff
+URxvt*scrollBar: false
+
+! Black + DarkGrey
+!*color0:  #000000
+!*color8:  #555753
+!! DarkRed + Red
+!*color1:  #ff6565
+!*color9:  #ff8d8d
+!! DarkGreen + Green
+!*color2:  #93d44f
+*color2:  #99ff33
+!*color10: #c8e7a8
+!! DarkYellow + Yellow
+!*color3:  #eab93d
+*color11: #ffc123
+!! DarkBlue + Blue
+!*color4:  #204a87
+URxvt*color4: rgb:5c/bb/ff
+!*color12: #3465a4
+URxvt*color12: rgb:5c/5c/ff
+!! DarkMagenta + Magenta
+!*color5:  #ce5c00
+!*color13: #f57900
+!!DarkCyan + Cyan (both not tango)
+!*color6:  #89b6e2
+!*color14: #46a4ff
+!! LightGrey + White
+!*color7:  #cccccc
+!*color15: #ffffff
+
+URxvt.iso14755: false
+
