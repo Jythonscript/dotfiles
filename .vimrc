@@ -26,3 +26,4 @@ set relativenumber
 set number
 set hlsearch
 noremap - :set hlsearch! hlsearch?<CR>
+set backspace=indent,eol,start
