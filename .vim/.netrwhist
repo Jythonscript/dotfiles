@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Users/90302927/Downloads/Math homework.app/Contents/MacOS'
+let g:netrw_dirhist_2='/Users/90302927/Downloads/Math homework.app/Contents'
+let g:netrw_dirhist_3='/Users/90302927/.vim/view'
+let g:netrw_dirhist_4='/Users/90302927/git/textArcade/.git'
