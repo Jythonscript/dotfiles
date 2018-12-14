@@ -72,7 +72,7 @@ setlocal modeline
 setlocal modifiable
 setlocal nrformats=bin,octal,hex
 setlocal number
-setlocal numberwidth=4
+setlocal numberwidth=3
 setlocal omnifunc=
 setlocal path=
 setlocal nopreserveindent
@@ -116,12 +116,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 7 - ((6 * winheight(0) + 19) / 38)
+let s:l = 19 - ((18 * winheight(0) + 25) / 50)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-7
-normal! 0
+19
+normal! 024|
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost
 " vim: set ft=vim :
