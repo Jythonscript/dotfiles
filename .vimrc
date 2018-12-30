@@ -13,6 +13,8 @@ call plug#end()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "   My bindings
 
+"	set colorscheme to delek
+colorscheme delek
 "   Control+] makes matching brackets
 map <C-]> <Esc>A<Space>{<Esc>o}<Esc>O
 filetype indent on
