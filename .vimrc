@@ -6,6 +6,7 @@
 call plug#begin()
 
 Plug 'terryma/vim-multiple-cursors'
+Plug 'https://github.com/lervag/vimtex'
 
 call plug#end()
 
@@ -51,3 +52,5 @@ set ignorecase
 set smartcase
 "	highlight matches while searching
 set incsearch
+"	search for currently selected text in visual mode
+vnoremap // y/\V<C-r>=escape(@",'/\')<CR><CR>
