@@ -12,12 +12,18 @@ call plug#end()
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"	Plugin bindings
+
+"	multiple cursors select all
+map n <A-n>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "   My bindings
 
 "	set colorscheme to delek
 colorscheme delek
 "   Control+] makes matching brackets
-map <C-]> <Esc>A<Space>{<Esc>o}<Esc>O
+noremap <C-]> <Esc>A<Space>{<Esc>o}<Esc>O
 filetype indent on
 syntax enable
 set shiftwidth=4
