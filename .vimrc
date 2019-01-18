@@ -60,3 +60,7 @@ set smartcase
 set incsearch
 "	search for currently selected text in visual mode
 vnoremap // y/\V<C-r>=escape(@",'/\')<CR><CR>
+"	:W is the same as :w (i do this on accident all the time)
+command W :w
+"	reduce timeout to not be bothersome but still use arrow keys in insert mode
+set timeoutlen=100
