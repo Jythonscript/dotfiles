@@ -53,6 +53,8 @@ autocmd BufWinEnter *.* silent loadview
 "	go to next grouping character: ()[]{}"'
 "	syntax highlighting disabled for visibility
 noremap <C-l> <Esc>:set nohlsearch<CR>/[()[\]"'{}]\v<CR>
+"	inverse of previous
+noremap <C-h> <Esc>:set nohlsearch<CR>?[()[\]"'{}]\v<CR>
 "	if search parameter is lowercase, use case insensitive search, otherwise use case sensitive
 set ignorecase
 set smartcase
