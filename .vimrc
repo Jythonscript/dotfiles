@@ -64,5 +64,7 @@ set incsearch
 vnoremap // y/\V<C-r>=escape(@",'/\')<CR><CR>
 "	:W is the same as :w (i do this on accident all the time)
 command W :w
+"	:Q is the same as :q (i do this on accident all the time)
+command Q :q
 "	reduce timeout to not be bothersome but still use arrow keys in insert mode
-set timeoutlen=100
+set timeoutlen=200
