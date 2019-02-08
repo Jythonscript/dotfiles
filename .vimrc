@@ -7,6 +7,9 @@ call plug#begin()
 
 Plug 'terryma/vim-multiple-cursors'
 Plug 'https://github.com/lervag/vimtex'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
+Plug 'arzg/seoul8'
 
 call plug#end()
 
