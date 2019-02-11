@@ -1,4 +1,4 @@
-"Plugins list
+"	Plugins list
 
 "	(.vim) 		Index Search:		https://www.vim.org/scripts/script.php?script_id=1682 
 "	(vim-plug) 	Multiple Cursors: 	https://github.com/terryma/vim-multiple-cursors	
