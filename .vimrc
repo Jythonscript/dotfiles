@@ -10,6 +10,7 @@ Plug 'https://github.com/lervag/vimtex'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'arzg/seoul8'
+Plug 'https://github.com/vimwiki/vimwiki'
 
 call plug#end()
 
@@ -19,6 +20,8 @@ call plug#end()
 
 "	multiple cursors select all
 map n <A-n>
+"	vimwiki
+filetype plugin on
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "   My bindings
