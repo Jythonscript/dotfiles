@@ -60,6 +60,10 @@ ZSH_THEME="nanotech"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  web-search
+  history
+  z
+  zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -92,7 +96,29 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias p "pwd"
 #export PATH=$HOME/brew/bin:$PATH
+
+#automatically run 'ls' after every directory change
+function chpwd() {
+    emulate -L zsh
+    ls
+}
+
 export EDITOR=vim
 export VISUAL=vim
+export PAGER=less
+export SAVEHIST=100000
+#[ -n "$XTERM_VERSION" ] && transset --id "$WINDOWID" >/dev/null
+# spawning a terminal with awesome keeps directory
+alias l="ls -lAh"
+#Prevents accidental running of ghostscript command
+alias gs="git status"
+alias se="sudoedit"
+alias igrep="grep -i"
+#used in awesomewm open terminal in same directory script
+mkdir -p /run/user/$(id --user)/urxvtc_ids/
+echo $$ > /run/user/$(id --user)/urxvtc_ids/$WINDOWID
+#easier vim access
+alias v="vim"
+#Custom paths
+export PATH="$PATH:/home/avery/usr/bin"
