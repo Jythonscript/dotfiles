@@ -24,3 +24,14 @@ def_key "h"
 def_key "h"
   jump_to_parent_directory
 
+def_key "d"
+  delete_playlist_items
+
+def_key "d"
+  delete_browser_items
+
+def_key "d"
+  delete_stored_playlist
+
+def_key "L"
+	show_lyrics

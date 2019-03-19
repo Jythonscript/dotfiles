@@ -5,5 +5,7 @@ visualizer_in_stereo = "yes"
 visualizer_type = "spectrum"
 visualizer_look = "+|"
 
+mpd_music_dir = "/home/avery/Music"
+
 mouse_list_scroll_whole_page = "no" 
 lines_scrolled = "3"
