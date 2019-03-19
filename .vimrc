@@ -22,6 +22,7 @@ call plug#end()
 map n <A-n>
 "	vimwiki
 filetype plugin on
+let g:vimwiki_list = [{'path':'~/.vimwiki/wiki/', 'path_html':'~/.vimwiki/html'}]
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "   My bindings
