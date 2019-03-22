@@ -11,7 +11,7 @@ Plug 'junegunn/limelight.vim'
 Plug 'arzg/seoul8'
 Plug 'https://github.com/vimwiki/vimwiki'
 Plug 'https://github.com/SirVer/ultisnips'
-Plug 'honza/vim-snippets'
+"	Plug 'honza/vim-snippets'
 
 call plug#end()
 
@@ -29,6 +29,7 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsSnippetsDir="~/.ultisnips"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "   My bindings
