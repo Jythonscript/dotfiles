@@ -1,7 +1,6 @@
 "	Plugins list
 
 "	(.vim) 		Index Search:		https://www.vim.org/scripts/script.php?script_id=1682 
-"	(vim-plug) 	Multiple Cursors: 	https://github.com/terryma/vim-multiple-cursors	
 
 call plug#begin()
 
@@ -11,6 +10,8 @@ Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'arzg/seoul8'
 Plug 'https://github.com/vimwiki/vimwiki'
+Plug 'https://github.com/SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
 call plug#end()
 
@@ -23,6 +24,11 @@ map n <A-n>
 "	vimwiki
 filetype plugin on
 let g:vimwiki_list = [{'path':'~/.vimwiki/wiki/', 'path_html':'~/.vimwiki/html'}]
+"	ultisnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsEditSplit="vertical"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "   My bindings
