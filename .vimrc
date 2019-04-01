@@ -84,3 +84,6 @@ command W :w
 command Q :q
 "	reduce timeout to not be bothersome but still use arrow keys in insert mode
 set timeoutlen=200
+"	folding appearance settings
+hi Folded ctermbg=None
+hi Folded ctermfg=Yellow
