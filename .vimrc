@@ -12,6 +12,7 @@ Plug 'arzg/seoul8'
 Plug 'https://github.com/vimwiki/vimwiki'
 Plug 'https://github.com/SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'Nequo/vim-allomancer'
 
 call plug#end()
 
@@ -26,8 +27,8 @@ filetype plugin on
 let g:vimwiki_list = [{'path':'~/.vimwiki/wiki/', 'path_html':'~/.vimwiki/html'}]
 "	ultisnips
 let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:UltiSnipsEditSplit="vertical"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
