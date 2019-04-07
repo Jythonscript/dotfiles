@@ -15,6 +15,7 @@ Plug 'https://github.com/SirVer/ultisnips'
 Plug 'Nequo/vim-allomancer'
 Plug 'https://github.com/tpope/vim-commentary'
 Plug 'https://github.com/tpope/vim-surround'
+Plug 'https://github.com/tpope/vim-repeat'
 
 call plug#end()
 
