@@ -94,3 +94,5 @@ hi Folded ctermfg=Yellow
 "	make splits work like my awesomewm setup
 set splitright
 set splitbelow
+"	command for easier vertical terminals
+command Vterm :vert term
