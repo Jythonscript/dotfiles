@@ -91,3 +91,6 @@ set timeoutlen=200
 "	folding appearance settings
 hi Folded ctermbg=None
 hi Folded ctermfg=Yellow
+"	make splits work like my awesomewm setup
+set splitright
+set splitbelow
