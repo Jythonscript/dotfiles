@@ -29,10 +29,10 @@ map n <A-n>
 filetype plugin on
 let g:vimwiki_list = [{'path':'~/.vimwiki/wiki/', 'path_html':'~/.vimwiki/html'}]
 "	ultisnips
-let g:UltiSnipsExpandTrigger="<c-f>"
-let g:UltiSnipsJumpForwardTrigger="<c-f>"
-let g:UltiSnipsJumpBackwardTrigger="<c-b>"
-imap <tab> <c-f>
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+"imap <tab> <c-f>
 let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsSnippetDirectories = ['~/.vim/UltiSnips', 'UltiSnips']
 "	Commentary
@@ -97,3 +97,5 @@ set splitright
 set splitbelow
 "	command for easier vertical terminals
 command Vterm :vert term
+"	save and open shell shortcut
+noremap <C-s> <Esc>:w<bar>sh<Enter>
