@@ -100,3 +100,5 @@ set splitbelow
 command Vterm :vert term
 "	save and open shell shortcut
 noremap <C-s> <Esc>:w<bar>sh<Enter>
+"	wrapped lines keep the same indent
+set breakindent
