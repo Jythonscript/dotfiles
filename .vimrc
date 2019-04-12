@@ -102,3 +102,5 @@ command Vterm :vert term
 noremap <C-s> <Esc>:w<bar>sh<Enter>
 "	wrapped lines keep the same indent
 set breakindent
+"	character to display for long lines that wrap across the terminal
+set showbreak=↪
