@@ -104,3 +104,5 @@ noremap <C-s> <Esc>:w<bar>sh<Enter>
 set breakindent
 "	character to display for long lines that wrap across the terminal
 set showbreak=↪
+"	easier clipboard access
+noremap <C-y> "+y
