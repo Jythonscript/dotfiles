@@ -122,3 +122,5 @@ echo $$ > /run/user/$(id --user)/urxvtc_ids/$WINDOWID
 alias v="vim"
 #Custom paths
 export PATH="$PATH:/home/avery/usr/bin"
+#Disable ctrl+s freeze terminal
+stty -ixon
