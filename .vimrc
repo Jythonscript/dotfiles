@@ -4,15 +4,18 @@
 
 call plug#begin()
 
-Plug 'terryma/vim-multiple-cursors'
+"	Colorschemes
+Plug 'Nequo/vim-allomancer'
+Plug 'arzg/seoul8'
+
+"	Programming
+"	Plug 'terryma/vim-multiple-cursors'
 Plug 'https://github.com/lervag/vimtex'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
-Plug 'arzg/seoul8'
 Plug 'https://github.com/vimwiki/vimwiki'
 Plug 'https://github.com/SirVer/ultisnips'
 "	Plug 'honza/vim-snippets'
-Plug 'Nequo/vim-allomancer'
 Plug 'https://github.com/tpope/vim-commentary'
 Plug 'https://github.com/tpope/vim-surround'
 Plug 'https://github.com/tpope/vim-repeat'
@@ -42,6 +45,11 @@ autocmd FileType c setlocal commentstring="// %s"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "   My bindings
 
+"	make netrw file browser better
+let g:netrw_banner=0 " disable banner
+let g:netrw_browse_split=4 " open in prior window
+let g:netrw_altv=1 " open splits to the right
+let g:netrw_liststyle=3 " tree view
 "	set colorscheme to delek
 colorscheme delek
 "   Control+] makes matching brackets
