@@ -114,3 +114,7 @@ set breakindent
 set showbreak=↪
 "	easier clipboard access
 noremap <C-y> "+y
+"	show all options in footer
+set wildmenu
+"	recursive searching
+set path+=**
