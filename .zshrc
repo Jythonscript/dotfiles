@@ -115,6 +115,7 @@ alias l="ls -lAh"
 alias gs="git status"
 alias se="sudoedit"
 alias igrep="grep -i"
+alias isv='if [[ $VIMRUNTIME != "" ]]; then; echo "Vim session found"; else; echo "No Vim session found"; fi;'
 #used in awesomewm open terminal in same directory script
 mkdir -p /run/user/$(id --user)/urxvtc_ids/
 echo $$ > /run/user/$(id --user)/urxvtc_ids/$WINDOWID
