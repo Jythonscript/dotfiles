@@ -1,11 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/home/avery/Documents/school12/Chinese5/projects'
-let g:netrw_dirhist_2='/home/avery/Documents/school12/Chinese5/projects/culture'
-let g:netrw_dirhist_3='/home/avery/Documents/school12/Chinese5/week7'
-let g:netrw_dirhist_4='/home/avery/git/dotfiles/.git'
-let g:netrw_dirhist_5='/home/avery/Documents/python/wordhisto/.git'
-let g:netrw_dirhist_6='/sys/bus/hid/drivers/logitech-hidpp-device/module'
-let g:netrw_dirhist_7='/sys/bus/hid/drivers/logitech-hidpp-device/module/drivers'
-let g:netrw_dirhist_8='/sys/bus/hid/drivers/logitech-hidpp-device/module/drivers/hid:logitech-hidpp-device'
-let g:netrw_dirhist_9='/home/avery/.wine'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/home/avery'

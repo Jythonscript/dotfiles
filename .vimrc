@@ -52,8 +52,6 @@ let g:netrw_altv=1 " open splits to the right
 let g:netrw_liststyle=3 " tree view
 "	set colorscheme to delek
 colorscheme delek
-"   Control+] makes matching brackets
-noremap <C-]> <Esc>A<Space>{<Esc>o}<Esc>O
 filetype indent on
 syntax enable
 set shiftwidth=4
