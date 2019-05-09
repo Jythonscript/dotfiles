@@ -32,6 +32,8 @@ map n <A-n>
 "	vimwiki
 filetype plugin on
 let g:vimwiki_list = [{'path':'~/.vimwiki/wiki/', 'path_html':'~/.vimwiki/html'}]
+let g:vimwiki_folding="custom"
+"let g:vimwiki_folding
 "	ultisnips
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
