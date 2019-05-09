@@ -15,6 +15,22 @@ def_key "l"
 def_key "l"
   enter_directory
 
+# scroll down 5 lines
+def_key "J"
+	scroll_down
+	scroll_down
+	scroll_down
+	scroll_down
+	scroll_down
+
+# scroll up 5 lines
+def_key "K"
+	scroll_up
+	scroll_up
+	scroll_up
+	scroll_up
+	scroll_up
+
 def_key "h"
   previous_column
 
@@ -35,3 +51,14 @@ def_key "d"
 
 def_key "L"
 	show_lyrics
+
+def_key "F"
+  jump_to_browser
+
+def_key "g"
+	move_home
+
+def_key "G"
+	move_end
+
+
