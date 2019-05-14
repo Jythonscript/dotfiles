@@ -20,6 +20,8 @@ Plug 'https://github.com/tpope/vim-commentary'
 Plug 'https://github.com/tpope/vim-surround'
 Plug 'https://github.com/tpope/vim-repeat'
 Plug 'https://github.com/junegunn/fzf.vim'
+Plug 'https://github.com/fcpg/vim-orbital'
+Plug 'https://github.com/Heorhiy/VisualStudioDark.vim'
 
 call plug#end()
 
@@ -118,3 +120,5 @@ noremap <C-y> "+y
 set wildmenu
 "	recursive searching
 set path+=**
+"	toggle number and relativenumber command
+command Num set number!|set relativenumber!
