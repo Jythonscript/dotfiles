@@ -47,7 +47,9 @@ autocmd FileType c setlocal commentstring="// %s"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "   My bindings
-
+"	custom leader
+let mapleader = ","
+noremap <leader>, ,
 "	make netrw file browser better
 let g:netrw_banner=0 " disable banner
 let g:netrw_browse_split=4 " open in prior window
