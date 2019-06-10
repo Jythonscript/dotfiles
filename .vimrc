@@ -52,6 +52,10 @@ let mapleader = ","
 noremap <leader>, ,
 "	save file
 noremap <leader>w :w<Cr>
+"	fzf ripgrep find
+noremap <leader>r :Rg<CR>
+"	fzf file search
+noremap <leader>f :Files<CR>
 "	make netrw file browser better
 let g:netrw_banner=0 " disable banner
 let g:netrw_browse_split=4 " open in prior window
