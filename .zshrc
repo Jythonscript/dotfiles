@@ -64,6 +64,9 @@ plugins=(
   history
   z
   #zsh-syntax-highlighting
+  jump
+  extract
+  timer
 )
 
 source $ZSH/oh-my-zsh.sh
