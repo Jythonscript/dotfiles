@@ -129,3 +129,4 @@ alias v="vim"
 export PATH="$PATH:/home/avery/usr/bin"
 #Disable ctrl+s freeze terminal
 stty -ixon
+compinit
