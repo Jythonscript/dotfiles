@@ -49,7 +49,6 @@ autocmd FileType c setlocal commentstring="// %s"
 "   My bindings
 "	custom leader
 let mapleader = ","
-noremap <leader>, ,
 "	save file
 noremap <leader>w :w<Cr>
 "	fzf ripgrep find
