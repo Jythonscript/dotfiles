@@ -50,7 +50,11 @@ autocmd FileType c setlocal commentstring="// %s"
 "	custom leader
 let mapleader = ","
 "	save file
-noremap <leader>w :w<Cr>
+noremap <leader>w :w<CR>
+"	quit without saving
+noremap <leader>q ZQ
+"	quit with saving
+noremap <leader>z ZZ
 "	fzf ripgrep find
 noremap <leader>r :Rg<CR>
 "	fzf file search
