@@ -55,6 +55,8 @@ noremap <leader>w :w<Cr>
 noremap <leader>r :Rg<CR>
 "	fzf file search
 noremap <leader>f :Files<CR>
+"	easier clipboard access
+noremap <leader>y "+y
 "	make netrw file browser better
 let g:netrw_banner=0 " disable banner
 "let g:netrw_browse_split=4 " open in prior window
@@ -120,8 +122,6 @@ noremap <C-s> <Esc>:w<bar>sh<Enter>
 set breakindent
 "	character to display for long lines that wrap across the terminal
 set showbreak=↪
-"	easier clipboard access
-noremap <C-y> "+y
 "	show all options in footer
 set wildmenu
 "	recursive searching
