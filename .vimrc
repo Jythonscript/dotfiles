@@ -7,6 +7,8 @@ call plug#begin()
 "	Colorschemes
 Plug 'Nequo/vim-allomancer'
 Plug 'arzg/seoul8'
+Plug 'https://github.com/fcpg/vim-orbital'
+Plug 'https://github.com/Heorhiy/VisualStudioDark.vim'
 
 "	Programming
 "	Plug 'terryma/vim-multiple-cursors'
@@ -20,8 +22,6 @@ Plug 'https://github.com/tpope/vim-commentary'
 Plug 'https://github.com/tpope/vim-surround'
 Plug 'https://github.com/tpope/vim-repeat'
 Plug 'https://github.com/junegunn/fzf.vim'
-Plug 'https://github.com/fcpg/vim-orbital'
-Plug 'https://github.com/Heorhiy/VisualStudioDark.vim'
 
 call plug#end()
 
