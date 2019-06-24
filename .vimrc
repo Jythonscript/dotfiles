@@ -52,7 +52,7 @@ let mapleader = ","
 "	save file
 noremap <leader>w :w<CR>
 "	quit without saving
-noremap <leader>q ZQ
+noremap <leader>q :q<CR>
 "	quit with saving
 noremap <leader>z ZZ
 "	fzf ripgrep find
