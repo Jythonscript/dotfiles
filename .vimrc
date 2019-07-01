@@ -61,6 +61,8 @@ noremap <leader>r :Rg<CR>
 noremap <leader>f :Files<CR>
 "	easier clipboard access
 noremap <leader>y "+y
+"	reload current file
+noremap <leader>e :e<CR>
 "	make netrw file browser better
 let g:netrw_banner=0 " disable banner
 "let g:netrw_browse_split=4 " open in prior window
