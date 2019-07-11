@@ -70,8 +70,13 @@ let g:netrw_altv=1 " open splits to the right
 let g:netrw_liststyle=3 " tree view
 "	set colorscheme to delek
 colorscheme delek
-filetype indent on
 syntax enable
+"	dark background to improve colorscheme options
+set background=dark
+"	hlsearch colors
+hi Search ctermbg='NONE'
+hi Search ctermfg=green
+filetype indent on
 set shiftwidth=4
 set tabstop=4
 "	7 line lookahead when scrolling
