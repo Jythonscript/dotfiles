@@ -30,7 +30,7 @@ call plug#end()
 "	Plugin bindings
 
 "	multiple cursors select all
-map n <A-n>
+"map n <A-n>
 "	vimwiki
 filetype plugin on
 let g:vimwiki_list = [{'path':'~/.vimwiki/wiki/', 'path_html':'~/.vimwiki/html'}]
