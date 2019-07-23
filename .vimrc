@@ -74,8 +74,8 @@ syntax enable
 "	dark background to improve colorscheme options
 set background=dark
 "	hlsearch colors
-hi Search ctermbg='NONE'
-hi Search ctermfg=green
+hi Search ctermbg=none ctermfg=green
+hi MatchParen cterm=bold ctermfg=green ctermbg=blue
 filetype indent on
 set shiftwidth=4
 set tabstop=4
