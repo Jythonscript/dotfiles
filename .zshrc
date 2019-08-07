@@ -120,6 +120,7 @@ alias se="sudoedit"
 alias igrep="grep -i"
 alias isv='if [[ $VIMRUNTIME != "" ]]; then; echo "Vim session found"; else; echo "No Vim session found"; fi;'
 alias bgd="bg && disown"
+alias dirstat="find . -maxdepth 1 -exec du -sh '{}' \; | sort -h | grep -vP '^[^\s]+\s\.$'"
 #used in awesomewm open terminal in same directory script
 mkdir -p /run/user/$(id --user)/urxvtc_ids/
 echo $$ > /run/user/$(id --user)/urxvtc_ids/$WINDOWID
