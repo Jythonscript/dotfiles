@@ -107,6 +107,14 @@ function chpwd() {
     ls
 }
 
+function yta() {
+    mpv --ytdl-format=bestaudio ytdl://ytsearch:"$*"
+}
+
+function yt() {
+    mpv ytdl://ytsearch:"$*"
+}
+
 export EDITOR=vim
 export VISUAL=vim
 export PAGER=less
