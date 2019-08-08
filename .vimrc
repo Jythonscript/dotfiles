@@ -140,3 +140,5 @@ set wildmenu
 set path+=**
 "	toggle number and relativenumber command
 command Num set number!|set relativenumber!
+"	hide gray border
+command Nogray set foldcolumn=0
