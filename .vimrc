@@ -142,3 +142,5 @@ set path+=**
 command Num set number!|set relativenumber!
 "	hide gray border
 command Nogray set foldcolumn=0
+"	undo readonly status command
+command Noreadonly set noro
