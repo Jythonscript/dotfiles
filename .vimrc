@@ -144,3 +144,7 @@ command Num set number!|set relativenumber!
 command Nogray set foldcolumn=0
 "	undo readonly status command
 command Noreadonly set noro
+"	DOS editing mode
+command DOS e ++ff=dos
+"	UNIX editing mode
+command UNIX e ++ff=unix
