@@ -60,12 +60,10 @@ ZSH_THEME="daveverwer"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  web-search
   history
   z
   zsh-syntax-highlighting
   jump
-  extract
   timer
   colored-man-pages
 )
