@@ -106,8 +106,21 @@ function chpwd() {
     ls
 }
 
+#function yta() {
+    #mpv --ytdl-format=bestaudio ytdl://ytsearch:"$*"
+#}
+
 function yta() {
-    mpv --ytdl-format=bestaudio ytdl://ytsearch:"$*"
+    #PLAYLIST=~/.config/mpd/playlists/yt-playlist.m3u
+    PLAYLIST=~/Music/Playlists/yt-playlist.m3u
+
+    printf "#EXTM3U\n#EXTINF:" > $PLAYLIST
+
+    youtube-dl -f bestaudio -j ytsearch:"$*" | jq -cMr .duration | tr '\n' ',' >> $PLAYLIST
+    youtube-dl -f bestaudio --get-title ytsearch:"$*" >> $PLAYLIST
+    youtube-dl -f bestaudio -g ytsearch:"$*" >> $PLAYLIST
+
+    mpc load $(basename -s .m3u $PLAYLIST)
 }
 
 function yt() {
