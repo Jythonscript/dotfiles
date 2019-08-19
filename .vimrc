@@ -22,6 +22,7 @@ Plug 'https://github.com/tpope/vim-commentary'
 Plug 'https://github.com/tpope/vim-surround'
 Plug 'https://github.com/tpope/vim-repeat'
 Plug 'https://github.com/junegunn/fzf.vim'
+Plug 'dense-analysis/ale'
 
 call plug#end()
 
