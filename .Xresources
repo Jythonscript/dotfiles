@@ -14,7 +14,7 @@ URxvt*scrollBar: false
 URxvt.inputMethod: ibus
 URxvt.preeditType: OverTheSpot
 
-URxvt*background: [80]#000000
+URxvt*background: [70]#000000
 URxvt*foreground: rgb:FF/FF/FF
 
 !		TERMINAL COLORS
@@ -60,10 +60,10 @@ URxvt*cursorColor: #07fff2
 URxvt*modifier: ALT_L
 
 ! DPI settings
-Xft.dpi: 180
+Xft.dpi: 160
 Xft.autohint: 0
 Xft.lcdfilter:  lcddefault
 Xft.hintstyle:  hintfull
 Xft.hinting: 1
 Xft.antialias: 1
-Xft.rgba: rgb
+!Xft.rgba: rgb
