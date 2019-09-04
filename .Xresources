@@ -1,7 +1,8 @@
 ! Default Font
 URxvt*font: xft:Fira Mono:size=11, xft:DejaVu Sans Mono:size=11, xft:Source Han Sans CN:size=11
+!URxvt*font: xft:Fira Mono:size=10, xft:DejaVu Sans Mono:size=10, xft:IPAGothic:size=14
 
-! :Bind C-0, C-+ and C-= to activate small, medium, and big font size resp.     
+! :Bind C-0, C-+ and C-= to activate small, medium, and big font size resp.
 URxvt.keysym.C-0: command:\033]710;xft:Fira Mono:size=11, xft:DejaVu Sans Mono:size=11, xft:Source Han Sans CN:size=11\007
 URxvt.keysym.C-minus: command:\033]710;xft:Fira Mono:size=8, xft:DejaVu Sans Mono:size=8, xft:Source Han Sans CN:size=8\007
 URxvt.keysym.C-equal: command:\033]710;xft:Fira Mono:size=30, xft:DejaVu Sans Mono:size=30, xft:Source Han Sans CN:size=30\007
@@ -14,7 +15,7 @@ URxvt*scrollBar: false
 URxvt.inputMethod: ibus
 URxvt.preeditType: OverTheSpot
 
-URxvt*background: [80]#000000
+URxvt*background: [70]#000000
 URxvt*foreground: rgb:FF/FF/FF
 
 !		TERMINAL COLORS
