@@ -62,6 +62,8 @@ noremap <leader>r :Rg<CR>
 noremap <leader>f :Files<CR>
 "	easier clipboard access
 noremap <leader>y "+y
+noremap <leader>p "+p
+noremap <leader>P "+P
 "	reload current file
 noremap <leader>e :e<CR>
 "	make netrw file browser better
