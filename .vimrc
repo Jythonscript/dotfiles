@@ -123,6 +123,8 @@ command W :w
 command Q :q
 "	reduce timeout to not be bothersome but still use arrow keys in insert mode
 set timeoutlen=200
+"	always show changes, regardless of the number of lines affected
+set report=0
 "	folding appearance settings
 hi Folded ctermbg=None
 hi Folded ctermfg=Yellow
