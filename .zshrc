@@ -124,6 +124,21 @@ function yta() {
     mpc load $(basename -s .m3u $PLAYLIST)
 }
 
+function ytao() {
+	    mpv --ytdl-format=bestaudio ytdl://ytsearch:"$*"
+}
+
+function ytaa() {
+    PLAYLIST=~/Music/Playlists/yt-playlist.m3u
+
+    #printf "#EXTM3U\n#EXTINF:" > $PLAYLIST
+
+    youtube-dl -f bestaudio -g ytsearch:"$*" >> $PLAYLIST
+
+    mpc load $(basename -s .m3u $PLAYLIST)
+}
+
+
 function yt() {
     mpv ytdl://ytsearch:"$*"
 }
