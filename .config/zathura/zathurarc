@@ -1,0 +1,5 @@
+set recolor
+set recolor-lightcolor "#000102"
+set default-bg "#000102"
+set statusbar-bg "#000102"
+set guioptions "sv"
