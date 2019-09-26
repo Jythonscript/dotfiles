@@ -111,6 +111,8 @@ function chpwd() {
     #mpv --ytdl-format=bestaudio ytdl://ytsearch:"$*"
 #}
 
+
+#Music functions
 function yta() {
     #PLAYLIST=~/.config/mpd/playlists/yt-playlist.m3u
     PLAYLIST=~/Music/Playlists/yt-playlist.m3u
@@ -139,9 +141,13 @@ function ytaa() {
     mpc load $(basename -s .m3u $PLAYLIST)
 }
 
-
 function yt() {
     mpv ytdl://ytsearch:"$*"
+}
+
+#Convenience functions
+function search() {
+	echo $PATH | tr ':' '\n' | xargs -I{} find '{}' -iname $1
 }
 
 export EDITOR=vim
