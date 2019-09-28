@@ -26,12 +26,14 @@ Plug 'dense-analysis/ale'
 
 call plug#end()
 
+"	custom leader
+let mapleader = ","
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "	Plugin bindings
 
-"	multiple cursors select all
-"map n <A-n>
+"	ALE
+noremap <leader>a :ALEToggle<CR>
 "	vimwiki
 filetype plugin on
 let g:vimwiki_list = [{'path':'~/.vimwiki/wiki/', 'path_html':'~/.vimwiki/html'}]
@@ -45,11 +47,8 @@ let g:UltiSnipsSnippetDirectories = ['~/.vim/UltiSnips', 'UltiSnips']
 "	Commentary
 autocmd FileType c setlocal commentstring="// %s"
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "   My bindings
-"	custom leader
-let mapleader = ","
 "	save file
 noremap <leader>w :w<CR>
 "	quit without saving
