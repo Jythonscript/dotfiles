@@ -34,6 +34,7 @@ let mapleader = ","
 
 "	ALE
 noremap <leader>a :ALEToggle<CR>
+noremap <leader>A :ALEEnable<CR>
 "	vimwiki
 filetype plugin on
 let g:vimwiki_list = [{'path':'~/.vimwiki/wiki/', 'path_html':'~/.vimwiki/html'}]
