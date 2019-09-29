@@ -101,18 +101,12 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #export PATH=$HOME/brew/bin:$PATH
 
-#automatically run 'ls' after every directory change
-function chpwd() {
-    emulate -L zsh
-    ls
-}
-
 #function yta() {
     #mpv --ytdl-format=bestaudio ytdl://ytsearch:"$*"
 #}
 
 
-#Music functions
+#	Music functions
 function yta() {
     #PLAYLIST=~/.config/mpd/playlists/yt-playlist.m3u
     PLAYLIST=~/Music/Playlists/yt-playlist.m3u
@@ -145,17 +139,37 @@ function yt() {
     mpv ytdl://ytsearch:"$*"
 }
 
-#Convenience functions
+function m() {
+    TRACK="$(mpc listall -f "%file%\t%title%\t%artist%\t%album%" | fzf -f "$*" | head -n 1 | sed "s/\t.*//")"
+    if $(mpc playlist -f "%file%" | grep -Fxq "$TRACK")
+    then
+        mpc play $(mpc playlist -f "%file%" | grep -nFx "$TRACK" | sed "s/:.*//" | head -n 1)
+    else
+        mpc add "$TRACK"
+        mpc play $(mpc playlist | wc -l)
+    fi
+}
+
+#	Convenience functions
 function search() {
 	echo $PATH | tr ':' '\n' | xargs -I{} find '{}' -iname $1
 }
 
+#automatically run 'ls' after every directory change
+function chpwd() {
+    emulate -L zsh
+    ls
+}
+
+#	Environment
 export EDITOR=vim
 export VISUAL=vim
 export PAGER=less
 export SAVEHIST=100000
 #[ -n "$XTERM_VERSION" ] && transset --id "$WINDOWID" >/dev/null
 # spawning a terminal with awesome keeps directory
+
+#	Aliases
 alias l="ls -lAh"
 #Prevents accidental running of ghostscript command
 alias gs="git status"
@@ -166,13 +180,15 @@ alias bgd="bg && disown"
 alias ds="find . -maxdepth 1 -exec du -sh '{}' \; | sort -h | grep -vP '^[^\s]+\s\.$'"
 alias j="jump"
 alias za="zathura"
+alias v="vim"
+
+#	Other
 #used in awesomewm open terminal in same directory script
 mkdir -p /run/user/$(id --user)/urxvtc_ids/
 echo $$ > /run/user/$(id --user)/urxvtc_ids/$WINDOWID
 #easier vim access
-alias v="vim"
 #Custom paths
-export PATH="$PATH:/home/avery/usr/bin"
+export PATH="$PATH:/home/avery/usr/local/bin"
 #Disable ctrl+s freeze terminal
 stty -ixon
 compinit
