@@ -71,6 +71,8 @@ noremap <leader>e :e<CR>
 noremap <leader>s :setlocal spell!<CR>
 noremap <leader>ss :setlocal spell<CR>
 noremap <leader>S :setlocal spell<bar>setlocal spell!<CR>
+"	spell fix shortcut
+inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 "	make netrw file browser better
 let g:netrw_banner=0 " disable banner
 "let g:netrw_browse_split=4 " open in prior window
