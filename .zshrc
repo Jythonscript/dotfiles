@@ -186,7 +186,6 @@ alias v="vim"
 #used in awesomewm open terminal in same directory script
 mkdir -p /run/user/$(id --user)/urxvtc_ids/
 echo $$ > /run/user/$(id --user)/urxvtc_ids/$WINDOWID
-#easier vim access
 #Custom paths
 export PATH="$PATH:/home/avery/usr/local/bin"
 #Disable ctrl+s freeze terminal
