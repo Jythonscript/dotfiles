@@ -67,6 +67,10 @@ noremap <leader>p "+p
 noremap <leader>P "+P
 "	reload current file
 noremap <leader>e :e<CR>
+"	spell toggling
+noremap <leader>s :setlocal spell!<CR>
+noremap <leader>ss :setlocal spell<CR>
+noremap <leader>S :setlocal spell<bar>setlocal spell!<CR>
 "	make netrw file browser better
 let g:netrw_banner=0 " disable banner
 "let g:netrw_browse_split=4 " open in prior window
