@@ -62,7 +62,7 @@ URxvt*modifier: ALT_L
 
 
 ! ST settings
-st.font: Fira Mono:pixelsize=30:antialias=true:autohint=true;
+st.font: Fira Mono:pixelsize=16:antialias=true:autohint=true;
 st.borderpix: 10
 st.cursorshape: 2
 st.xfps: 120
