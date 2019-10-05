@@ -59,3 +59,16 @@ URxvt*cursorColor: #07fff2
 
 ! Modifier key
 URxvt*modifier: ALT_L
+
+
+! ST settings
+st.font: Fira Mono:pixelsize=30:antialias=true:autohint=true;
+st.borderpix: 10
+st.cursorshape: 2
+st.xfps: 120
+st.mouseScrollLines: 10
+
+st.background: #000000
+st.foregroud: #ffffff
+st.opacity: 178.5
+st.bellvolume: 0
