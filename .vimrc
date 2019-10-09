@@ -162,3 +162,5 @@ command Noreadonly set noro
 command DOS e ++ff=dos
 "	UNIX editing mode
 command UNIX e ++ff=unix
+"	no underline
+hi Cursorline cterm=None
