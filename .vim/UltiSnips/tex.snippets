@@ -18,14 +18,22 @@ snippet // "Fraction" iA
 \\frac{$1}{$2}$0
 endsnippet
 
+snippet / "Fraction" i
+\\frac{${VISUAL}}{$1}$0
+endsnippet
+
 snippet bf "Boldface" w
-\textbf{$1}$0
+\\textbf{$1}$0
 endsnippet
 
 snippet it "Italicize" w
-\textit{$1}$0
+\\textit{$1}$0
 endsnippet
 
 snippet ul "Italicize" w
-\underline{$1}$0
+\\underline{$1}$0
+endsnippet
+
+snippet [ "Box" i
+\\boxed{${VISUAL}}$0
 endsnippet
