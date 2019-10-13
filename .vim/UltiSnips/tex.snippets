@@ -1,5 +1,31 @@
-snippet beg
+snippet beg "Begin" bA
 \begin{$1}
-	$2
+	$0
 \end{$1}
+endsnippet
+
+snippet dm "Math" bA
+\[
+$1
+\] $0
+endsnippet
+
+snippet im "Math" w
+\$$1\$$0
+endsnippet
+
+snippet // "Fraction" iA
+\\frac{$1}{$2}$0
+endsnippet
+
+snippet bf "Boldface" w
+\textbf{$1}$0
+endsnippet
+
+snippet it "Italicize" w
+\textit{$1}$0
+endsnippet
+
+snippet ul "Italicize" w
+\underline{$1}$0
 endsnippet
