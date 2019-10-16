@@ -181,6 +181,7 @@ alias ds="find . -maxdepth 1 -exec du -sh '{}' \; | sort -h | grep -vP '^[^\s]+\
 alias j="jump"
 alias za="zathura"
 alias v="vim"
+alias de="disown && exit"
 
 #	Other
 #used in awesomewm open terminal in same directory script
