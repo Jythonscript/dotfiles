@@ -39,6 +39,7 @@ noremap <leader>A :ALEDisable<CR>
 noremap <leader>aa :ALEEnable<CR>
 "	vimtex
 let g:vimtex_view_general_viewer = 'zathura'
+noremap <leader>v :VimtexCompile<CR>
 let g:tex_flavor='latex'
 "	vimwiki
 filetype plugin on
