@@ -1,16 +1,16 @@
-snippet today "Date"
-`date +%F`
+snippet today "Date" i
+`date +"%B %d, %Y"`
 endsnippet
 
 snippet box "Box"
 `!p snip.rv = '┌' + '─' * (len(t[1]) + 2) + '┐'`
-│ $1 │
+│ $0 │
 `!p snip.rv = '└' + '─' * (len(t[1]) + 2) + '┘'`
 $0
 endsnippet
 
 snippet { "Expand curly bracket"
 {
-	$1
+	$0
 }
 endsnippet
