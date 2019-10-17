@@ -167,3 +167,6 @@ command DOS e ++ff=dos
 command UNIX e ++ff=unix
 "	no underline
 hi Cursorline cterm=None
+"	easier split shortcut access
+noremap <Esc>a <C-w>
+tnoremap <Esc>a <C-w>
