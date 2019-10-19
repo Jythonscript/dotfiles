@@ -170,3 +170,5 @@ hi Cursorline cterm=None
 "	easier split shortcut access
 noremap <Esc>a <C-w>
 tnoremap <Esc>a <C-w>
+"	open LaTeX default file
+command LATEX execute '!cp ~/Documents/latex/default.tex notes.tex' | e notes.tex
