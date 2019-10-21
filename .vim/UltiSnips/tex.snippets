@@ -1,3 +1,22 @@
+global !p
+texMathZones = ['texMathZone'+x for x in ['A', 'AS', 'B', 'BS', 'C', 'CS', 'D', 'DS', 'E', 'ES', 'F', 'FS', 'G', 'GS', 'H', 'HS', 'I', 'IS', 'J', 'JS', 'K', 'KS', 'L', 'LS', 'DS', 'V', 'W', 'X', 'Y', 'Z']]
+
+texIgnoreMathZones = ['texMathText']
+
+texMathZoneIds = vim.eval('map('+str(texMathZones)+", 'hlID(v:val)')")
+texIgnoreMathZoneIds = vim.eval('map('+str(texIgnoreMathZones)+", 'hlID(v:val)')")
+
+ignore = texIgnoreMathZoneIds[0]
+
+def math():
+	synstackids = vim.eval("synstack(line('.'), col('.') - (col('.')>=2 ? 1 : 0))")
+	try:
+		first = next(i for i in reversed(synstackids) if i in texIgnoreMathZoneIds or i in texMathZoneIds)
+		return first != ignore
+	except StopIteration:
+		return False
+endglobal
+
 snippet beg "Begin" bA
 \begin{$1}
 	$0
@@ -40,26 +59,72 @@ $1
 \] $0
 endsnippet
 
+context "math()"
 snippet ^^ "Exponent" iA
 ^{$1}$0
 endsnippet
 
+context "math()"
 snippet __ "Subscript" iA
 _{$1}$0
 endsnippet
 
+#Postfix and prefix
+context "math()"
+snippet "(\\?\w+)(,\.|\.,)" "Vector postfix" riA
+\vec{`!p snip.rv=match.group(1)`}
+endsnippet 
+
+context "math()"
+priority 10
+snippet "hat" "hat" riA
+\hat{$1}$0
+endsnippet
+
+context "math()"
+priority 100
+snippet "([a-zA-Z])hat" "hat" riA
+\hat{`!p snip.rv=match.group(1)`}
+endsnippet
+
+context "math()"
+priority 10
+snippet "bar" "bar" riA
+\overline{$1}$0
+endsnippet
+
+context "math()"
+priority 100
+snippet "([a-zA-Z])bar" "bar" riA
+\overline{`!p snip.rv=match.group(1)`}
+endsnippet
+
+#Math
+context "math()"
 snippet int "Integrate" i
 \\int_{$1}^{$2}$0
+endsnippet
+
+context "math()"
+snippet ** "Dot product" iA
+\\cdot{$1}$0
+endsnippet
+
+context "math()"
+snippet xx "Cross product" iA
+\\times{$1}$0
 endsnippet
 
 snippet im "Math" w
 \$$1\$$0
 endsnippet
 
+context "math()"
 snippet // "Fraction" iA
 \\frac{$1}{$2}$0
 endsnippet
 
+context "math()"
 snippet / "Fraction" i
 \\frac{${VISUAL}}{$1}$0
 endsnippet
@@ -76,7 +141,8 @@ snippet ul "Underline" w
 \\underline{$1}$0
 endsnippet
 
-snippet txt "Text" w
+context "math()"
+snippet txt "Text" iA
 \\text{$1}$0
 endsnippet
 
@@ -98,6 +164,7 @@ snippet table "Table" w
 endsnippet
 
 # Constants
+context "math()"
 snippet inf "Infinity" i
 \infty
 endsnippet
