@@ -171,4 +171,4 @@ hi Cursorline cterm=None
 noremap <Esc>a <C-w>
 tnoremap <Esc>a <C-w>
 "	open LaTeX default file
-command LATEX execute '!cp ~/Documents/latex/default.tex notes.tex' | e notes.tex
+command LATEX execute '!cp ~/.vim/templates/notes.tex .' | e notes.tex
