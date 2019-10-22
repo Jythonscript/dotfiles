@@ -55,7 +55,7 @@ endsnippet
 
 snippet dm "Math" bA
 \[
-$1
+	$1
 \] $0
 endsnippet
 
@@ -100,19 +100,54 @@ snippet "([a-zA-Z])bar" "bar" riA
 endsnippet
 
 #Math
+#context "math()"
+#snippet int "Integrate" i
+#\\int_{$1}^{$2}$0
+#endsnippet
+
+priority 300
 context "math()"
-snippet int "Integrate" i
-\\int_{$1}^{$2}$0
+snippet dint "integral" wA
+\int_{${1:-\infty}}^{${2:\infty}} ${3:${VISUAL}} $0
+endsnippet
+
+priority 100
+context "math()"
+snippet '(?<!\\)(sin|cos|arccot|cot|csc|ln|log|exp|star|perp)' "ln" rwA
+\\`!p snip.rv = match.group(1)`
+endsnippet
+
+priority 200
+context "math()"
+snippet '(?<!\\)(arcsin|arccos|arctan|arccot|arccsc|arcsec|pi|zeta|int)' "Functions" rwA
+\\`!p snip.rv = match.group(1)`
+endsnippet
+
+#special characters
+context "math()"
+priority 101
+snippet '(?<!\\)(pi|mu|theta|omega)' "Special characters" rwA
+\\`!p snip.rv = match.group(1)`
+endsnippet
+
+context "math()"
+snippet '(?<!\\)(eps)' "epsilon" riA
+\\varepsilon
+endsnippet
+
+context "math()"
+snippet '(?<!\\)(Eps)' "Epsilon" riA
+\\mathacal{E}
 endsnippet
 
 context "math()"
 snippet ** "Dot product" iA
-\\cdot{$1}$0
+\\cdot $0
 endsnippet
 
 context "math()"
 snippet xx "Cross product" iA
-\\times{$1}$0
+\\times $0
 endsnippet
 
 snippet im "Math" w
@@ -166,5 +201,10 @@ endsnippet
 # Constants
 context "math()"
 snippet inf "Infinity" i
-\infty
+\\infty
+endsnippet
+
+context "math()"
+snippet oc "Proportional to" i
+\\propto
 endsnippet
