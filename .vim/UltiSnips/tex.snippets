@@ -10,27 +10,27 @@ snippet s "Section" b
 $0
 endsnippet
 
-snippet ss "Section*" b
+snippet sn "Section*" b
 \\section*{$1}
 $0
 endsnippet
 
-snippet b "Subsection" b
+snippet ss "Subsection" b
 \\subsection{$1}
 $0
 endsnippet
 
-snippet bs "Subsection*" b
+snippet ssn "Subsection*" b
 \\subsection*{$1}
 $0
 endsnippet
 
-snippet bb "Subsubsection" b
+snippet sss "Subsubsection" b
 \\subsubsection{$1}
 $0
 endsnippet
 
-snippet bbs "Subsubsection*" b
+snippet sssn "Subsubsection*" b
 \\subsubsection*{$1}
 $0
 endsnippet
@@ -130,7 +130,7 @@ endsnippet
 
 priority 100
 context "math()"
-snippet '(?<!\\)(sin|cos|arccot|cot|csc|ln|log|exp|star|perp|Delta|delta)' "ln" rwA
+snippet '(?<!\\)(sin|cos|arccot|cot|csc|ln|log|exp|star|perp|Delta|delta|phi)' "ln" rwA
 \\`!p snip.rv = match.group(1) + " "`
 endsnippet
 
@@ -255,6 +255,16 @@ endsnippet
 context "math()"
 snippet oc "Proportional to" i
 \\propto
+endsnippet
+
+context "math()"
+snippet ~= "Approximate" iA
+\\approx
+endsnippet
+
+context "math()"
+snippet ~~ "Proportional to" iA
+\\sim
 endsnippet
 
 ## Graphics
