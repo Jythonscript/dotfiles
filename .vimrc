@@ -41,6 +41,7 @@ noremap <leader>aa :ALEEnable<CR>
 let g:vimtex_view_general_viewer = 'zathura'
 noremap <leader>v :VimtexCompile<CR>
 let g:tex_flavor='latex'
+let g:vimtex_quickfix_enabled = 0
 "	vimwiki
 filetype plugin on
 let g:vimwiki_list = [{'path':'~/.vimwiki/wiki/', 'path_html':'~/.vimwiki/html'}]
@@ -167,6 +168,8 @@ command DOS e ++ff=dos
 command UNIX e ++ff=unix
 "	no underline
 hi Cursorline cterm=None
+"	Visual colors
+hi Visual ctermfg=Gray ctermbg=Gray
 "	easier split shortcut access
 noremap <Esc>a <C-w>
 tnoremap <Esc>a <C-w>
