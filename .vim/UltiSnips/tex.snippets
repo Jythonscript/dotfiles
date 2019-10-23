@@ -87,6 +87,10 @@ snippet im "Math" w
 \$$1\$$0
 endsnippet
 
+snippet mk "Math" wA
+\$$1\$$0
+endsnippet
+
 context "math()"
 snippet txt "Text" iA
 \\text{$1}$0
@@ -109,6 +113,11 @@ snippet td "Exponent" iA
 endsnippet
 
 context "math()"
+snippet sb "Subscript" iA
+_{$1}$0
+endsnippet
+
+context "math()"
 snippet __ "Subscript" iA
 _{$1}$0
 endsnippet
@@ -121,13 +130,13 @@ endsnippet
 
 priority 100
 context "math()"
-snippet '(?<!\\)(sin|cos|arccot|cot|csc|ln|log|exp|star|perp)' "ln" rwA
+snippet '(?<!\\)(sin|cos|arccot|cot|csc|ln|log|exp|star|perp|Delta|delta)' "ln" rwA
 \\`!p snip.rv = match.group(1) + " "`
 endsnippet
 
 priority 200
 context "math()"
-snippet '(?<!\\)(arcsin|arccos|arctan|arccot|arccsc|arcsec|pi|zeta|int|oint)' "Functions" rwA
+snippet '(?<!\\)(arcsin|arccos|arctan|arccot|arccsc|arcsec|pi|zeta|int|oint|eta)' "Functions" rwA
 \\`!p snip.rv = match.group(1) + " "`
 endsnippet
 
