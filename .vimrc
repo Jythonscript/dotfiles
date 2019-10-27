@@ -4,26 +4,26 @@
 
 call plug#begin()
 
-"	Colorschemes
+"	Cosmetics
 Plug 'Nequo/vim-allomancer'
 Plug 'arzg/seoul8'
 Plug 'https://github.com/fcpg/vim-orbital'
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
 "Plug 'https://github.com/Heorhiy/VisualStudioDark.vim'
 
 "	Programming
-"Plug 'terryma/vim-multiple-cursors'
-Plug 'https://github.com/lervag/vimtex'
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
-Plug 'https://github.com/vimwiki/vimwiki'
+Plug 'https://github.com/junegunn/fzf.vim'
+Plug 'dense-analysis/ale'
 Plug 'https://github.com/SirVer/ultisnips'
-"Plug 'honza/vim-snippets'
+Plug 'https://github.com/lervag/vimtex'
+Plug 'https://github.com/vimwiki/vimwiki'
 Plug 'https://github.com/tpope/vim-commentary'
 Plug 'https://github.com/tpope/vim-surround'
 Plug 'https://github.com/tpope/vim-repeat'
-Plug 'https://github.com/junegunn/fzf.vim'
-Plug 'dense-analysis/ale'
-Plug 'dracula/vim', { 'as': 'dracula' }
+"Plug 'terryma/vim-multiple-cursors'
+"Plug 'honza/vim-snippets'
 
 call plug#end()
 
