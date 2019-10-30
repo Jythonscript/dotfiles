@@ -166,6 +166,8 @@ command Noreadonly set noro
 command DOS e ++ff=dos
 "	UNIX editing mode
 command UNIX e ++ff=unix
+" open PDFs in zathura
+command ZATHURA silent exe "!echo " . shellescape(expand("%")) . " | grep -oP '^[^\.]+' | xargs -I{} zathura '{}'.pdf &disown" | redraw!
 "	no underline
 hi Cursorline cterm=None
 "	Visual colors
