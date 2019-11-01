@@ -177,3 +177,5 @@ noremap <Esc>a <C-w>
 tnoremap <Esc>a <C-w>
 "	open LaTeX default file
 command LATEX execute '!cp ~/.vim/templates/notes.tex .' | e notes.tex
+"	show full words on their own line
+set linebreak
