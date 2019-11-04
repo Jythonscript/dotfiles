@@ -183,9 +183,9 @@ hi MatchParen cterm=bold ctermfg=green ctermbg=blue
 "	folding appearance settings
 hi Folded ctermbg=None
 hi Folded ctermfg=Yellow
-"	no underline
-hi Cursorline cterm=None
 "	visual mode selection colors
 hi Visual ctermfg=Gray ctermbg=Gray
 "	improve sidebar colors
 set background=dark
+"	no underline
+hi Cursorline cterm=None
