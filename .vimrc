@@ -176,16 +176,16 @@ command Q :q
 "	set colorscheme to delek
 colorscheme delek
 syntax enable
-"	hlsearch colors
-hi Search ctermbg=none ctermfg=green
 "	matching parentheses colors
 hi MatchParen cterm=bold ctermfg=green ctermbg=blue
-"	folding appearance settings
-hi Folded ctermbg=None
-hi Folded ctermfg=Yellow
 "	visual mode selection colors
 hi Visual ctermfg=Gray ctermbg=Gray
 "	improve sidebar colors
 set background=dark
 "	no underline
 hi Cursorline cterm=None
+"	hlsearch colors
+hi Search ctermbg=none ctermfg=green
+"	folding appearance settings
+hi Folded ctermbg=None
+hi Folded ctermfg=Yellow
