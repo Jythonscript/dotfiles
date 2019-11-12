@@ -173,19 +173,7 @@ command Q :q
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "	Color Options
-"	set colorscheme to delek
-colorscheme delek
 syntax enable
-"	matching parentheses colors
-hi MatchParen cterm=bold ctermfg=green ctermbg=blue
-"	visual mode selection colors
-hi Visual ctermfg=Gray ctermbg=Gray
-"	improve sidebar colors
 set background=dark
-"	no underline
-hi Cursorline cterm=None
-"	hlsearch colors
-hi Search ctermbg=none ctermfg=green
-"	folding appearance settings
-hi Folded ctermbg=None
-hi Folded ctermfg=Yellow
+"	custom colorscheme
+colorscheme mydelek
