@@ -235,15 +235,32 @@ endsnippet
 
 context "math()"
 snippet '(?<!\\)(eps)' "epsilon" riA
-\\varepsilon
+\\varepsilon 
 endsnippet
 
 context "math()"
 snippet '(?<!\\)(Eps)' "Epsilon" riA
-\\mathcal{E}
+\\mathcal{E} 
 endsnippet
 
-snippet [ "Box" i
+context "math()"
+snippet '(?<!\\)(part)' "Partial derivative" riA
+\\partial 
+endsnippet
+
+context "math()"
+snippet '(\(|\[|\\{)' "Big grouping characters" riA
+\\left`!p snip.rv=match.group(0)` $1 \\right`!p 
+dict = {
+"(": ")",
+"[": "]",
+"\{": "\}"
+}
+snip.rv = dict[match.group(0)]
+` $0
+endsnippet
+
+snippet box "Box" i
 \\boxed{${VISUAL}}$0
 endsnippet
 
