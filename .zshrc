@@ -182,6 +182,7 @@ alias j="jump"
 alias za="zathura"
 alias v="vim"
 alias de="disown && exit"
+alias truestudio="/opt/truestudio/ide/TrueSTUDIO"
 
 #	Other
 #used in awesomewm open terminal in same directory script
