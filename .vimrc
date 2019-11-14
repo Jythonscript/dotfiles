@@ -91,6 +91,9 @@ nnoremap <Up> gk
 nnoremap <Down> gj
 inoremap <Up> <C-o>gk
 inoremap <Down> <C-o>gj
+"	delete previous word
+noremap! <C-BS> <C-w>
+noremap! <C-h> <C-w>
 "	toggle folding
 noremap <space> za
 "	toggle relative number
