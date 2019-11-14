@@ -86,6 +86,9 @@ noremap <leader>e :e<CR>
 noremap <leader>s :setlocal spell!<CR>
 noremap <leader>ss :setlocal spell<CR>
 noremap <leader>S :setlocal spell<bar>setlocal spell!<CR>
+"	arrow keys for easier navigation of long lines
+noremap <Up> gk
+noremap <Down> gj
 "	toggle folding
 noremap <space> za
 "	toggle relative number
