@@ -41,6 +41,7 @@ noremap <leader>b :Buffers<CR>
 noremap <leader>a :ALEToggle<CR>
 noremap <leader>A :ALEDisable<CR>
 noremap <leader>aa :ALEEnable<CR>
+let g:ale_enabled=0
 "	vimtex
 let g:vimtex_view_general_viewer = 'zathura'
 noremap <leader>v :VimtexCompile<CR>
