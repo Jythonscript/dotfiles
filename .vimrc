@@ -110,6 +110,15 @@ vnoremap // y/\V<C-r>=escape(@",'/\')<CR><CR>
 "	easier split shortcut access in terminals
 noremap <Esc>a <C-w>
 tnoremap <Esc>a <C-w>
+"	disable middle-click paste
+map  <MiddleMouse>   <Nop>
+imap <MiddleMouse>   <Nop>
+map  <2-MiddleMouse> <Nop>
+imap <2-MiddleMouse> <Nop>
+map  <3-MiddleMouse> <Nop>
+imap <3-MiddleMouse> <Nop>
+map  <4-MiddleMouse> <Nop>
+imap <4-MiddleMouse> <Nop>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "	Settings
