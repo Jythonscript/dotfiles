@@ -152,6 +152,8 @@ set report=0
 "	make splits work like my awesomewm setup
 set splitright
 set splitbelow
+"	wrap lines instead of going off-screen
+set wrap
 "	wrapped lines keep the same indent
 set breakindent
 "	character to display for long lines that wrap across the terminal
