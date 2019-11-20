@@ -140,7 +140,13 @@ function yt() {
 }
 
 function m() {
-    TRACK="$(mpc listall -f "%file%\t%title%\t%artist%\t%album%" | fzf -f "$*" | head -n 1 | sed "s/\t.*//")"
+	if [ $# -eq 0 ]
+	then
+		TRACK="$(mpc listall -f "%file%\t%title%\t%artist%\t%album%" | fzf | head -n 1 | sed "s/\t.*//")"
+	else
+		TRACK="$(mpc listall -f "%file%\t%title%\t%artist%\t%album%" | fzf -f "$*" | head -n 1 | sed "s/\t.*//")"
+	fi
+
     if $(mpc playlist -f "%file%" | grep -Fxq "$TRACK")
     then
         mpc play $(mpc playlist -f "%file%" | grep -nFx "$TRACK" | sed "s/:.*//" | head -n 1)
