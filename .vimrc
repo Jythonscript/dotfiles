@@ -43,8 +43,8 @@ noremap <leader>A :ALEDisable<CR>
 noremap <leader>aa :ALEEnable<CR>
 let g:ale_enabled=0
 "	vimtex
-let g:vimtex_view_general_viewer = 'zathura'
 noremap <leader>v :VimtexCompile<CR>
+let g:vimtex_view_general_viewer = 'zathura'
 let g:tex_flavor='latex'
 let g:vimtex_quickfix_enabled = 0
 "	vimwiki
@@ -52,6 +52,7 @@ filetype plugin on
 let g:vimwiki_list = [{'path':'~/.vimwiki/wiki/', 'path_html':'~/.vimwiki/html'}]
 let g:vimwiki_folding="custom"
 "	ultisnips
+noremap <leader>se :UltiSnipsEdit<CR>
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
