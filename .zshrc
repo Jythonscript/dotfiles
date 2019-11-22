@@ -173,6 +173,10 @@ function chpwd() {
     ls
 }
 
+function nc() {
+	ncmpcpp
+}
+
 #	Environment
 export EDITOR=vim
 export VISUAL=vim
