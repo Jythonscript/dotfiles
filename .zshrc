@@ -216,6 +216,7 @@ alias za="zathura"
 alias v="vim"
 alias de="disown && exit"
 alias truestudio="/opt/truestudio/ide/TrueSTUDIO"
+alias R="R --quiet"
 
 #	Other
 #used in awesomewm open terminal in same directory script
