@@ -153,6 +153,23 @@ function m() {
 		return
 	fi
 
+	mpc add "$TRACK"
+}
+
+function mp() {
+	if [ $# -eq 0 ]
+	then
+		TRACK="$(mpc listall -f "%file%\t%title%\t%artist%\t%album%" | fzf | head -n 1 | sed "s/\t.*//")"
+	else
+		TRACK="$(mpc listall -f "%file%\t%title%\t%artist%\t%album%" | fzf -f "$*" | head -n 1 | sed "s/\t.*//")"
+	fi
+
+	# exit if no track selected
+	if [[ $TRACK == "" ]]
+	then
+		return
+	fi
+
     if $(mpc playlist -f "%file%" | grep -Fxq "$TRACK")
     then
         mpc play $(mpc playlist -f "%file%" | grep -nFx "$TRACK" | sed "s/:.*//" | head -n 1)
