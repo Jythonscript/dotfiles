@@ -12,16 +12,11 @@ lines_scrolled = "3"
 user_interface = "alternative"
 playlist_separate_albums = "yes"
 
-#color1 = "black"
-#color2 = "black"
-#discard_colors_if_item_is_selected = "yes"
 empty_tag_color = "blue"
 progressbar_elapsed_color = "magenta"
 statusbar_color = "blue"
-#song_list_format = "{$7%a $7%l $7%t}|{$7%a $5%t $7}"
-#song_status_format = "$2%a $7• $4%t $7• $3%b {}$7• $5%y$7"
-song_columns_list_format = "(15)[magenta]{a} (30)[blue]{t} (46)[magenta]{b} (5)[magenta]{l}"
-#browser_display_mode = "columns"
+song_columns_list_format = "(30)[magenta]{bE} (30)[blue]{t|f:Title} (15)[magenta]{aE} (5f)[magenta]{l}"
+block_search_constraints_change_if_items_found = "no"
 centered_cursor = "yes"
 
 discard_colors_if_item_is_selected = "yes"
@@ -34,3 +29,13 @@ color1 = "default"
 color2 = "default"
 current_item_prefix = "$(cyan)$r"
 current_item_suffix = "$/r$(end)"
+
+#color1 = "black"
+#browser_display_mode = "columns"
+#song_columns_list_format = (20)[]{a} (6f)[green]{NE} (50)[white]{t|f:Title} (20)[cyan]{b} (7f)[magenta]{l}
+#song_window_title_format = {%n - }{%t}|{%f}
+#song_library_format = {%n - }{%t}|{%f}
+#song_status_format = "$2%a $7• $4%t $7• $3%b {}$7• $5%y$7"
+#song_list_format = "{$7%a $7%l $7%t}|{$7%a $5%t $7}"
+#discard_colors_if_item_is_selected = "yes"
+#color2 = "black"

@@ -1,4 +1,5 @@
 .DS_Store
 .vim/view
 .ncmpcpp/error.log
+.ncmpcpp/patterns.list
 *.swp
