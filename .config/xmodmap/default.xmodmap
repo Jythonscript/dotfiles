@@ -1,0 +1,9 @@
+keycode 25 = w
+keycode 38 = a
+keycode 39 = s
+keycode 40 = d
+
+keycode 111 = Up
+keycode 113 = Left
+keycode 116 = Down
+keycode 114 = Right
