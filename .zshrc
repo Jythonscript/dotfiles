@@ -218,6 +218,9 @@ alias de="disown && exit"
 alias truestudio="/opt/truestudio/ide/TrueSTUDIO"
 alias R="R --quiet"
 
+# ZLE keybindings
+bindkey "" backward-kill-word
+
 #	Other
 #used in awesomewm open terminal in same directory script
 mkdir -p /run/user/$(id --user)/urxvtc_ids/
