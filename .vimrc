@@ -88,6 +88,8 @@ noremap <leader>e :e<CR>
 noremap <leader>s :setlocal spell!<CR>
 noremap <leader>ss :setlocal spell<CR>
 noremap <leader>S :setlocal spell<bar>setlocal spell!<CR>
+"	nested fold toggling
+noremap <leader>z zA
 "	arrow keys for easier navigation of long lines
 nnoremap <Up> gk
 nnoremap <Down> gj
