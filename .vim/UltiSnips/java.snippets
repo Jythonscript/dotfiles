@@ -1,0 +1,15 @@
+snippet main "Basic java program"
+public class ${1:`!p snip.rv = fn[:fn.index(".java")]`} {
+	public static void main(String[] args) {
+		$0
+	}
+}
+endsnippet
+
+snippet pln "println" i
+System.out.println($0
+endsnippet
+
+snippet p "print" i
+System.out.print($0
+endsnippet
