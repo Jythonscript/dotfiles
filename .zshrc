@@ -194,6 +194,10 @@ function nc() {
 	ncmpcpp
 }
 
+function term() {
+	zsh
+}
+
 #set up notes environment
 function notes() {
 	cp ~/.vim/templates/notes.tex .
