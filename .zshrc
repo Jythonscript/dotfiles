@@ -194,6 +194,14 @@ function nc() {
 	ncmpcpp
 }
 
+#set up notes environment
+function notes() {
+	cp ~/.vim/templates/notes.tex .
+	sed -i "s/Date/$(date "+%B %d, %Y")/g" notes.tex
+	sed -i "s/Title/Lecture Notes/g"
+	vim +VimtexCompile notes.tex
+}
+
 #	Environment
 export EDITOR=vim
 export VISUAL=vim
