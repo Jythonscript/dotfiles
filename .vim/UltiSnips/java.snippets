@@ -1,8 +1,12 @@
-snippet main "Basic java program"
+snippet main "Java main function"
+public static void main(String[] args) {
+	$0
+}
+endsnippet
+
+snippet class "Basic Java class"
 public class ${1:`!p snip.rv = fn[:fn.index(".java")]`} {
-	public static void main(String[] args) {
-		$0
-	}
+	$0
 }
 endsnippet
 
