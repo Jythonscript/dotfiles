@@ -190,11 +190,11 @@ function chpwd() {
     ls
 }
 
-function nc() {
+function n() {
 	ncmpcpp
 }
 
-function term() {
+function t() {
 	zsh
 }
 
