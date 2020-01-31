@@ -198,6 +198,11 @@ function t() {
 	zsh
 }
 
+#ipython sympy environment
+function sym() {
+	ipython ~/.ipython_sympy.py -i --no-banner
+}
+
 #set up notes environment
 function notes() {
 	cp ~/.vim/templates/notes.tex .
@@ -230,7 +235,6 @@ alias de="disown && exit"
 alias truestudio="/opt/truestudio/ide/TrueSTUDIO"
 alias R="R --quiet"
 alias tdir='mkdir $(date "+%Y-%m-%d") && ls'
-alias sym="ipython ~/.ipython_sympy.py -i --no-banner"
 
 # ZLE keybindings
 bindkey "" backward-kill-word
