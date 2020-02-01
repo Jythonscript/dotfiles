@@ -378,3 +378,23 @@ snippet table "Table" w
 	\\end{center}
 \\end{table}
 endsnippet
+
+snippet sym "sympy setup" bA
+sympy $1 sympy$0
+endsnippet
+
+snippet 'sympy(.*)sympy' "evaluate sympy" wr
+\\[
+`!p
+from sympy import *
+x, y, z, t = symbols('x y z t')
+k, m, n = symbols('k m n', integer=True)
+f, g, h = symbols('f g h', cls=Function)
+init_printing()
+snip.rv = eval('latex(' + match.group(1).replace('\\', '') \
+    .replace('^', '**') \
+    .replace('{', '(') \
+    .replace('}', ')') + ')')
+`
+\\]
+endsnippet
