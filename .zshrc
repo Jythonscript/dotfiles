@@ -205,10 +205,18 @@ function sym() {
 
 #set up notes environment
 function notes() {
-	cp ~/.vim/templates/notes.tex .
-	sed -i "s/Date/$(date "+%B %d, %Y")/g" notes.tex
-	sed -i "s/Title/Lecture Notes/g"
-	vim +VimtexCompile notes.tex
+    DATE="$(date "+%Y-%m-%d")"
+    FOLDER="$DATE"
+    index=0
+    while [ -d "$FOLDER" ]; do
+        printf -v FOLDER -- '%s_%01d' "$DATE" "$((++index))"
+    done
+    mkdir $FOLDER
+    cd $FOLDER
+    cp ~/.vim/templates/notes.tex ./
+    sed -i "s/DATE/$(date "+%B %d, %Y")/g" ./notes.tex
+	sed -i "s/TITLE/Lecture Notes/g" notes.tex
+    vim +30 +VimtexCompile ./notes.tex
 }
 
 #	Environment
