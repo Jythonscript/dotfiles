@@ -223,6 +223,50 @@ snip.rv = stripped[0:i] + "\\frac{" + stripped[i+1:-1] + "}"
 `{$1}$0
 endsnippet
 
+context "math()"
+priority 100
+snippet "\[(.*)\]]" "Vector" wr
+`!p 
+l = match.group(1).split(",")
+snip.rv = "\\begin{bmatrix*}"
+snip >> 1
+for s in l:
+    snip += s + "\\\\"
+snip << 1
+snip += "\\end{bmatrix*}"
+`
+endsnippet
+
+context "math()"
+priority 90
+snippet "\[(.*)\]" "Matrix" wr
+`!p 
+rows = match.group(1).split(",,") #row separator
+snip.rv = "\\begin{bmatrix*}"
+snip >> 1
+for r in rows:
+	col = r.split(",") #column separator
+	line = ""
+	for i, c in enumerate(col):
+		line += c + " "
+		if i != (len(col) - 1):
+			 line += "& "
+	snip += line + "\\\\"
+snip << 1
+snip += "\\end{bmatrix*}"
+`
+endsnippet
+
+context "math()"
+snippet fr "f from Rn to Rm" w
+f: \\mathbb{R}^{${1:n}} \rightarrow \mathbb{R}^{${2:m}} $0
+endsnippet
+
+context "math()"
+snippet -> "rightarrow" iA
+\\rightarrow 
+endsnippet
+
 ## Postfix and prefix
 context "math()"
 snippet "(\\?\w+)(,\.|\.,)" "Vector postfix" riA
@@ -309,6 +353,16 @@ endsnippet
 context "math()"
 snippet ~~ "Proportional to" iA
 \\sim
+endsnippet
+
+context "math()"
+snippet cd "cdots" iA
+\\cdots 
+endsnippet
+
+context "math()"
+snippet vd "vdots" iA
+\\vdots 
 endsnippet
 
 ## Graphics

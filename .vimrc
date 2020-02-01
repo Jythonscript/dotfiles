@@ -47,6 +47,7 @@ noremap <leader>v :VimtexCompile<CR>
 let g:vimtex_view_general_viewer = 'zathura'
 let g:tex_flavor='latex'
 let g:vimtex_quickfix_enabled = 0
+let g:vimtex_mappings_enabled = 0
 "	vimwiki
 filetype plugin on
 let g:vimwiki_list = [{'path':'~/.vimwiki/wiki/', 'path_html':'~/.vimwiki/html'}]
