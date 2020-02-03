@@ -17,3 +17,13 @@ endsnippet
 snippet p "print" i
 System.out.print($0
 endsnippet
+
+snippet getset "generate getters and setters"
+$1 get$2() {
+	return this.$3;
+}
+
+void set$2($1 _$3) {
+	this.$3 = _$2;
+}$0
+endsnippet
