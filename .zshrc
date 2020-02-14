@@ -184,6 +184,10 @@ function search() {
 	echo $PATH | tr ':' '\n' | xargs -I{} find '{}' -iname $1
 }
 
+function cheat() {
+	curl cheat.sh/$1
+}
+
 #automatically run 'ls' after every directory change
 function chpwd() {
     emulate -L zsh
