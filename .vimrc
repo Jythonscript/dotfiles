@@ -91,6 +91,11 @@ noremap <leader>ss :setlocal spell<CR>
 noremap <leader>S :setlocal spell<bar>setlocal spell!<CR>
 "	nested fold toggling
 noremap <leader>z zA
+"	foldmethod changing
+noremap <leader>fi :set foldmethod=indent<CR>
+noremap <leader>fm :set foldmethod=manual<CR>
+noremap <leader>fs :set foldmethod=syntax<CR>
+noremap <leader>fw :set foldmethod<CR>
 "	arrow keys for easier navigation of long lines
 nnoremap <Up> gk
 nnoremap <Down> gj
