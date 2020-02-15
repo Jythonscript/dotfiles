@@ -250,6 +250,7 @@ alias tdir='mkdir $(date "+%Y-%m-%d") && ls'
 
 # ZLE keybindings
 bindkey "" backward-kill-word
+bindkey -s " " " "
 
 #	Other
 #used in awesomewm open terminal in same directory script
