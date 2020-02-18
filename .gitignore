@@ -3,3 +3,5 @@
 .ncmpcpp/error.log
 .ncmpcpp/patterns.list
 *.swp
+.ipython/*
+!.ipython/ipython_config.py
