@@ -89,8 +89,8 @@ noremap <leader>e :e<CR>
 noremap <leader>s :setlocal spell!<CR>
 noremap <leader>ss :setlocal spell<CR>
 noremap <leader>S :setlocal spell<bar>setlocal spell!<CR>
-"	nested fold toggling
-noremap <leader>z zA
+"	single fold toggling
+noremap <leader>z za
 "	foldmethod changing
 noremap <leader>fi :set foldmethod=indent<CR>
 noremap <leader>fm :set foldmethod=manual<CR>
@@ -105,7 +105,7 @@ inoremap <Down> <C-o>gj
 noremap! <C-BS> <C-w>
 noremap! <C-h> <C-w>
 "	toggle folding
-noremap <space> za
+noremap <space> zA
 "	toggle relative number
 noremap + :set relativenumber! <bar> set number!<Enter>
 "	toggle highlightsearch
