@@ -202,6 +202,20 @@ function t() {
 	zsh
 }
 
+#latex popup
+function tx() {
+	LATEX_DIR=/tmp/latex_temp
+	mkdir -p $LATEX_DIR
+	echo -e "\\\\begin{align*}\n\t\n\\\\end{align*}" > $LATEX_DIR/latex.tex
+	vim +2 +"call vimtex#syntax#p#amsmath#load()" $LATEX_DIR/latex.tex
+	echo -E "${$(<$HOME/.vim/templates/shortdoc.tex)//CONTENTS/$(<$LATEX_DIR/latex.tex)}" > $LATEX_DIR/latex.tex
+	( cd $LATEX_DIR ; pdflatex $LATEX_DIR/latex.tex )
+	pdfcrop --margins 12 $LATEX_DIR/latex.pdf $LATEX_DIR/latex.pdf
+	pdf2svg $LATEX_DIR/latex.pdf $LATEX_DIR/latex.svg
+	pdftoppm $LATEX_DIR/latex.pdf $LATEX_DIR/latex -png -f 1 -singlefile -rx 600 -ry 600
+	nohup xclip -selection clipboard -target image/png -i $LATEX_DIR/latex.png 1>&- 2>&- 0<&-
+}
+
 #ipython sympy environment
 function sym() {
 	ipython ~/.ipython_sympy.py -i --no-banner
