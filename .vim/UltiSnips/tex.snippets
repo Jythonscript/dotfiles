@@ -383,6 +383,7 @@ snippet sym "sympy setup" bA
 sympy $1 sympy$0
 endsnippet
 
+priority 10000
 snippet 'sympy(.*)sympy' "evaluate sympy" wr
 \\[
 `!p
@@ -397,4 +398,20 @@ snip.rv = eval('latex(' + match.group(1).replace('\\', '') \
     .replace('}', ')') + ')')
 `
 \\]
+endsnippet
+
+priority 20000
+context "math()"
+snippet 'sympy(.*)sympy' "evaluate latex in sympy" wr
+`!p
+from sympy import *
+from sympy.parsing.latex import parse_latex
+x, y, z, t = symbols('x y z t')
+k, m, n = symbols('k m n', integer=True)
+f, g, h = symbols('f g h', cls=Function)
+init_printing()
+expr = eval('parse_latex(r"' + match.group(1) + '")')
+replacements = [(Symbol('pi'),pi),(Symbol('e'),exp(1)),(Symbol('i'),'I')]
+snip.rv = latex(expr.subs(replacements).doit())
+`
 endsnippet
