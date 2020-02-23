@@ -99,6 +99,9 @@ noremap <leader>fw :set foldmethod<CR>
 "	writing mode toggling
 noremap <leader>wr :call Write()<CR>
 noremap <leader>wn :call NoWrite()<CR>
+"	session creating and loading
+nnoremap <leader>sn :exec "mks!" . "~/.vim/sessions/" . substitute(expand("%:p:h"), "/", "_", "g") . ".vim"<CR>
+nnoremap <leader>sl :exec "source" . "~/.vim/sessions/" . substitute(expand("%:p:h"), "/", "_", "g") . ".vim"<CR>
 "	arrow keys for easier navigation of long lines
 nnoremap <Up> gk
 nnoremap <Down> gj
