@@ -166,7 +166,7 @@ set wrap
 "	wrapped lines keep the same indent
 set breakindent
 "	character to display for long lines that wrap across the terminal
-set showbreak=>\ 
+let &showbreak="> "
 "	show all options in footer
 set wildmenu
 "	recursive searching
