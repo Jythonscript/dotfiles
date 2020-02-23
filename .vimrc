@@ -96,6 +96,9 @@ noremap <leader>fi :set foldmethod=indent<CR>
 noremap <leader>fm :set foldmethod=manual<CR>
 noremap <leader>fs :set foldmethod=syntax<CR>
 noremap <leader>fw :set foldmethod<CR>
+"	writing mode toggling
+noremap <leader>wr :call Write()<CR>
+noremap <leader>wn :call NoWrite()<CR>
 "	arrow keys for easier navigation of long lines
 nnoremap <Up> gk
 nnoremap <Down> gj
@@ -206,3 +209,26 @@ syntax enable
 set background=dark
 "	custom colorscheme
 colorscheme mydelek
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"	Functions
+
+"	enable writing mode-specific shortcuts
+function! Write()
+	Goyo
+	let &showbreak=""
+	nnoremap j gj
+	nnoremap k gk
+	nnoremap gj j
+	nnoremap gk k
+endfunction
+
+"	disable writing mode-specific shortcuts
+function! NoWrite()
+	Goyo!
+	let &showbreak="> "
+	nnoremap j j
+	nnoremap k k
+	nnoremap gj gj
+	nnoremap gk gk
+endfunction
