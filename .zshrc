@@ -258,7 +258,7 @@ export SAVEHIST=100000
 alias l="ls -lAh"
 #Prevents accidental running of ghostscript command
 alias gs="git status"
-alias se="sudoedit"
+alias se="sudo -e"
 alias igrep="grep -i"
 alias isv='if [[ $VIMRUNTIME != "" ]]; then; echo "Vim session found"; else; echo "No Vim session found"; fi;'
 alias bgd="bg && disown"
