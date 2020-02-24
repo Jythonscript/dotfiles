@@ -224,6 +224,12 @@ function! Write()
 	nnoremap k gk
 	nnoremap gj j
 	nnoremap gk k
+
+	nnoremap $ g$
+	nnoremap ^ g^
+	nnoremap g$ $
+	nnoremap g^ ^
+	set breakindent!
 endfunction
 
 "	disable writing mode-specific shortcuts
@@ -234,4 +240,10 @@ function! NoWrite()
 	nnoremap k k
 	nnoremap gj gj
 	nnoremap gk gk
+
+	nnoremap $ $
+	nnoremap ^ ^
+	nnoremap g$ g$
+	nnoremap g^ g^
+	set breakindent
 endfunction
