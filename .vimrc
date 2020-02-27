@@ -101,7 +101,7 @@ noremap <leader>wr :call Write()<CR>
 noremap <leader>wn :call NoWrite()<CR>
 "	session creating and loading
 nnoremap <leader>sn :exec "mks!" . "~/.vim/sessions/" . substitute(expand("%:p:h"), "/", "_", "g") . ".vim"<CR>
-nnoremap <leader>sl :exec "source" . "~/.vim/sessions/" . substitute(expand("%:p:h"), "/", "_", "g") . ".vim"<CR>
+nnoremap <leader>sl :exec "source" . "~/.vim/sessions/" . substitute(expand("%:p:h"), "/", "_", "g") . ".vim"<CR> | colo mydelek
 "	arrow keys for easier navigation of long lines
 nnoremap <Up> gk
 nnoremap <Down> gj
@@ -219,6 +219,7 @@ colorscheme mydelek
 "	enable writing mode-specific shortcuts
 function! Write()
 	Goyo
+	colo seoul8
 	let &showbreak=""
 	nnoremap j gj
 	nnoremap k gk
@@ -229,12 +230,13 @@ function! Write()
 	nnoremap ^ g^
 	nnoremap g$ $
 	nnoremap g^ ^
-	set breakindent!
+	set breakindent| set breakindent!
 endfunction
 
 "	disable writing mode-specific shortcuts
 function! NoWrite()
 	Goyo!
+	colo mydelek
 	let &showbreak="> "
 	nnoremap j j
 	nnoremap k k
