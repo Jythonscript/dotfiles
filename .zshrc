@@ -254,6 +254,9 @@ export SAVEHIST=100000
 #[ -n "$XTERM_VERSION" ] && transset --id "$WINDOWID" >/dev/null
 # spawning a terminal with awesome keeps directory
 
+# profiling for shell benchmarks
+zmodload zsh/zprof
+
 #	Aliases
 alias l="ls -lAh"
 #Prevents accidental running of ghostscript command
@@ -270,6 +273,7 @@ alias de="disown && exit"
 alias truestudio="/opt/truestudio/ide/TrueSTUDIO"
 alias R="R --quiet"
 alias tdir='mkdir $(date "+%Y-%m-%d") && ls'
+alias b='time zsh -i -c "exit"'
 
 # ZLE keybindings
 bindkey "" backward-kill-word
@@ -279,8 +283,7 @@ bindkey -s " " " "
 #used in awesomewm open terminal in same directory script
 mkdir -p /run/user/$(id --user)/urxvtc_ids/
 echo $$ > /run/user/$(id --user)/urxvtc_ids/$WINDOWID
-#Custom paths
-export PATH="$PATH:/home/avery/usr/local/bin"
 #Disable ctrl+s freeze terminal
 stty -ixon
-compinit
+#Custom paths
+export PATH="$PATH:/home/avery/usr/local/bin"
