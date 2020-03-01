@@ -1,3 +1,5 @@
+set nocompatible
+
 "	Plugins list
 
 "	(.vim) 		Index Search:		https://www.vim.org/scripts/script.php?script_id=1682 
@@ -208,6 +210,7 @@ command Q :q
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "	Color Options
+syntax on
 syntax enable
 set background=dark
 "	custom colorscheme
