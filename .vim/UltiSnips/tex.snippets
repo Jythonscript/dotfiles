@@ -79,8 +79,9 @@ endsnippet
 
 snippet adm "Align Math" bA
 \\begin{align*}
-	$0
+	$1
 \\end{align*}
+$0
 endsnippet
 
 snippet im "Math" w
@@ -112,6 +113,11 @@ endsnippet
 context "math()"
 snippet == "Align Equals" iA
 &=$0
+endsnippet
+
+context "math()"
+snippet oname "Operator name" iA
+\\operatorname{$1}$0
 endsnippet
 
 context "math()"
@@ -173,12 +179,27 @@ _
 endsnippet
 
 context "math()"
+snippet ps "Plus" iA
++ 
+endsnippet
+
+context "math()"
+snippet ms "Minus" iA
+-
+endsnippet
+
+context "math()"
+snippet eq "Equals" iA
+=
+endsnippet
+
+context "math()"
 snippet sd "Squared" iA
 ^2
 endsnippet
 
 context "math()"
-snippet cbd "Cubed" iA
+snippet cb "Cubed" iA
 ^3
 endsnippet
 
@@ -300,7 +321,7 @@ endsnippet
 ## Special characters
 context "math()"
 priority 101
-snippet '(?<!\\)(pi|mu|theta|omega)' "Special characters" rwA
+snippet '(?<!\\)(pi|mu|theta|omega|pm|mp)' "Special characters" rwA
 \\`!p snip.rv = match.group(1) + " "`
 endsnippet
 
