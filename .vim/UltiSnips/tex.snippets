@@ -126,7 +126,7 @@ snippet ~ "Tilde" i
 endsnippet
 
 context "math()"
-snippet R "Real number" i
+snippet Rn "Real number" i
 \\mathbb{R} 
 endsnippet
 
@@ -179,8 +179,8 @@ _
 endsnippet
 
 context "math()"
-snippet ps "Plus" iA
-+ 
+snippet "([^\\])ps" "Plus" irA
+`!p snip.rv = match.group(1) + "+ "`
 endsnippet
 
 context "math()"
