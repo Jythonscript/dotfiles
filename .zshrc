@@ -265,7 +265,7 @@ alias se="sudo -e"
 alias igrep="grep -i"
 alias isv='if [[ $VIMRUNTIME != "" ]]; then; echo "Vim session found"; else; echo "No Vim session found"; fi;'
 alias bgd="bg && disown"
-alias ds="find . -maxdepth 1 -exec du -sh '{}' \; | sort -h | grep -vP '^[^\s]+\s\.$'"
+alias ds="du -sh ./{*,.*} | sort -h"
 alias j="jump"
 alias za="zathura"
 alias v="vim"
