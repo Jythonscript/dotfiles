@@ -95,6 +95,8 @@ noremap <leader>e :e<CR>
 noremap <leader>s :setlocal spell!<CR>
 noremap <leader>ss :setlocal spell<CR>
 noremap <leader>S :setlocal spell<bar>setlocal spell!<CR>
+"	toggle hybrid numbers
+noremap <leader>n :set relativenumber! <bar> set number!<Enter>
 "	single fold toggling
 noremap <leader>z za
 "	foldmethod changing
