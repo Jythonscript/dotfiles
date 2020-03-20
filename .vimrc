@@ -47,7 +47,7 @@ let g:ale_lint_on_text_changed = 0
 let g:ale_lint_on_enter = 0
 let g:ale_lint_on_insert_leave=0
 let g:ale_lint_on_save = 1
-let g:ale_enabled=1
+let g:ale_enabled=0
 "	vimtex
 noremap <leader>v :VimtexCompile<CR>
 let g:vimtex_view_general_viewer = 'zathura'
