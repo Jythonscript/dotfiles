@@ -40,9 +40,13 @@ noremap <leader>r :Rg<CR>
 noremap <leader>f :Files<CR>
 noremap <leader>b :Buffers<CR>
 "	ALE
-noremap <leader>a :ALEToggle<CR>
+noremap <leader>a :ALELint<CR>
 noremap <leader>A :ALEDisable<CR>
 noremap <leader>aa :ALEEnable<CR>
+let g:ale_lint_on_text_changed = 0
+let g:ale_lint_on_enter = 0
+let g:ale_lint_on_insert_leave=0
+let g:ale_lint_on_save = 1
 let g:ale_enabled=0
 "	vimtex
 noremap <leader>v :VimtexCompile<CR>
@@ -91,6 +95,8 @@ noremap <leader>e :e<CR>
 noremap <leader>s :setlocal spell!<CR>
 noremap <leader>ss :setlocal spell<CR>
 noremap <leader>S :setlocal spell<bar>setlocal spell!<CR>
+"	toggle hybrid numbers
+noremap <leader>n :set relativenumber! <bar> set number!<Enter>
 "	single fold toggling
 noremap <leader>z za
 "	foldmethod changing
