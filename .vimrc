@@ -183,6 +183,8 @@ set path+=**
 set linebreak
 "	show inputs
 set showcmd
+"	make folding character a box-drawing character so it is solid
+set fillchars=fold:─,vert:\|
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "	Commands
