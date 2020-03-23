@@ -246,6 +246,11 @@ function notes() {
     vim +30 +VimtexCompile ./notes.tex
 }
 
+#open todo
+function to() {
+	vim ~/.vimwiki/wiki/TODO.wiki +0
+}
+
 #	Environment
 export EDITOR=vim
 export VISUAL=vim
