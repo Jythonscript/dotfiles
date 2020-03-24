@@ -247,7 +247,7 @@ function notes() {
 }
 
 #open todo
-function to() {
+function td() {
 	vim ~/.vimwiki/wiki/TODO.wiki +0
 }
 
