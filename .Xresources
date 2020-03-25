@@ -29,12 +29,12 @@ URxvt*foreground: rgb:FF/FF/FF
 
 !! DarkGreen + Green
 !*color2:  #93d44f
-*color2:  #99ff33
+URxvt*color2:  #99ff33
 !*color10: #c8e7a8
 
 !! DarkYellow + Yellow
 !*color3:  #eab93d
-*color11: #ffc123
+URxvt*color11: #ffc123
 
 !! DarkBlue + Blue
 !*color4:  #204a87
