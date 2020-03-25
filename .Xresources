@@ -72,3 +72,4 @@ st.background: #000000
 st.foregroud: #ffffff
 st.opacity: 178.5
 st.bellvolume: 0
+URxvt*print-pipe: cat > /tmp/urxvt_screen

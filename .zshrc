@@ -251,6 +251,16 @@ function td() {
 	vim ~/.vimwiki/wiki/TODO.wiki +0
 }
 
+#open the current terminal buffer in vim
+function vb() {
+    local print_file="/tmp/urxvt_screen"
+    xdotool key --window $WINDOWID ctrl+Print
+    vim "+normal G" $print_file
+    zle reset-prompt
+}
+zle -N vimbuffer
+bindkey '^P' vimbuffer
+
 #	Environment
 export EDITOR=vim
 export VISUAL=vim
