@@ -258,8 +258,6 @@ function vb() {
 	vim "+normal G" $print_file </dev/tty
 	zle redisplay
 }
-zle -N vimbuffer
-bindkey '^P' vimbuffer
 
 #	Environment
 export EDITOR=vim
@@ -291,6 +289,8 @@ alias tdir='mkdir $(date "+%Y-%m-%d") && ls'
 alias b='time zsh -i -c "exit"'
 
 # ZLE keybindings
+zle -N vb
+bindkey '^P' vb
 bindkey "" backward-kill-word
 bindkey -s " " " "
 
