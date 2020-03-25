@@ -253,10 +253,10 @@ function td() {
 
 #open the current terminal buffer in vim
 function vb() {
-    local print_file="/tmp/urxvt_screen"
-    xdotool key --window $WINDOWID ctrl+Print
-    vim "+normal G" $print_file
-    zle reset-prompt
+	local print_file="/tmp/urxvt_screen"
+	xdotool key --window $WINDOWID ctrl+Print
+	vim "+normal G" $print_file </dev/tty
+	zle redisplay
 }
 zle -N vimbuffer
 bindkey '^P' vimbuffer
