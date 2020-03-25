@@ -72,4 +72,22 @@ st.background: #000000
 st.foregroud: #ffffff
 st.opacity: 178.5
 st.bellvolume: 0
+
+st.color0:     #000000
+st.color1:     #e59400
+st.color2:     #00cc00
+st.color3:     #00cc00
+st.color4:     #005500
+st.color5:     #e59400
+st.color6:     #00cc00
+st.color7:     #00cc00
+st.color8:     #000000
+st.color9:     #e59400
+st.color10:    #e59400
+st.color11:    #e59400
+st.color12:    #005500
+st.color13:    #e59400
+st.color14:    #e59400
+st.color15:    #00cc00
+
 URxvt*print-pipe: cat > /tmp/urxvt_screen
