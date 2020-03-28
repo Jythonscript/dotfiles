@@ -252,11 +252,33 @@ function td() {
 }
 
 #open the current terminal buffer in vim
-function vb() {
-	local print_file="/tmp/urxvt_screen"
-	xdotool key --window $WINDOWID ctrl+Print
-	vim "+normal G" $print_file </dev/tty
-	zle redisplay
+function vimbuffer() {
+	# Paste scrollback to print_file. Terminal specific.
+    xdotool key --window $WINDOWID ctrl+Print
+    local print_file="/tmp/urxvt_screen"
+    local written_file="/tmp/urxvt_buffer.sh"
+    local prompt_string="$(print -P "$PS1" | sed 's/\x1b\[[0-9;]*m//g')"
+
+    # Remove trailing newlines
+    printf '%s\n' "$(cat "$print_file")" > "$written_file"
+    # Remove last lines of buffer
+    tail -n $(tac "$written_file" | grep -nm1 "$prompt_string" | cut -d : -f 1) \
+        "$written_file" | wc -c | xargs -I {} truncate "$written_file" -s -{}
+
+    local scrollback_line_length=$(( $(wc -l < "$written_file") + 1 ))
+    echo "$prompt_string$PREBUFFER$BUFFER" >> "$written_file"
+
+    local byte_offset=$(( ${#PREBUFFER//$'\n'/} + ${#LBUFFER//$'\n'/} + \
+        $(printf "%s" "$prompt_string" | wc -m) ))
+    vim "+${scrollback_line_length}" "+normal ${byte_offset} " -- \
+        "$written_file" </dev/tty
+
+    print -Rz - "$(tail -n $(tac "$written_file" | grep -nm1 "$prompt_string" \
+        | cut -d : -f 1) "$written_file" | tail -c +$(( $(printf "%s" \
+        "$prompt_string" | wc -c) + 1 )))"
+
+    rm "$written_file"
+    zle send-break
 }
 
 #	Environment
@@ -289,8 +311,8 @@ alias tdir='mkdir $(date "+%Y-%m-%d") && ls'
 alias b='time zsh -i -c "exit"'
 
 # ZLE keybindings
-zle -N vb
-bindkey '^P' vb
+zle -N vimbuffer
+bindkey '^P' vimbuffer
 bindkey "" backward-kill-word
 bindkey -s " " " "
 
