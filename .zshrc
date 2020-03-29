@@ -246,6 +246,14 @@ function notes() {
     vim +30 +VimtexCompile ./notes.tex
 }
 
+#search pdf notes
+function notesearch() {
+	if [ $# -gt 0 ]
+	then
+		pdfgrep -ri $* --color "always" | sort -h
+	fi
+}
+
 #open todo
 function td() {
 	vim ~/.vimwiki/wiki/TODO.wiki +0
