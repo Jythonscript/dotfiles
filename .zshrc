@@ -289,6 +289,10 @@ function vimbuffer() {
     zle send-break
 }
 
+function manpdf() {
+	zathura <(man -Tpdf $*) & disown
+}
+
 #	Environment
 export EDITOR=vim
 export VISUAL=vim
