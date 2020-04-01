@@ -128,6 +128,8 @@ noremap - :set hlsearch! hlsearch?<CR>
 noremap <C-s> <Esc>:w<bar>sh<Enter>
 "	spell fix shortcut
 inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
+"	Alt+w save in insert mode
+inoremap w <C-o>:w<CR>
 "	search for currently selected text in visual mode
 vnoremap // y/\V<C-r>=escape(@",'/\')<CR><CR>
 "	easier split shortcut access in terminals
