@@ -97,8 +97,6 @@ noremap <leader>ss :setlocal spell<CR>
 noremap <leader>S :setlocal spell<bar>setlocal spell!<CR>
 "	toggle hybrid numbers
 noremap <leader>n :set relativenumber! <bar> set number!<Enter>
-"	single fold toggling
-noremap <leader>z za
 "	foldmethod changing
 noremap <leader>fi :set foldmethod=indent<CR>
 noremap <leader>fm :set foldmethod=manual<CR>
@@ -119,7 +117,7 @@ inoremap <Down> <C-o>gj
 noremap! <C-BS> <C-w>
 noremap! <C-h> <C-w>
 "	toggle folding
-noremap <space> zA
+noremap <space> za
 "	toggle relative number
 noremap + :set relativenumber! <bar> set number!<Enter>
 "	toggle highlightsearch
@@ -151,6 +149,10 @@ filetype indent on
 "	automatically save and load views
 autocmd BufWinLeave *.* mkview
 autocmd BufWinEnter *.* silent loadview
+"	language-specific foldnestmax
+autocmd BufWinEnter,BufNewFile,BufRead *.java exec "set foldnestmax=2"
+autocmd BufWinEnter,BufNewFile,BufRead *.c exec "set foldnestmax=1"
+"	tab preferences
 set shiftwidth=4
 set tabstop=4
 "	7 line lookahead when scrolling
