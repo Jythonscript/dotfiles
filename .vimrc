@@ -84,7 +84,7 @@ noremap <leader>w :w<CR>
 "	quit without saving
 noremap <leader>q :q<CR>
 "	quit with saving
-noremap <leader>z ZZ
+noremap <leader>x ZZ
 "	easier clipboard access
 noremap <leader>y "+y
 noremap <leader>p "+p
