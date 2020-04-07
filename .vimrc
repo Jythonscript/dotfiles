@@ -24,6 +24,7 @@ Plug 'https://github.com/vimwiki/vimwiki'
 Plug 'https://github.com/tpope/vim-commentary'
 Plug 'https://github.com/tpope/vim-surround'
 Plug 'https://github.com/tpope/vim-repeat'
+Plug 'https://github.com/Konfekt/FastFold'
 "Plug 'terryma/vim-multiple-cursors'
 "Plug 'honza/vim-snippets'
 
@@ -65,6 +66,8 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsSnippetDirectories = ['~/.vim/UltiSnips', 'UltiSnips']
+"	fastfold
+let g:fastfold_minlines=0
 "	Commentary
 autocmd FileType c setlocal commentstring="// %s"
 "	Netrw
