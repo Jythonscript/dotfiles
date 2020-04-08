@@ -243,7 +243,7 @@ function notes() {
     cp ~/.vim/templates/notes.tex ./
     sed -i "s/DATE/$(date "+%B %d, %Y")/g" ./notes.tex
 	sed -i "s/TITLE/Lecture Notes/g" notes.tex
-    vim +30 +VimtexCompile ./notes.tex
+    vim +'$-2' +VimtexCompile ./notes.tex
 }
 
 #search pdf notes
