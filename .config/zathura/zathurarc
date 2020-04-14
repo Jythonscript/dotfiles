@@ -1,5 +1,5 @@
 set statusbar-home-tilde true
-set recolor
+#set recolor
 set recolor-lightcolor "#000102"
 set default-bg "#000102"
 set statusbar-bg "#000102"
