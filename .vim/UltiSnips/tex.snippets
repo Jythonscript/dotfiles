@@ -84,6 +84,13 @@ snippet adm "Align Math" bA
 $0
 endsnippet
 
+snippet fladm "Force left align math" bA
+\\begin{flalign*}
+	$1
+\\end{flalign*}
+$0
+endsnippet
+
 snippet im "Math" w
 \$$1\$$0
 endsnippet
@@ -156,6 +163,12 @@ snippet dint "integral" wA
 \\int_{${1:-\infty}}^{${2:\infty}} ${0:${VISUAL}}
 endsnippet
 
+priority 300
+context "math()"
+snippet iint "double integral" iA
+\\iint 
+endsnippet
+
 priority 100
 context "math()"
 snippet '(?<!\\)(sin|cos|sec|tan|arccot|cot|csc|ln|log|exp|star|perp|Delta|delta|phi|Phi|rho)' "ln" rwA
@@ -186,11 +199,6 @@ endsnippet
 context "math()"
 snippet ms "Minus" iA
 - 
-endsnippet
-
-context "math()"
-snippet eq "Equals" iA
-=
 endsnippet
 
 context "math()"
@@ -286,6 +294,16 @@ endsnippet
 context "math()"
 snippet -> "rightarrow" iA
 \\rightarrow 
+endsnippet
+
+context "math()"
+snippet mbb "Math blackboard" iA
+\\mathbb{$1}$0
+endsnippet
+
+context "math()"
+snippet in "in" i
+\\in
 endsnippet
 
 ## Postfix and prefix
@@ -384,6 +402,11 @@ endsnippet
 context "math()"
 snippet vd "vdots" iA
 \\vdots 
+endsnippet
+
+context "math()"
+snippet obr "overbrace" wA
+\\overbrace{${1:${VISUAL}}}^{\\text{$2}} $0
 endsnippet
 
 ## Graphics
