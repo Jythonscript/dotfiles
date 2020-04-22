@@ -52,6 +52,7 @@ let g:ale_enabled=0
 "	vimtex
 noremap <leader>v :VimtexCompile<CR>
 let g:vimtex_view_general_viewer = 'zathura'
+let g:vimtex_view_general_options = '@pdf 2>/dev/null'
 let g:tex_flavor='latex'
 let g:vimtex_quickfix_enabled = 0
 let g:vimtex_mappings_enabled = 0
@@ -212,7 +213,7 @@ command DOS e ++ff=dos
 "	UNIX editing mode
 command UNIX e ++ff=unix
 " open PDFs in zathura
-command ZATHURA silent exe "!echo " . shellescape(expand("%")) . " | grep -oP '^[^\.]+' | xargs -I{} zathura '{}'.pdf &disown" | redraw!
+command ZATHURA silent exe "!echo " . shellescape(expand("%")) . " | grep -oP '^[^\.]+' | xargs -I{} zathura '{}'.pdf 2>/dev/null &disown" | redraw!
 "	open LaTeX default file
 command LATEX execute '!cp ~/.vim/templates/notes.tex .' | e notes.tex
 "	command for easier vertical terminals
