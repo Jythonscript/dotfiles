@@ -106,6 +106,8 @@ noremap <leader>fi :set foldmethod=indent<CR>
 noremap <leader>fm :set foldmethod=manual<CR>
 noremap <leader>fs :set foldmethod=syntax<CR>
 noremap <leader>fw :set foldmethod<CR>
+"	fold nest changing
+noremap <leader>fn :call PromptNest()<CR>
 "	writing mode toggling
 noremap <leader>wr :call Write()<CR>
 noremap <leader>wn :call NoWrite()<CR>
@@ -156,6 +158,9 @@ autocmd BufWinEnter *.* silent loadview
 "	language-specific foldnestmax
 autocmd BufWinEnter,BufNewFile,BufRead *.java exec "set foldnestmax=2"
 autocmd BufWinEnter,BufNewFile,BufRead *.c exec "set foldnestmax=1"
+autocmd BufWinEnter,BufNewFile,BufRead *.cpp exec "set foldnestmax=1"
+autocmd BufWinEnter,BufNewFile,BufRead *.h exec "set foldnestmax=1"
+autocmd BufWinEnter,BufNewFile,BufRead *.hpp exec "set foldnestmax=1"
 "	tab preferences
 set shiftwidth=4
 set tabstop=4
@@ -267,4 +272,16 @@ function! NoWrite()
 	nnoremap g$ g$
 	nnoremap g^ g^
 	set breakindent
+endfunction
+
+"	ask the user for a new nesting value
+function! PromptNest()
+	call inputsave()
+	let value = input('Enter a nest value: ')
+	call inputrestore()
+	if value ==# ""
+		echo "value not set"
+	else
+		execute "set foldnestmax=" . value
+	endif
 endfunction
