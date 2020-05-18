@@ -14,6 +14,7 @@ playlist_separate_albums = "yes"
 
 empty_tag_color = "blue"
 progressbar_elapsed_color = "magenta"
+progressbar_look = "──"
 statusbar_color = "blue"
 song_columns_list_format = "(30)[magenta]{bE} (30)[blue]{t|f:Title} (15)[magenta]{aE} (5f)[magenta]{l}"
 block_search_constraints_change_if_items_found = "no"
