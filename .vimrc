@@ -114,6 +114,9 @@ noremap <leader>wn :call NoWrite()<CR>
 "	session creating and loading
 nnoremap <leader>sn :exec "mks!" . "~/.vim/sessions/" . substitute(expand("%:p:h"), "/", "_", "g") . ".vim"<CR>
 nnoremap <leader>sl :exec "source" . "~/.vim/sessions/" . substitute(expand("%:p:h"), "/", "_", "g") . ".vim"<CR> | colo mydelek
+"	toggle line wrapping
+noremap <leader>sr :set wrap<CR>
+noremap <leader>srr :set wrap!<CR>
 "	arrow keys for easier navigation of long lines
 nnoremap <Up> gk
 nnoremap <Down> gj
@@ -190,7 +193,7 @@ set splitright
 set splitbelow
 "	wrap lines instead of going off-screen
 set wrap
-"	wrapped lines keep the same indent
+"	wrapped lines keep the same indent as the original line
 set breakindent
 "	character to display for long lines that wrap across the terminal
 let &showbreak="> "
