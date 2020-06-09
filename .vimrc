@@ -54,7 +54,7 @@ noremap <leader>v :VimtexCompile<CR>
 let g:vimtex_view_general_viewer = 'zathura'
 let g:vimtex_view_general_options = '@pdf 2>/dev/null'
 let g:tex_flavor='latex'
-let g:vimtex_quickfix_enabled = 0
+let g:vimtex_quickfix_mode = 0
 let g:vimtex_mappings_enabled = 0
 "	vimwiki
 filetype plugin on
