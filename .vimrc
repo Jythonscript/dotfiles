@@ -199,6 +199,8 @@ set breakindent
 let &showbreak="> "
 "	show all options in footer
 set wildmenu
+"	ignore case for filename completion
+set wildignorecase
 "	recursive searching
 set path+=**
 "	show full words on their own line
