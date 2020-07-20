@@ -299,6 +299,27 @@ function vim_session_char() {
 	fi
 }
 
+# credit to annoyatron255 for this function
+function shaders() {
+    SHADER_PATH="$HOME/git/compton-shaders/"
+    if [ $# -eq 0 ]
+    then
+        SHADER="$(find $SHADER_PATH -type f -iname "*.glsl" | fzf --delimiter / --with-nth -1 | head -n 1)"
+    else
+        SHADER="$(find $SHADER_PATH -type f -iname "*.glsl" | fzf -f "$*" | head -n 1)"
+    fi
+
+    if [[ -n "$SHADER" || $! -eq "0" ]]
+    then
+        killall picom
+        while killall -0 picom
+        do
+            sleep 1
+        done
+        picom -b --backend glx --force-win-blend --use-damage --glx-fshader-win "$(cat "$SHADER")"
+    fi
+}
+
 #	Environment
 export EDITOR=vim
 export VISUAL=vim
