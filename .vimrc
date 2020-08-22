@@ -155,9 +155,11 @@ imap <4-MiddleMouse> <Nop>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "	Settings
 filetype indent on
-"	automatically save and load views
-autocmd BufWinLeave *.* mkview
-autocmd BufWinEnter *.* silent loadview
+"	automatically save and load views when not in diff mode
+if !&diff
+	autocmd BufWinLeave *.* mkview
+	autocmd BufWinEnter *.* silent loadview
+endif
 "	language-specific foldnestmax
 autocmd BufWinEnter,BufNewFile,BufRead *.java exec "set foldnestmax=2"
 autocmd BufWinEnter,BufNewFile,BufRead *.c exec "set foldnestmax=1"
