@@ -1,0 +1,15 @@
+[user]
+	email = bartnik314@gmail.com
+	name = Jythonscript
+[credential]
+	helper = cache
+[pull]
+	rebase = false
+[diff]
+	tool = vimdiff
+[merge]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[alias]
+	dt = difftool
