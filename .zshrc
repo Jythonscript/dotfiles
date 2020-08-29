@@ -293,9 +293,11 @@ function manpdf() {
 	zathura <(man -Tpdf $*) & disown
 }
 
-function vim_session_char() {
+function vim_session_color() {
 	if [[ $VIMRUNTIME != "" ]]; then
-		printf "$fg[blue]*$reset_color "
+		print -P "%F{51}"
+	else
+		printf "\$fg[red]"
 	fi
 }
 
@@ -364,4 +366,4 @@ echo $$ > /run/user/$(id --user)/urxvtc_ids/$WINDOWID
 stty -ixon
 #Custom paths
 export PATH="$PATH:/home/avery/usr/local/bin"
-export PROMPT="$(vim_session_char)$PROMPT"
+export PROMPT="${PROMPT//\$fg\[red\]/$(vim_session_color)}"
