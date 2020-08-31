@@ -322,6 +322,11 @@ function shaders() {
     fi
 }
 
+# optical character recognition function
+function ocr() {
+	tesseract =(import png:-) - 2> /dev/null | xclip -selection clipboard 1>&- 2>&-
+}
+
 #	Environment
 export EDITOR=vim
 export VISUAL=vim
