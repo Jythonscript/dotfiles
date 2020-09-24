@@ -194,6 +194,12 @@ function chpwd() {
     ls
 }
 
+# print ^C
+TRAPINT() {
+  print -n "^C"
+  return $(( 128 + $1 ))
+}
+
 function n() {
 	ncmpcpp
 }
