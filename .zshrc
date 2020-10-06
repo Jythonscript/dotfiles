@@ -194,6 +194,10 @@ function chpwd() {
     ls
 }
 
+function pdf-merge() {
+	env gs -sDEVICE=pdfwrite -sOutputFile=$1 -dNOPAUSE -dBATCH -q ${@:2}
+}
+
 # print ^C
 TRAPINT() {
   print -n "^C"
