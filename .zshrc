@@ -243,8 +243,14 @@ function sym() {
 #set up notes environment
 function notes() {
     DATE="$(date "+%Y-%m-%d")"
-    FOLDER="$DATE"
+
+	if [ $# -gt 0 ]; then
+		FOLDER="$1"
+	else
+		FOLDER="$DATE"
+	fi
     index=0
+
     while [ -d "$FOLDER" ]; do
         printf -v FOLDER -- '%s_%01d' "$DATE" "$((++index))"
     done
