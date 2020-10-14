@@ -2,7 +2,7 @@
 
 %packages
 \usepackage{listings}
-\usepackage[letterpaper, margin=1in, tmargin=0.15in]{geometry}
+\usepackage[letterpaper, margin=1in, tmargin=1in]{geometry}
 \usepackage{sectsty}
 \usepackage{amsmath}
 \usepackage{mathtools}
@@ -19,8 +19,16 @@
 %\usepackage[utf8]{inputenc}
 %\usepackage[T1]{fontenc}
 \usepackage{xcolor}
+\usepackage{mathrsfs}
+\usepackage{titling}
+\usepackage{titlesec}
 
-%formatting
+
+\setlength{\parindent}{0pt}
+\setlength{\droptitle}{-60pt}
+\posttitle{\par\end{center}}
+
+%lstlisting
 \lstset{basicstyle=\footnotesize\ttfamily,breaklines=true}
 
 %title
