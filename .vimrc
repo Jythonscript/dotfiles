@@ -193,6 +193,8 @@ set report=0
 "	make splits work like my awesomewm setup
 set splitright
 set splitbelow
+"	automatically new lines to same as current line
+set autoindent
 "	wrap lines instead of going off-screen
 set wrap
 "	wrapped lines keep the same indent as the original line
