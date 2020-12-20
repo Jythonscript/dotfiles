@@ -35,6 +35,11 @@ snippet sssn "Subsubsection*" b
 $0
 endsnippet
 
+snippet bsk "Bigskip" bA
+\\bigskip
+$0
+endsnippet
+
 # Text
 snippet bf "Boldface" w
 \\textbf{$1}$0
@@ -46,6 +51,10 @@ endsnippet
 
 snippet ul "Underline" w
 \\underline{$1}$0
+endsnippet
+
+snippet np "Newpage"
+\\newpage
 endsnippet
 
 # Math
@@ -128,7 +137,7 @@ snippet == "Align Equals" iA
 endsnippet
 
 context "math()"
-snippet oname "Operator name" iA
+snippet ona "Operator name" iA
 \\operatorname{$1}$0
 endsnippet
 
@@ -324,8 +333,13 @@ snippet seq "Subset equal" wA
 endsnippet
 
 context "math()"
-snippet in "in" i
-\\in
+snippet in "in" w
+\\in 
+endsnippet
+
+context "math()"
+snippet lim "Limit" w
+\\lim_{${1:n \\rightarrow \infty}} $0
 endsnippet
 
 ## Postfix and prefix
