@@ -372,6 +372,8 @@ alias R="R --quiet"
 alias tdir='mkdir $(date "+%Y-%m-%d") && ls'
 alias b='time zsh -i -c "exit"'
 alias feh="feh --scale-down --auto-zoom --auto-rotate --image-bg \"#000102\""
+alias ffprobe='ffprobe -hide_banner'
+alias ffmpeg='ffmpeg -hide_banner'
 
 # ZLE keybindings
 zle -N vimbuffer
