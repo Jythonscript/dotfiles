@@ -170,7 +170,7 @@ autocmd BufWinEnter,BufNewFile,BufRead *.hpp exec "set foldnestmax=1"
 set shiftwidth=4
 set tabstop=4
 "	7 line lookahead when scrolling
-set so=7
+set so=3
 "	enables scroll support
 set mouse=a
 "	number sidebars
