@@ -259,7 +259,7 @@ function notes() {
     cp ~/.vim/templates/notes.tex ./
     sed -i "s/DATE/$(date "+%B %d, %Y")/g" ./notes.tex
 	sed -i "s/TITLE/Lecture Notes/g" notes.tex
-    vim +'$-2' +VimtexCompile ./notes.tex
+    nvim +'$-2' +VimtexCompile ./notes.tex
 }
 
 #search pdf notes
@@ -365,7 +365,8 @@ alias bgd="bg && disown"
 alias ds="find . -maxdepth 1 -exec du -sh '{}' \; | sort -h | grep -vP '^[^\s]+\s\.$'"
 alias j="jump"
 alias za="zathura"
-alias v="vim"
+alias v="nvim"
+alias vim="echo bad && sleep 1 && nvim"
 alias de="disown && exit"
 alias truestudio="/opt/truestudio/ide/TrueSTUDIO"
 alias R="R --quiet"
