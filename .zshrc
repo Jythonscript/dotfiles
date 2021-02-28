@@ -375,12 +375,14 @@ alias b='time zsh -i -c "exit"'
 alias feh="feh --scale-down --auto-zoom --auto-rotate --image-bg \"#000102\""
 alias ffprobe='ffprobe -hide_banner'
 alias ffmpeg='ffmpeg -hide_banner'
+alias isbotdown='telnet cs-paladin.cs.umn.edu 8080'
 
 # ZLE keybindings
 zle -N vimbuffer
 bindkey '^P' vimbuffer
 bindkey "" backward-kill-word
 bindkey -s " " " "
+bindkey -r "^[l"
 
 #	Other
 #used in awesomewm open terminal in same directory script
