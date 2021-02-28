@@ -242,24 +242,49 @@ function sym() {
 
 #set up notes environment
 function notes() {
-    DATE="$(date "+%Y-%m-%d")"
-
-	if [ $# -gt 0 ]; then
-		FOLDER="$1"
-	else
+	if [ $# -eq 0 ]
+	then
+		DATE="$(date "+%Y-%m-%d")"
 		FOLDER="$DATE"
+		FILENAME="notes.tex"
+	else
+		FOLDER="$*"
+		FILENAME="$*.tex"
 	fi
-    index=0
-
-    while [ -d "$FOLDER" ]; do
-        printf -v FOLDER -- '%s_%01d' "$DATE" "$((++index))"
-    done
-    mkdir $FOLDER
-    cd $FOLDER
-    cp ~/.vim/templates/notes.tex ./
-    sed -i "s/DATE/$(date "+%B %d, %Y")/g" ./notes.tex
-	sed -i "s/TITLE/Lecture Notes/g" notes.tex
-    nvim +'$-2' +VimtexCompile ./notes.tex
+	index=0
+	while [ -d "$FOLDER" ]; do
+		printf -v FOLDER -- '%s_%01d' "$FOLDER" "$((++index))"
+	done
+	mkdir $FOLDER
+	cd $FOLDER
+	cp ~/.vim/templates/notes.tex "./$FILENAME"
+	sed -i "s/DATE/$(date "+%B %-d, %Y")/g" "./$FILENAME"
+	SUBJECT=$(basename "$(dirname "$(dirname "$(pwd)")")" | sed -e "s/\([a-zA-Z]\)\([0-9]\)/\1 \2/g")
+	SUBJECT=${SUBJECT:u}
+	TYPE=$(basename "$(dirname "$(pwd)")")
+	TYPE=${TYPE:u}
+	case $TYPE in
+		HOMEWORK)
+			TYPE="Homework $(basename "$(pwd)" | sed "s/[^0-9]//g")"
+			;;
+		NOTE*)
+			TYPE="Notes"
+			;;
+		LAB*)
+			TYPE="Lab $(basename "$(pwd)" | sed "s/[^0-9]//g")"
+			;;
+		QUIZ*)
+			TYPE="Quiz $(basename "$(pwd)" | sed "s/[^0-9]//g")"
+			;;
+		EXAM*)
+			TYPE="Exam $(basename "$(pwd)" | sed "s/[^0-9]//g")"
+			;;
+		*)
+			TYPE=${(C)TYPE}
+			;;
+	esac
+	sed -i "s/TITLE/$SUBJECT $TYPE/g" "./$FILENAME"
+	nvim +'$-2' +VimtexCompile "./$FILENAME"
 }
 
 #search pdf notes
