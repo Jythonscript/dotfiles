@@ -344,8 +344,8 @@ function ocr() {
 }
 
 #	Environment
-export EDITOR=vim
-export VISUAL=vim
+export EDITOR=nvim
+export VISUAL=nvim
 export PAGER=less
 export SAVEHIST=100000
 #[ -n "$XTERM_VERSION" ] && transset --id "$WINDOWID" >/dev/null
