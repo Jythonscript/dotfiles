@@ -73,7 +73,7 @@ def comment():
 
 def env(name):
     [x,y] = vim.eval("vimtex#env#is_inside('" + name + "')")
-    return x != '0' and x != '0'
+    return x != '0' and y != '0'
 
 endglobal
 
@@ -150,7 +150,7 @@ endsnippet
 
 context "math()"
 snippet Rn "Real number" i
-\\mathbb{R} 
+\\mathbb{R} ^{$1} $0
 endsnippet
 
 context "math()"
@@ -283,6 +283,13 @@ while True:
 	i-=1
 snip.rv = stripped[0:i] + "\\frac{" + stripped[i+1:-1] + "}"
 `{$1}$0
+endsnippet
+
+context "math()"
+snippet "<(.*)>" "Inline vector" wr
+`!p
+snip.rv = f"\\langle {match.group(1)} \\rangle"
+`
 endsnippet
 
 context "math()"
