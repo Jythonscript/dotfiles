@@ -288,7 +288,7 @@ endsnippet
 context "math()"
 snippet "<(.*)>" "Inline vector" wr
 `!p
-snip.rv = f"\\langle {match.group(1)} \\rangle"
+snip.rv = f"\\langle {match.group(1)} \\rangle "
 `
 endsnippet
 
@@ -468,14 +468,13 @@ endsnippet
 ## Graphics
 snippet table "Table" w
 \\begin{table}[H]
-	\\begin{center}
-		\\begin{tabular}{c|c}
-			\\textbf{${1:Var x}} & \\textbf{${2:Var y}} \\\\
-			${3:Units x} & ${4:Units y} \\\\
-			\\hline
-			${5:data 1} & ${0:data 2}
-		\\end{tabular}
-	\\end{center}
+	\\centering
+	\\begin{tabular}{c|c}
+		\\textbf{${1:Var x}} & \\textbf{${2:Var y}} \\\\
+		${3:Units x} & ${4:Units y} \\\\
+		\\hline
+		${5:data 1} & ${0:data 2}
+	\\end{tabular}
 \\end{table}
 endsnippet
 
