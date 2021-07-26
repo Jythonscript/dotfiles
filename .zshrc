@@ -373,6 +373,8 @@ export EDITOR=nvim
 export VISUAL=nvim
 export PAGER=less
 export SAVEHIST=100000
+export FZF_TMUX_HEIGHT='15%'
+export FZF_CTRL_R_OPTS='--min-height=5'
 #[ -n "$XTERM_VERSION" ] && transset --id "$WINDOWID" >/dev/null
 # spawning a terminal with awesome keeps directory
 
