@@ -244,7 +244,11 @@ syntax on
 syntax enable
 set background=dark
 "	custom colorscheme
-colorscheme mydelek
+if &diff
+	colorscheme allomancer
+else
+	colorscheme mydelek
+endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "	Functions
