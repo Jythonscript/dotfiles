@@ -125,8 +125,8 @@ inoremap <Down> <C-o>gj
 "	delete previous word
 noremap! <C-BS> <C-w>
 noremap! <C-h> <C-w>
-"	toggle folding
-noremap <space> za
+"	switch between split panes
+noremap <space> <C-w>
 "	toggle relative number
 noremap + :set relativenumber! <bar> set number!<Enter>
 "	toggle highlightsearch
