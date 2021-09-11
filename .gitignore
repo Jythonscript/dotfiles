@@ -5,3 +5,6 @@
 *.swp
 .ipython/*
 !.ipython/ipython_config.py
+.config/nvim/plugin/
+.config/nvim/sessions/*
+.config/nvim/.netrwhist
