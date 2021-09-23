@@ -423,4 +423,4 @@ stty -ixon
 export PATH="$PATH:/home/avery/usr/local/bin"
 export PROMPT="${PROMPT//\$fg\[red\]/$(vim_session_color)}"
 
-source .extra.zsh
+source ~/.extra.zsh
