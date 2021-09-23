@@ -13,3 +13,5 @@
 	prompt = false
 [alias]
 	dt = difftool
+[core]
+	editor = nvim

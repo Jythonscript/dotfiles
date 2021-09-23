@@ -60,6 +60,8 @@ let g:vimtex_compiler_latexmk = {
 \   '-shell-escape',
 \ ],
 \}
+"	Instant
+let g:instant_username = "Jythonscript"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "   Custom bindings

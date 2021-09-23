@@ -135,6 +135,8 @@ set linebreak
 set showcmd
 "	make folding character a box-drawing character so it is solid
 set fillchars=fold:─,vert:│
+"	use system clipboard by default
+set clipboard=unnamedplus
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "	Commands

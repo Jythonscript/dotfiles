@@ -1,5 +1,7 @@
---vim.cmd [[packadd packer.nvim]]
+vim.cmd('packadd packer.nvim')
+local use = require('packer').use
 
+vim.cmd([[autocmd BufWritePost plugins.lua source <afile> | PackerSync]])
 return require('packer').startup(function()
 	use 'wbthomason/packer.nvim'
 
@@ -13,8 +15,6 @@ return require('packer').startup(function()
 	use 'chrisduerr/vim-undead'
 
 	-- Programming
-	use 'junegunn/fzf.vim'
-	use 'dense-analysis/ale'
 	use 'SirVer/ultisnips'
 	use 'lervag/vimtex'
 	use 'vimwiki/vimwiki'
@@ -22,5 +22,20 @@ return require('packer').startup(function()
 	use 'tpope/vim-surround'
 	use 'tpope/vim-repeat'
 	use 'Konfekt/FastFold'
-	use 'neovim/nvim-lspconfig'
+	use {
+		'neovim/nvim-lspconfig',
+		config = function ()
+			require 'config.lsp'
+		end,
+	}
+	use {
+		'nvim-telescope/telescope.nvim',
+		requires = { {'nvim-lua/plenary.nvim'} },
+		config = function ()
+			require 'config.telescope'
+		end,
+	}
+	use 'jbyuki/instant.nvim'
+	use 'nvim-treesitter/nvim-treesitter'
+
 end)
