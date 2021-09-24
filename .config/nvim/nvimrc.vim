@@ -1,6 +1,9 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "	Plugin bindings
 
+"	custom leader
+let mapleader = ","
+
 "	FZF
 noremap <leader>r :Rg<CR>
 noremap <leader>f :Files<CR>
