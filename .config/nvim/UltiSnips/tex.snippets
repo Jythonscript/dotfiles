@@ -132,6 +132,13 @@ snippet enum "enumerate" bA
 \\end{enumerate}
 endsnippet
 
+snippet mult "multicolumn" bA
+\\begin{multicols}{${1:2}}
+	\noindent
+	$0
+\\end{multicols}
+endsnippet
+
 ## Operations and Equations
 context "math()"
 snippet == "Align Equals" iA
@@ -205,7 +212,7 @@ endsnippet
 
 context "math()"
 snippet sqrt "Square root" iA
-\\sqrt{$1}$0
+\\sqrt{${1:${VISUAL}}}$0
 endsnippet
 
 context "math()"
@@ -469,6 +476,7 @@ endsnippet
 snippet table "Table" w
 \\begin{table}[H]
 	\\centering
+	\\caption{}
 	\\begin{tabular}{c|c}
 		\\textbf{${1:Var x}} & \\textbf{${2:Var y}} \\\\
 		${3:Units x} & ${4:Units y} \\\\
