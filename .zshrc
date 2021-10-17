@@ -410,7 +410,7 @@ alias feh="feh --scale-down --auto-zoom --auto-rotate --image-bg \"#000102\""
 alias ffprobe='ffprobe -hide_banner'
 alias ffmpeg='ffmpeg -hide_banner'
 alias lsofstat='lsof | tail -n "+2" | grep -oP "^[^\s]+" | sort | uniq -c | sort -n'
-alias bat='bat -pp'
+alias bat='bat -p'
 alias histo='sort | uniq -c | sort -n'
 
 # ZLE keybindings
@@ -430,6 +430,6 @@ fi
 stty -ixon
 #Custom paths
 export PATH="$PATH:/home/avery/usr/local/bin"
-export PROMPT="${PROMPT//\$fg\[red\]/$(vim_session_color)}"
+#export PROMPT="${PROMPT//\$fg\[red\]/$(vim_session_color)}"
 
 source ~/.extra.zsh
