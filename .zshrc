@@ -409,6 +409,8 @@ alias feh="feh --scale-down --auto-zoom --auto-rotate --image-bg \"#000102\""
 alias ffprobe='ffprobe -hide_banner'
 alias ffmpeg='ffmpeg -hide_banner'
 alias lsofstat='lsof | tail -n "+2" | grep -oP "^[^\s]+" | sort | uniq -c | sort -n'
+alias bat='bat -pp'
+alias histo='sort | uniq -c | sort -n'
 
 # ZLE keybindings
 zle -N vimbuffer
