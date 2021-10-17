@@ -258,6 +258,7 @@ function notes() {
 	mkdir $FOLDER
 	cd $FOLDER
 	cp ~/.vim/templates/notes.tex "./$FILENAME"
+	cp ~/.vim/templates/latexmkrc .
 	sed -i "s/DATE/$(date "+%B %-d, %Y")/g" "./$FILENAME"
 	SUBJECT=$(basename "$(dirname "$(dirname "$(pwd)")")" | sed -e "s/\([a-zA-Z]\)\([0-9]\)/\1 \2/g")
 	SUBJECT=${SUBJECT:u}
