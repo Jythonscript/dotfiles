@@ -186,6 +186,11 @@ snippet dint "integral" wA
 \\int_{${1:-\infty}}^{${2:\infty}} ${0:${VISUAL}}
 endsnippet
 
+context "math()"
+snippet sum "sum" wA
+\\sum_{$1}^{${2:\infty}} $0
+endsnippet
+
 priority 300
 context "math()"
 snippet iint "double integral" iA
@@ -460,6 +465,11 @@ endsnippet
 context "math()"
 snippet cd "cdots" iA
 \\cdots 
+endsnippet
+
+context "math()"
+snippet ld "ldots" iA
+\\ldots 
 endsnippet
 
 context "math()"
