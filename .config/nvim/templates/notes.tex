@@ -1,6 +1,7 @@
 \documentclass[12pt]{article}
 
 %packages
+\usepackage{pythontex}
 \usepackage{listings}
 \usepackage[letterpaper, margin=1in, tmargin=1in]{geometry}
 \usepackage{sectsty}
@@ -22,11 +23,30 @@
 \usepackage{mathrsfs}
 \usepackage{titling}
 \usepackage{titlesec}
-
+\usepackage{minted}
+%\usepackage[lining,scaled=0.9]{FiraMono}
+\usepackage{tikz}
+\usepackage{pgfplots}
 
 \setlength{\parindent}{0pt}
+\setlength{\parskip}{2ex}
 \setlength{\droptitle}{-60pt}
 \posttitle{\par\end{center}}
+
+\setminted{
+	frame=lines,
+	autogobble,
+	framesep=2mm,
+	fontsize=\footnotesize,
+	linenos,
+	numbersep=6pt,
+	tabsize=4,
+	breaklines
+}
+
+\begin{pycode}
+1+1
+\end{pycode}
 
 %lstlisting
 \lstset{basicstyle=\footnotesize\ttfamily,breaklines=true}
