@@ -37,5 +37,10 @@ return require('packer').startup(function()
 	}
 	use 'jbyuki/instant.nvim'
 	use 'nvim-treesitter/nvim-treesitter'
+	use {
+		'nvim-telescope/telescope-fzf-native.nvim',
+		run = 'make'
+	}
+	use 'junegunn/fzf.vim'
 
 end)
