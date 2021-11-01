@@ -8,3 +8,5 @@
 .config/nvim/plugin/
 .config/nvim/sessions/*
 .config/nvim/.netrwhist
+.config/nvim/spell/en.utf-8.add
+.config/nvim/spell/en.utf-8.add.spl
