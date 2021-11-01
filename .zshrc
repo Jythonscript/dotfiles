@@ -221,7 +221,7 @@ function tx() {
 	then
 		echo -e "\\\\begin{align*}\n\t\n\\\\end{align*}" > $LATEX_DIR/latex_input.tex
 	fi
-	vim +2 +"call vimtex#syntax#p#amsmath#load()" $LATEX_DIR/latex_input.tex
+	nvim +2 $LATEX_DIR/latex_input.tex
 	echo -E "${$(<$HOME/.vim/templates/shortdoc.tex)//CONTENTS/$(<$LATEX_DIR/latex_input.tex)}" > $LATEX_DIR/latex.tex
 	( cd $LATEX_DIR ; pdflatex $LATEX_DIR/latex.tex )
 	pdfcrop --margins 12 $LATEX_DIR/latex.pdf $LATEX_DIR/latex.pdf
@@ -412,6 +412,7 @@ alias ffmpeg='ffmpeg -hide_banner'
 alias lsofstat='lsof | tail -n "+2" | grep -oP "^[^\s]+" | sort | uniq -c | sort -n'
 alias bat='bat -p'
 alias histo='sort | uniq -c | sort -n'
+alias makevars='make -pn | grep -A1 "^# makefile"| grep -v "^#\|^--" | sort | uniq'
 
 # ZLE keybindings
 zle -N vimbuffer
