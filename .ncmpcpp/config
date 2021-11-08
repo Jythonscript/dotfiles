@@ -8,31 +8,31 @@ mpd_music_dir = "/home/avery/Music"
 
 mouse_list_scroll_whole_page = "no" 
 lines_scrolled = "3"
-user_interface = "alternative"
+user_interface = "classic"
 playlist_separate_albums = "yes"
 
-empty_tag_color = "blue"
-progressbar_elapsed_color = "magenta"
+empty_tag_color = "white"
+progressbar_elapsed_color = "red"
 progressbar_look = "──"
-statusbar_color = "blue"
-song_columns_list_format = "(30)[magenta]{bE} (30)[blue]{t|f:Title} (15)[magenta]{aE} (5f)[magenta]{l}"
+statusbar_color = "white"
+song_columns_list_format = "(30)[red]{bE} (30)[white]{t|f:Title} (15)[red]{aE} (5f)[red]{l}"
 block_search_constraints_change_if_items_found = "no"
 centered_cursor = "yes"
 
 discard_colors_if_item_is_selected = "yes"
-header_window_color = "cyan"
-volume_color = "cyan"
+header_window_color = "white"
+volume_color = "white"
 state_line_color = "red"
-state_flags_color = "blue"
-main_window_color = "magenta"
+state_flags_color = "white"
+main_window_color = "red"
 color1 = "default"
 color2 = "default"
-current_item_prefix = "$(cyan)$r"
+current_item_prefix = "$(white)$r"
 current_item_suffix = "$/r$(end)"
 
 #color1 = "black"
 #browser_display_mode = "columns"
-#song_columns_list_format = (20)[]{a} (6f)[green]{NE} (50)[white]{t|f:Title} (20)[cyan]{b} (7f)[magenta]{l}
+#song_columns_list_format = (20)[]{a} (6f)[green]{NE} (50)[white]{t|f:Title} (20)[white]{b} (7f)[red]{l}
 #song_window_title_format = {%n - }{%t}|{%f}
 #song_library_format = {%n - }{%t}|{%f}
 #song_status_format = "$2%a $7• $4%t $7• $3%b {}$7• $5%y$7"
