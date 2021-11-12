@@ -212,6 +212,10 @@ function t() {
 	zsh
 }
 
+function q() {
+	qalc
+}
+
 #latex popup
 #credit to annoyatron255 for this function
 function tx() {
