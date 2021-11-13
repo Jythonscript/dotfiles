@@ -425,6 +425,10 @@ bindkey "" backward-kill-word
 bindkey -s " " " "
 bindkey -r "^[l"
 
+# ZSH styles
+zstyle ':completion:*:git-add:*:descriptions' format '%F{yellow}-- %d --%f'
+zstyle ':completion:*:git-add:*' group-name ''
+
 #	Other
 #used in awesomewm open terminal in same directory script
 if [ -n "$WINDOWID" ]; then
