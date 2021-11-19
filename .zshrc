@@ -417,6 +417,8 @@ alias lsofstat='lsof | tail -n "+2" | grep -oP "^[^\s]+" | sort | uniq -c | sort
 alias bat='bat -p'
 alias histo='sort | uniq -c | sort -n'
 alias makevars='make -pn | grep -A1 "^# makefile"| grep -v "^#\|^--" | sort | uniq'
+alias ns='notesearch'
+alias ff='firefox'
 
 # ZLE keybindings
 zle -N vimbuffer
