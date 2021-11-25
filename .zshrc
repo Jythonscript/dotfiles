@@ -419,6 +419,7 @@ alias histo='sort | uniq -c | sort -n'
 alias makevars='make -pn | grep -A1 "^# makefile"| grep -v "^#\|^--" | sort | uniq'
 alias ns='notesearch'
 alias ff='firefox'
+alias venv='python3 -m venv'
 
 # ZLE keybindings
 zle -N vimbuffer
