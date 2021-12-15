@@ -383,7 +383,8 @@ function vsync() {
 export EDITOR=nvim
 export VISUAL=nvim
 export PAGER=less
-export SAVEHIST=100000
+export HISTSIZE=1000000000
+export SAVEHIST=$HISTSIZE
 export FZF_TMUX_HEIGHT='15%'
 export FZF_CTRL_R_OPTS='--min-height=5'
 #[ -n "$XTERM_VERSION" ] && transset --id "$WINDOWID" >/dev/null
