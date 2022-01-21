@@ -42,19 +42,19 @@ endsnippet
 
 # Text
 snippet bf "Boldface" w
-\\textbf{$1}$0
+\\textbf{${1:${VISUAL}}}$0
 endsnippet
 
 snippet it "Italicize" w
-\\textit{$1}$0
+\\textit{${1:${VISUAL}}}$0
 endsnippet
 
 snippet ul "Underline" w
-\\underline{$1}$0
+\\underline{${1:${VISUAL}}}$0
 endsnippet
 
 snippet ttt "text-teletype"
-\\texttt{$1}$0
+\\texttt{${1:${VISUAL}}}$0
 endsnippet
 
 snippet np "Newpage"
@@ -125,6 +125,7 @@ snippet item "itemize" bA
 \\begin{itemize}
 	\\item $0
 \\end{itemize}
+$1
 endsnippet
 
 snippet enum "enumerate" bA
