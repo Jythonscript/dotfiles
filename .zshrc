@@ -61,7 +61,7 @@ ZSH_THEME="daveverwer"
 plugins=(
   git
   history
-  z
+  #z
   zsh-syntax-highlighting
   jump
   timer
@@ -422,6 +422,7 @@ alias makevars='make -pn | grep -A1 "^# makefile"| grep -v "^#\|^--" | sort | un
 alias ns='notesearch'
 alias ff='firefox'
 alias venv='python3 -m venv'
+alias rstudio='rstudio-bin'
 
 # ZLE keybindings
 zle -N vimbuffer
