@@ -241,7 +241,7 @@ function tx() {
 
 #ipython sympy environment
 function sym() {
-	ipython ~/.ipython_sympy.py -i --no-banner
+	ipython ~/.ipython_sympy.py -i --no-banner --no-confirm-exit
 }
 
 #set up notes environment
@@ -423,6 +423,7 @@ alias ns='notesearch'
 alias ff='firefox'
 alias venv='python3 -m venv'
 alias rstudio='rstudio-bin'
+alias ipython='ipython --no-confirm-exit'
 
 # ZLE keybindings
 zle -N vimbuffer
