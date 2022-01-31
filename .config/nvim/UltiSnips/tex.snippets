@@ -142,9 +142,16 @@ snippet mult "multicolumn" bA
 endsnippet
 
 ## Operations and Equations
+priority 100
 context "math()"
 snippet == "Align Equals" iA
 &=$0
+endsnippet
+
+priority 101
+context "math()"
+snippet &== "triple equals" iA
+\equiv $0
 endsnippet
 
 context "math()"
@@ -154,7 +161,7 @@ endsnippet
 
 context "math()"
 snippet ~ "Tilde" i
-\\sim 
+\\sim $0
 endsnippet
 
 context "math()"
@@ -216,13 +223,13 @@ endsnippet
 priority 300
 context "math()"
 snippet iint "double integral" iA
-\\iint 
+\\iint $0
 endsnippet
 
 priority 400
 context "math()"
 snippet iiint "triple integral" iA
-\\iiint 
+\\iiint $0
 endsnippet
 
 priority 100
@@ -238,18 +245,23 @@ snippet '(?<!\\)(arcsin|arccos|arctan|arccot|arccsc|arcsec|pi|zeta|int|oint)' "F
 endsnippet
 
 context "math()"
+snippet mod "modulus" wA
+\\bmod $0
+endsnippet
+
+context "math()"
 snippet lt "Logical not" wA
-\\lnot 
+\\lnot $0
 endsnippet
 
 context "math()"
 snippet lr "Logical or" wA
-\\lor 
+\\lor $0
 endsnippet
 
 context "math()"
 snippet equiv "Equivalent" wA
-\\equiv 
+\\equiv $0
 endsnippet
 
 context "math()"
@@ -280,7 +292,7 @@ endsnippet
 
 context "math()"
 snippet ms "Minus" iA
-- 
+- $0
 endsnippet
 
 context "math()"
@@ -344,7 +356,7 @@ endsnippet
 context "math()"
 priority 100
 snippet "\[(.*)\]]" "Vector" wr
-`!p 
+`!p
 l = match.group(1).split(",")
 snip.rv = "\\begin{bmatrix*}"
 snip >> 1
@@ -358,7 +370,7 @@ endsnippet
 context "math()"
 priority 90
 snippet "\[(.*)\]" "Matrix" wr
-`!p 
+`!p
 rows = match.group(1).split(",,") #row separator
 snip.rv = "\\begin{bmatrix*}"
 snip >> 1
@@ -382,12 +394,12 @@ endsnippet
 
 context "math()"
 snippet -> "rightarrow" iA
-\\rightarrow 
+\\rightarrow $0
 endsnippet
 
 context "math()"
 snippet => "proof implication" iA
-\\Rightarrow 
+\\Rightarrow $0
 endsnippet
 
 context "math()"
@@ -397,12 +409,12 @@ endsnippet
 
 context "math()"
 snippet seq "Subset equal" wA
-\\subseteq 
+\\subseteq $0
 endsnippet
 
 context "math()"
 snippet in "in" w
-\\in 
+\\in $0
 endsnippet
 
 context "math()"
@@ -414,7 +426,7 @@ endsnippet
 context "math()"
 snippet "(\\?\w+)(,\.|\.,)" "Vector postfix" riA
 \\vec{`!p snip.rv=match.group(1)`}
-endsnippet 
+endsnippet
 
 context "math()"
 priority 10
@@ -450,22 +462,22 @@ endsnippet
 priority 101
 context "math()"
 snippet '(?<!\\)(eps)' "epsilon" riA
-\\varepsilon 
+\\varepsilon $0
 endsnippet
 
 context "math()"
 snippet '(?<!\\)(Eps)' "Epsilon" riA
-\\mathcal{E} 
+\\mathcal{E} $0
 endsnippet
 
 context "math()"
 snippet '(?<!\\)(part)' "Partial derivative" riA
-\\partial 
+\\partial $0
 endsnippet
 
 context "math()"
 snippet '(\(|\[|\\{)' "Big grouping characters" ri
-\\left`!p snip.rv=match.group(0)` $1 \\right`!p 
+\\left`!p snip.rv=match.group(0)` $1 \\right`!p
 dict = {
 "(": ")",
 "[": "]",
@@ -491,7 +503,7 @@ endsnippet
 
 context "math()"
 snippet ~= "Approximate" iA
-\\approx 
+\\approx $0
 endsnippet
 
 context "math()"
@@ -501,17 +513,17 @@ endsnippet
 
 context "math()"
 snippet cd "cdots" iA
-\\cdots 
+\\cdots $0
 endsnippet
 
 context "math()"
 snippet ld "ldots" iA
-\\ldots 
+\\ldots $0
 endsnippet
 
 context "math()"
 snippet vd "vdots" iA
-\\vdots 
+\\vdots $0
 endsnippet
 
 context "math()"
