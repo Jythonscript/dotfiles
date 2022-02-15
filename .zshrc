@@ -397,7 +397,8 @@ zmodload zsh/zprof
 alias l="ls -lAh"
 #Prevents accidental running of ghostscript command
 alias gs="git status"
-alias gl="git pull --rebase"
+alias glr="git pull --rebase"
+alias gadp="git add -p"
 alias se="sudo -e"
 alias igrep="grep -i"
 alias isv='if [[ $VIMRUNTIME != "" ]]; then; echo "Vim session found"; else; echo "No Vim session found"; fi;'
