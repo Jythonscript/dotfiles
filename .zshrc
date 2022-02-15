@@ -424,6 +424,7 @@ alias ff='firefox'
 alias venv='python3 -m venv'
 alias rstudio='rstudio-bin'
 alias ipython='ipython --no-confirm-exit'
+alias op='xdg-open'
 
 # ZLE keybindings
 zle -N vimbuffer
