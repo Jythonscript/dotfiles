@@ -426,6 +426,7 @@ alias venv='python3 -m venv'
 alias rstudio='rstudio-bin'
 alias ipython='ipython --no-confirm-exit'
 alias op='xdg-open'
+alias rstudio='rstudio-bin --no-sandbox'
 
 # ZLE keybindings
 zle -N vimbuffer
