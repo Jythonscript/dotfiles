@@ -112,7 +112,7 @@ function t() {
 function q() {
 	if [ $# -gt 0 ]
 	then
-		qalc -t "$*" | tr -d '\n' | nohup xclip -selection clipboard
+		qalc -t "$*"
 	else
 		qalc
 	fi
