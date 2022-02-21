@@ -277,7 +277,7 @@ function vsync() {
 }
 
 function ff() {
-	firefox
+	firefox $*
 }
 
 #	Aliases
