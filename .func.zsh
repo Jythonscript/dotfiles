@@ -110,7 +110,12 @@ function t() {
 }
 
 function q() {
-	qalc
+	if [ $# -gt 0 ]
+	then
+		qalc -t "$*" | tr -d '\n' | nohup xclip -selection clipboard
+	else
+		qalc
+	fi
 }
 
 #latex popup
