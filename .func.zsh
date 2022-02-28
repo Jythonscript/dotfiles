@@ -89,7 +89,7 @@ function cheat() {
 # automatically run 'git status' if in a git repository
 function chpwd() {
     emulate -L zsh
-	if $(git rev-parse --is-inside-work-tree)
+	if $(git rev-parse --is-inside-work-tree 2>/dev/null)
 	then
 		git status
 	fi
