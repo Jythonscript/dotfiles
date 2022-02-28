@@ -85,10 +85,15 @@ function cheat() {
 	curl cheat.sh/$1
 }
 
-#automatically run 'ls' after every directory change
+# automatically run 'ls' after every directory change
+# automatically run 'git status' if in a git repository
 function chpwd() {
     emulate -L zsh
     ls
+	if [[ -d .git ]]
+	then
+		git status
+	fi
 }
 
 function pdf-merge() {
