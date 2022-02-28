@@ -89,11 +89,11 @@ function cheat() {
 # automatically run 'git status' if in a git repository
 function chpwd() {
     emulate -L zsh
-    ls
-	if [[ -d .git ]]
+	if $(git rev-parse --is-inside-work-tree)
 	then
 		git status
 	fi
+    ls
 }
 
 function pdf-merge() {
