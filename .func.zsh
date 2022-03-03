@@ -209,7 +209,7 @@ function notesearch() {
 
 #open todo
 function td() {
-	vim ~/.vimwiki/wiki/TODO.wiki +0
+	nvim ~/.vimwiki/wiki/TODO.wiki +0
 }
 
 #open the current terminal buffer in vim
