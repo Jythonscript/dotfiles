@@ -203,7 +203,7 @@ function notes() {
 function notesearch() {
 	if [ $# -gt 0 ]
 	then
-		pdfgrep -ri $* --color "always" --cache | sort -h
+		pdfgrep -Ri $* --color "always" --cache | sort -h
 	fi
 }
 
