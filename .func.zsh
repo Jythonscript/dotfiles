@@ -290,6 +290,10 @@ function ff() {
 	firefox $*
 }
 
+function clip() {
+	head -c -1 | xclip -selection clipboard
+}
+
 #	Aliases
 alias l="ls -lAh"
 #Prevents accidental running of ghostscript command
