@@ -42,5 +42,12 @@ return require('packer').startup(function()
 		run = 'make'
 	}
 	use 'junegunn/fzf.vim'
-
+	use {
+		'hrsh7th/nvim-cmp',
+		config = function ()
+			require 'config.nvim-cmp'
+		end,
+	}
+	use 'hrsh7th/cmp-nvim-lsp'
+	use 'quangnguyen30192/cmp-nvim-ultisnips'
 end)
