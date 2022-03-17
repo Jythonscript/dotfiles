@@ -286,6 +286,17 @@ function vsync() {
 	nvidia-auto-select @1920x1080 +1920+0 {ViewPortIn=1920x1080, ViewPortOut=1920x1080+0+0, ForceFullCompositionPipeline = $2}"
 }
 
+function gamer() {
+	if [ $# -eq 0 ]
+	then
+		vsync on off
+		pkill xcompmgr
+	else
+		vsync on on
+		xcompmgr &disown
+	fi
+}
+
 function ff() {
 	firefox $*
 }
