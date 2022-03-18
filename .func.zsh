@@ -305,6 +305,10 @@ function clip() {
 	head -c -1 | xclip -selection clipboard
 }
 
+function jpc() {
+	jupyter console --existing --ZMQTerminalInteractiveShell.banner= --ZMQTerminalInteractiveShell.image_handler=None --no-confirm-exit
+}
+
 #	Aliases
 alias l="ls -lAh"
 #Prevents accidental running of ghostscript command
