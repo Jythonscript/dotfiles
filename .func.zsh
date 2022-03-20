@@ -110,6 +110,10 @@ function n() {
 	ncmpcpp
 }
 
+function ncs() {
+	ncmpcpp --screen search_engine
+}
+
 function t() {
 	zsh
 }
