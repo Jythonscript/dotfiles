@@ -37,8 +37,6 @@ let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsSnippetDirectories = ['~/.config/nvim/UltiSnips', 'UltiSnips']
 "	fastfold
 let g:fastfold_minlines=0
-"	Commentary
-autocmd FileType c setlocal commentstring="// %s"
 "	Netrw
 "	disable banner
 let g:netrw_banner=0
