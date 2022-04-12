@@ -557,13 +557,19 @@ snippet table "Table" w
 \\begin{table}[H]
 	\\centering
 	\\caption{}
-	\\begin{tabular}{c|c}
-		\\textbf{${1:Var x}} & \\textbf{${2:Var y}} \\\\
-		${3:Units x} & ${4:Units y} \\\\
-		\\hline
-		${5:data 1} & ${0:data 2}
+	\\begin{tabular}{$1}
+		$0
 	\\end{tabular}
 \\end{table}
+endsnippet
+
+snippet tikz "Tikz" w
+\\begin{figure}[H]
+	\\centering
+	\\begin{tikzpicture}
+		$0
+	\\end{tikzpicture}
+\\end{figure}
 endsnippet
 
 snippet sym "sympy setup" bA
