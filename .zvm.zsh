@@ -12,6 +12,7 @@ function zvm_after_init() {
 	zvm_bindkey viins '^Q' push-line
 	zvm_bindkey viins '^H' backward-kill-word
 	zvm_bindkey viins '^[.' insert-last-word
+	zvm_bindkey viins '^[[Z' reverse-menu-complete
 }
 
 function zvm_after_lazy_keybindings() {
