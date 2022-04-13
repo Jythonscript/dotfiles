@@ -205,10 +205,7 @@ function notes() {
 
 #search pdf notes
 function notesearch() {
-	if [ $# -gt 0 ]
-	then
-		pdfgrep -Ri $* --color "always" --cache | sort -h
-	fi
+	rga $*
 }
 
 #open todo
@@ -244,6 +241,34 @@ function vimbuffer() {
 
     rm "$written_file"
     zle send-break
+}
+
+rga-fzf() {
+	RG_PREFIX="rga --files-with-matches"
+	local file
+	file="$(
+	FZF_DEFAULT_COMMAND="$RG_PREFIX '$1'" \
+		fzf --sort --preview="[[ ! -z {} ]] && rga --pretty --context 5 {q} {}" \
+		--phony -q "$1" \
+		--bind "change:reload:$RG_PREFIX {q}" \
+		--preview-window="70%:wrap"
+	)" &&
+	echo "opening $file" &&
+	xdg-open "$file"
+}
+
+rgai-fzf() {
+	RG_PREFIX="rga --files-with-matches --rga-adapters=+tesseract"
+	local file
+	file="$(
+	FZF_DEFAULT_COMMAND="$RG_PREFIX '$1'" \
+		fzf --sort --preview="[[ ! -z {} ]] && rga --rga-adapters=+tesseract --pretty --context 5 {q} {}" \
+		--phony -q "$1" \
+		--bind "change:reload:$RG_PREFIX {q}" \
+		--preview-window="70%:wrap"
+	)" &&
+	echo "opening $file" &&
+	xdg-open "$file"
 }
 
 function manpdf() {
@@ -347,4 +372,5 @@ alias ipython='ipython --no-confirm-exit'
 alias op='xdg-open'
 alias rstudio='rstudio-bin --no-sandbox'
 alias x='exit'
+alias rgai='rga --rga-adapters=+tesseract -j$(($(nproc) / 2))'
 alias .='cd .'
