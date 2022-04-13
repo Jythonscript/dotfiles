@@ -1,5 +1,9 @@
 ZVM_KEYTIMEOUT=0.04
 
+function my_exit() {
+	exit
+}
+
 function zvm_after_init() {
 	[ -f ~/.oh-my-zsh/plugins/fzf/fzf.plugin.zsh ] && source ~/.oh-my-zsh/plugins/fzf/fzf.plugin.zsh
 
@@ -11,4 +15,8 @@ function zvm_after_init() {
 }
 
 function zvm_after_lazy_keybindings() {
+	zvm_define_widget my_exit
+	zvm_bindkey vicmd 'ZZ' my_exit
+	zvm_bindkey vicmd 'ZQ' my_exit
+	zvm_bindkey vicmd ',q' my_exit
 }
