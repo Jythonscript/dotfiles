@@ -67,6 +67,7 @@ plugins=(
   timer
   colored-man-pages
   fzf
+  zsh-vi-mode
 )
 
 source $ZSH/oh-my-zsh.sh
