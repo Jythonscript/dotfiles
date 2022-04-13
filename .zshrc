@@ -58,6 +58,8 @@ ZSH_THEME="daveverwer"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+source ~/.zvm.zsh
+
 plugins=(
   git
   history
@@ -119,8 +121,8 @@ zmodload zsh/zprof
 # ZLE keybindings
 zle -N vimbuffer
 bindkey '^P' vimbuffer
-bindkey "" backward-kill-word
-bindkey -s " " " "
+bindkey "^H" backward-kill-word
+bindkey -s "^[ " " "
 bindkey -r "^[l"
 
 # ZSH styles
