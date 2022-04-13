@@ -20,4 +20,6 @@ function zvm_after_lazy_keybindings() {
 	zvm_bindkey vicmd 'ZZ' my_exit
 	zvm_bindkey vicmd 'ZQ' my_exit
 	zvm_bindkey vicmd ',q' my_exit
+	zvm_bindkey vicmd ',w' accept-line
+	zvm_bindkey vicmd ',v' edit-command-line
 }
