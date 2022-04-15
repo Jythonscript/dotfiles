@@ -34,3 +34,5 @@ font:
     family: "Fira Mono"
 
   size: 11.0
+
+ipc_socket: true
