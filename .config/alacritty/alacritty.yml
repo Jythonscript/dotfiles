@@ -39,3 +39,7 @@ font:
   size: 11.0
 
 ipc_socket: true
+
+key_bindings:
+  - { key: C, mods: Control|Alt, action: Copy }
+  - { key: V, mods: Control|Alt, action: Paste }
