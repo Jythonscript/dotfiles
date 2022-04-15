@@ -6,7 +6,7 @@ colors:
   normal:
     black: '#000000'
     red: '#cd0000'
-    green: '#00cd00'
+    green: '#99ff33'
     yellow: '#cdcd00'
     blue: '#4646ff'
     magenta: '#cd00cd'
@@ -22,6 +22,9 @@ colors:
     magenta: '#ff00ff'
     cyan: '#00ffff'
     white: '#ffffff'
+  
+  cursor:
+    cursor: '#07fff2'
 
 font:
   normal:
