@@ -43,6 +43,7 @@ ipc_socket: true
 key_bindings:
   - { key: C, mods: Control|Alt, action: Copy }
   - { key: V, mods: Control|Alt, action: Paste }
-  - { key: N, mods: Control, action: CreateNewWindow }
+  - { key: N, mods: Control|Shift, action: CreateNewWindow }
   - { key: 5, mode: Vi, mods: Shift, action: Last }
   - { key: 7, mode: Vi, mods: Shift, action: First }
+  - { key: Space, mods: Alt, action: ToggleViMode }
