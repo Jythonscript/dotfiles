@@ -60,8 +60,9 @@ endsnippet
 
 snippet mint "minted" w
 \\begin{minted}{$1}
-$0
+$1
 \\end{minted}
+$0
 endsnippet
 
 snippet np "Newpage"
@@ -127,7 +128,11 @@ snippet itx "Intertext" iA
 } $0
 endsnippet
 
-snippet item "itemize" bA
+snippet item "item" bA
+\\item $0
+endsnippet
+
+snippet bullet "bullet points" b
 \\begin{itemize}
 	\\item $1
 \\end{itemize}
@@ -138,7 +143,7 @@ snippet itm "item" bA
 \\item $0
 endsnippet
 
-snippet enum "enumerate" bA
+snippet nums "enumerate" b
 \\begin{enumerate}
 	\\item $1
 \\end{enumerate}
