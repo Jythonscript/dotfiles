@@ -131,10 +131,11 @@ zstyle ':completion:*:git-add:*' group-name ''
 
 #	Other
 #used in awesomewm open terminal in same directory script
-if [ -n "$WINDOWID" ]; then
-	mkdir -p /run/user/$(id --user)/urxvtc_ids/
-	echo $$ > /run/user/$(id --user)/urxvtc_ids/$WINDOWID
-fi
+# if [ -n "$WINDOWID" ]; then
+# 	mkdir -p /run/user/$(id --user)/urxvtc_ids/
+# 	echo $$ > /run/user/$(id --user)/urxvtc_ids/$WINDOWID
+# fi
+
 #Disable ctrl+s freeze terminal
 stty -ixon
 #Custom paths
