@@ -46,4 +46,6 @@ key_bindings:
   - { key: N, mods: Control|Shift, action: CreateNewWindow }
   - { key: 5, mode: Vi, mods: Shift, action: Last }
   - { key: 7, mode: Vi, mods: Shift, action: First }
+  - { key: D, mode: Vi, action: ScrollHalfPageDown }
+  - { key: D, mode: Vi, mods: Shift, action: ScrollHalfPageUp }
   - { key: Space, mods: Alt, action: ToggleViMode }
