@@ -40,6 +40,9 @@ font:
 
 ipc_socket: true
 
+window:
+  opacity: 0.98
+
 key_bindings:
   - { key: C, mods: Control|Alt, action: Copy }
   - { key: V, mods: Control|Alt, action: Paste }
