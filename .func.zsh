@@ -205,7 +205,7 @@ function notes() {
 
 #search pdf notes
 function notesearch() {
-	rga $*
+	rga --sort path "$*"
 }
 
 #open todo
