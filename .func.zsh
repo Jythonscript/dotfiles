@@ -150,6 +150,16 @@ function tx() {
 	fi
 }
 
+function ved() {
+	TMPFILE=$(mktemp)
+	if [[ $# -eq 0 ]]; then
+		xclip -out -selection clipboard > $TMPFILE
+	fi
+	nvim $TMPFILE
+	nohup xclip -in -selection clipboard -rmlastnl 1>&- 2>&- 0<&- < $TMPFILE
+	rm $TMPFILE
+}
+
 #ipython sympy environment
 function sym() {
 	ipython ~/.ipython_sympy.py -i --no-banner --no-confirm-exit
@@ -331,7 +341,7 @@ function ff() {
 }
 
 function clip() {
-	head -c -1 | xclip -selection clipboard
+	xclip -selection clipboard -rmlastnl
 }
 
 function jpc() {
