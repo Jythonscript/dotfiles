@@ -329,10 +329,10 @@ function gamer() {
 	if [ $# -eq 0 ]
 	then
 		vsync on off
-		pkill xcompmgr
+		pkill picom
 	else
 		vsync on on
-		xcompmgr &disown
+		picom &disown
 	fi
 }
 
