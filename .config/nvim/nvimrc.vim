@@ -65,6 +65,7 @@ let g:vimtex_compiler_latexmk = {
 let g:instant_username = "Jythonscript"
 "    Auto Pairs
 let g:AutoPairsFlyMode = 1
+let g:AutoPairsMapCh = 0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "   Custom bindings
