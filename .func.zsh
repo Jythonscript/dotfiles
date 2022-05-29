@@ -350,6 +350,7 @@ function jpc() {
 
 #	Aliases
 alias l="ls -lAh"
+alias lt="ls -lAthr"
 #Prevents accidental running of ghostscript command
 alias gs="git status"
 alias glr="git pull --rebase"
