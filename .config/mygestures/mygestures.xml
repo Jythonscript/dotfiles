@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mygestures>
+	<movement name="Down" value="D" />
+	<movement name="Up" value="U" />
+	<movement name="Up-Down" value="UD" />
+	<movement name="Down-Up" value="DU" />
+	<movement name="Circle" value="L?DRUL?" />
+	<movement name="Circle2" value="R?ULDR?" />
+
+	<context name="Firefox" windowclass="firefox" windowtitle=".*">
+		<gesture name="Toggle tree" movement="Down">
+			<do action="keypress" value="F1" />
+		</gesture>
+		<gesture name="New Tab" movement="Up">
+			<do action="keypress" value="Control_L+T" />
+		</gesture>
+		<gesture name="Close Tab" movement="Up-Down">
+			<do action="keypress" value="Control_L+W" />
+		</gesture>
+		<gesture name="Show Bookmarks" movement="Down-Up">
+			<do action="keypress" value="Control_L+B" />
+		</gesture>
+		<gesture name="Refresh" movement="Circle">
+			<do action="keypress" value="Control_L+R" />
+		</gesture>
+		<gesture name="Refresh" movement="Circle2">
+			<do action="keypress" value="Control_L+R" />
+		</gesture>
+	</context>
+</mygestures>
