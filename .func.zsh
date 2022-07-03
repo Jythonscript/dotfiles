@@ -330,9 +330,15 @@ function gamer() {
 	then
 		vsync on off
 		pkill picom
+		pgrep mygestures && pkill mygestures
 	else
 		vsync on on
 		picom &disown
+		pgrep mygestures
+		if [ $? -ne 0 ]
+		then
+			mygestures --device 'Virtual core pointer' --without-brush
+		fi
 	fi
 }
 
