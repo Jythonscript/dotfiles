@@ -354,6 +354,31 @@ function jpc() {
 	jupyter console --existing --ZMQTerminalInteractiveShell.banner= --ZMQTerminalInteractiveShell.image_handler=None --no-confirm-exit
 }
 
+function tw() {
+	CHANNELS="canteven msushi m1a2d3i4n5 wirtual shroud distortion2 gamesdonequick zfg1 az_axe waezone slipperynip maltemller blue_sr_ skurrypls moistcr1tikal maciejay btssmash armadaugs muty71"
+	if [ $# -gt 0 ]
+	then
+		case $1 in
+			http*)
+				CHANNEL=$(echo $1 | grep -oP "\w+$")
+				streamlink -p mpv --twitch-low-latency $1 best &
+				chromium --new-window "https://www.twitch.tv/popout/$CHANNEL/chat?popout="
+				;;
+			*)
+				streamlink -p mpv --twitch-low-latency "https://www.twitch.tv/$1" best &
+				chromium --new-window "https://www.twitch.tv/popout/$1/chat?popout="
+				;;
+		esac
+	else
+		CHANNEL=$(echo $CHANNELS | tr ' ' '\n' | parallel 'curl https://www.twitch.tv/{} 2>/dev/null | grep isLiveBroadcast > /dev/null && echo {}' | fzf)
+		if [ "$CHANNEL" = "" ]; then
+			echo "No channel selected"
+		else
+			tw $CHANNEL
+		fi
+	fi
+}
+
 #	Aliases
 alias l="ls -lAh"
 alias lt="ls -lAthr"
