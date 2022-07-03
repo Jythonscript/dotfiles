@@ -51,5 +51,4 @@ return require('packer').startup(function()
 	use 'hrsh7th/cmp-nvim-lsp'
 	use 'quangnguyen30192/cmp-nvim-ultisnips'
 	use 'tpope/vim-fugitive'
-	use 'jiangmiao/auto-pairs'
 end)
