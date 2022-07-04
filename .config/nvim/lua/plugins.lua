@@ -51,4 +51,10 @@ return require('packer').startup(function()
 	use 'hrsh7th/cmp-nvim-lsp'
 	use 'quangnguyen30192/cmp-nvim-ultisnips'
 	use 'tpope/vim-fugitive'
+	use {
+		'windwp/nvim-autopairs',
+		config = function ()
+			require 'config.autopairs'
+		end,
+	}
 end)
