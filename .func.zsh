@@ -355,26 +355,42 @@ function jpc() {
 }
 
 function tw() {
-	CHANNELS="canteven msushi m1a2d3i4n5 wirtual shroud distortion2 gamesdonequick zfg1 az_axe waezone slipperynip maltemller blue_sr_ skurrypls moistcr1tikal maciejay btssmash armadaugs muty71"
+	local CHANNELS="canteven msushi m1a2d3i4n5 wirtual shroud distortion2 gamesdonequick zfg1 az_axe waezone slipperynip maltemller blue_sr_ skurrypls moistcr1tikal maciejay btssmash armadaugs muty71"
 	if [ $# -gt 0 ]
 	then
 		case $1 in
 			http*)
-				CHANNEL=$(echo $1 | grep -oP "\w+$")
-				streamlink -p mpv --twitch-low-latency $1 best &
+				local CHANNEL=$(echo $1 | grep -oP "\w+$")
+				local TITLE
+				if [ $# -gt 1 ]; then
+					TITLE="$2"
+				else
+					TITLE=$(curl $1 | grep -oP '<[^<>]+property="og:description"[^<>]+>' | grep -oP 'content="\K([^"]+)')
+				fi
+				streamlink --player mpv --title $TITLE --twitch-low-latency $1 best &
 				chromium --new-window "https://www.twitch.tv/popout/$CHANNEL/chat?popout="
 				;;
 			*)
-				streamlink -p mpv --twitch-low-latency "https://www.twitch.tv/$1" best &
-				chromium --new-window "https://www.twitch.tv/popout/$1/chat?popout="
+				if [ $# -gt 1 ]; then
+					tw "https://www.twitch.tv/$1" $2
+				else
+					tw "https://www.twitch.tv/$1"
+				fi
 				;;
 		esac
 	else
-		CHANNEL=$(echo $CHANNELS | tr ' ' '\n' | parallel 'curl https://www.twitch.tv/{} 2>/dev/null | grep isLiveBroadcast > /dev/null && echo {}' | fzf)
+		local OUTPUT=$(echo $CHANNELS | tr ' ' '\n' | \
+			parallel 'OUT=$(curl https://www.twitch.tv/{} 2>/dev/null) \
+			&& echo $OUT | grep isLiveBroadcast > /dev/null \
+			&& TITLE=$(echo $OUT | grep -oP '"'"'<[^<>]+property="og:description"[^<>]+>'"'"' | \
+				grep -oP '"'"'content="\K([^"]+)'"'"') \
+			&& echo {} \\t $TITLE' | fzf)
+		local CHANNEL=$(echo $OUTPUT | grep -oP "^([\w]+)")
+		local TITLE=$(echo $OUTPUT | grep -oP "^[\w]+\s+\K(.*$)")
 		if [ "$CHANNEL" = "" ]; then
 			echo "No channel selected"
 		else
-			tw $CHANNEL
+			tw "$CHANNEL" "$TITLE"
 		fi
 	fi
 }
