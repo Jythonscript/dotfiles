@@ -384,7 +384,7 @@ function tw() {
 			&& echo $OUT | grep isLiveBroadcast > /dev/null \
 			&& TITLE=$(echo $OUT | grep -oP '"'"'<[^<>]+property="og:description"[^<>]+>'"'"' | \
 				grep -oP '"'"'content="\K([^"]+)'"'"') \
-			&& echo {} \\t $TITLE' | fzf)
+			&& printf "%-17s %s\n" {} $TITLE' | fzf)
 		local CHANNEL=$(echo $OUTPUT | grep -oP "^([\w]+)")
 		local TITLE=$(echo $OUTPUT | grep -oP "^[\w]+\s+\K(.*$)")
 		if [ "$CHANNEL" = "" ]; then
