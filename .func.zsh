@@ -355,7 +355,7 @@ function jpc() {
 }
 
 function tw() {
-	local CHANNELS="canteven msushi m1a2d3i4n5 wirtual shroud distortion2 gamesdonequick zfg1 az_axe waezone slipperynip maltemller blue_sr_ skurrypls moistcr1tikal maciejay btssmash armadaugs muty71"
+	local CHANNELS="canteven msushi m1a2d3i4n5 wirtual shroud distortion2 gamesdonequick zfg1 az_axe waezone slipperynip maltemller blue_sr_ skurrypls moistcr1tikal maciejay btssmash armadaugs muty71 zweek"
 	if [ $# -gt 0 ]
 	then
 		case $1 in
