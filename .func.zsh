@@ -355,7 +355,7 @@ function jpc() {
 }
 
 function tw() {
-	local CHANNELS="canteven msushi m1a2d3i4n5 wirtual shroud distortion2 gamesdonequick zfg1 az_axe waezone slipperynip maltemller blue_sr_ skurrypls moistcr1tikal maciejay btssmash armadaugs muty71 zweek"
+	local CHANNELS="canteven msushi m1a2d3i4n5 wirtual shroud distortion2 gamesdonequick zfg1 az_axe waezone slipperynip maltemller blue_sr_ skurrypls moistcr1tikal maciejay btssmash armadaugs muty71 zweek zach777 unity_b lilstressball klooger"
 	if [ $# -gt 0 ]
 	then
 		case $1 in
@@ -367,7 +367,7 @@ function tw() {
 				else
 					TITLE=$(curl $1 | grep -oP '<[^<>]+property="og:description"[^<>]+>' | grep -oP 'content="\K([^"]+)')
 				fi
-				streamlink --player mpv --title $TITLE --twitch-low-latency $1 best &
+				streamlink --player mpv --title "$TITLE" --twitch-low-latency $1 best &
 				chromium --new-window "https://www.twitch.tv/popout/$CHANNEL/chat?popout="
 				;;
 			*)
