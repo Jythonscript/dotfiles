@@ -139,7 +139,7 @@ zstyle ':completion:*:git-add:*' group-name ''
 #Disable ctrl+s freeze terminal
 stty -ixon
 #Custom paths
-export PATH="$PATH:/home/avery/usr/local/bin"
+export PATH="$PATH:/home/avery/usr/local/bin:/home/avery/.local/bin"
 #export PROMPT="${PROMPT//\$fg\[red\]/$(vim_session_color)}"
 
 source ~/.func.zsh
