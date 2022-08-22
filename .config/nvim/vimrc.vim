@@ -74,6 +74,9 @@ map  <3-MiddleMouse> <Nop>
 imap <3-MiddleMouse> <Nop>
 map  <4-MiddleMouse> <Nop>
 imap <4-MiddleMouse> <Nop>
+"	scroll screen left and right on long lines
+noremap ZH zH
+noremap ZL zL
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "	Settings
@@ -137,6 +140,8 @@ set showcmd
 set fillchars=fold:─,vert:│
 "	use system clipboard by default
 set clipboard=unnamedplus
+"	to make qmk configuration more readable
+autocmd BufWinEnter,BufNewFile,BufRead keymap.c exec "set nowrap"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "	Commands
