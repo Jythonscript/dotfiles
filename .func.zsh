@@ -355,7 +355,23 @@ function jpc() {
 }
 
 function tw() {
-	local CHANNELS="canteven msushi m1a2d3i4n5 wirtual shroud distortion2 gamesdonequick zfg1 az_axe waezone slipperynip maltemller blue_sr_ skurrypls moistcr1tikal maciejay btssmash armadaugs muty71 zweek zach777 unity_b lilstressball klooger"
+	local CHANNELS="canteven msushi m1a2d3i4n5 wirtual shroud distortion2 gamesdonequick zfg1 az_axe waezone slipperynip maltemller blue_sr_ skurrypls moistcr1tikal maciejay btssmash armadaugs muty71 zweek zach777 unity_b lilstressball klooger plup hungrybox"
+
+	local QUALITY="best"
+
+	while getopts ":q:" o; do
+		case "${o}" in
+			q)
+				QUALITY=$OPTARG
+				shift 2
+				;;
+			:)
+				echo "Error: -${OPTARG} requires an argument"
+				return
+				;;
+		esac
+	done
+
 	if [ $# -gt 0 ]
 	then
 		case $1 in
@@ -367,14 +383,15 @@ function tw() {
 				else
 					TITLE=$(curl $1 | grep -oP '<[^<>]+property="og:description"[^<>]+>' | grep -oP 'content="\K([^"]+)')
 				fi
-				streamlink --player mpv --title "$TITLE" --twitch-low-latency $1 best &
+				echo "Quality: $QUALITY"
+				streamlink --player mpv --title "$TITLE" --twitch-low-latency $1 $QUALITY &
 				chromium --new-window "https://www.twitch.tv/popout/$CHANNEL/chat?popout="
 				;;
 			*)
 				if [ $# -gt 1 ]; then
-					tw "https://www.twitch.tv/$1" $2
+					tw -q $QUALITY "https://www.twitch.tv/$1" $2
 				else
-					tw "https://www.twitch.tv/$1"
+					tw -q $QUALITY "https://www.twitch.tv/$1"
 				fi
 				;;
 		esac
@@ -390,7 +407,7 @@ function tw() {
 		if [ "$CHANNEL" = "" ]; then
 			echo "No channel selected"
 		else
-			tw "$CHANNEL" "$TITLE"
+			tw -q "$QUALITY" "$CHANNEL" "$TITLE"
 		fi
 	fi
 }
