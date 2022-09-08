@@ -412,6 +412,16 @@ function tw() {
 	fi
 }
 
+function dsc() {
+	if [ $# -gt 0 ]
+	then
+		local URL=$(echo $1 | sed -e "s/^https/discord/g")
+		discord --url -- $URL
+	else
+		discord
+	fi
+}
+
 #	Aliases
 alias l="ls -lAh"
 alias lt="ls -lAthr"
