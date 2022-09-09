@@ -19,11 +19,23 @@ let g:ale_lint_on_save = 1
 let g:ale_enabled=0
 "	vimtex
 noremap <leader>v :VimtexCompile<CR>
-let g:vimtex_view_general_viewer = 'zathura'
-let g:vimtex_view_general_options = '@pdf 2>/dev/null'
+noremap <leader>vv :VimtexView<CR>
+let g:vimtex_view_method='zathura'
 let g:tex_flavor='latex'
 let g:vimtex_quickfix_mode = 0
 let g:vimtex_mappings_enabled = 0
+let g:vimtex_view_forward_search_on_start = 0
+function! CloseViewers()
+	if executable('xdotool')
+				\ && exists('b:vimtex.viewer.xwin_id')
+				\ && b:vimtex.viewer.xwin_id > 0
+		call system('xdotool windowclose '. b:vimtex.viewer.xwin_id)
+	endif
+endfunction
+augroup vimtex_event_2
+	au!
+	au User VimtexEventQuit call CloseViewers()
+augroup END
 "	vimwiki
 filetype plugin on
 let g:vimwiki_list = [{'path':'~/.vimwiki/wiki/', 'path_html':'~/.vimwiki/html'}]
