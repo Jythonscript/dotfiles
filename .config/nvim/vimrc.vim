@@ -77,6 +77,8 @@ imap <4-MiddleMouse> <Nop>
 "	scroll screen left and right on long lines
 noremap ZH zH
 noremap ZL zL
+"	escape in normal mode disables search highlight
+nnoremap <silent><Esc> :noh<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "	Settings
