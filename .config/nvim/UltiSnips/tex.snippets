@@ -581,6 +581,16 @@ snippet tikz "Tikz" w
 \\end{figure}
 endsnippet
 
+snippet figure "Figure" w
+\\begin{figure}[H]
+	\\centering
+	\\includegraphics{$1}
+	\\label{$2}
+	\\caption{$3}
+\\end{figure}
+$0
+endsnippet
+
 snippet sym "sympy setup" bA
 sympy ${1:${VISUAL}} sympy$0
 endsnippet
