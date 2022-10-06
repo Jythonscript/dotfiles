@@ -57,4 +57,5 @@ return require('packer').startup(function()
 			require 'config.autopairs'
 		end,
 	}
+	use 'preservim/nerdtree'
 end)

@@ -77,6 +77,8 @@ let g:vimtex_compiler_latexmk = {
 let g:instant_username = "Jythonscript"
 "	LSP
 noremap <leader>sp :LspRestart<CR>
+"	nerdtree
+noremap <leader>n :NERDTreeToggle<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "   Custom bindings
