@@ -28,13 +28,13 @@ colors:
 
 font:
   normal:
-    family: "Fira Mono"
+    family: "monospace"
   bold:
-    family: "Fira Mono"
+    family: "monospace"
   italic:
-    family: "Fira Mono"
+    family: "monospace"
   bold_italic:
-    family: "Fira Mono"
+    family: "monospace"
 
   size: 11.0
 
