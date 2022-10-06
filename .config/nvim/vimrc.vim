@@ -39,8 +39,7 @@ nnoremap <leader>sl :exec "source" . "~/.vim/sessions/" . substitute(expand("%:p
 "	load view
 nnoremap <leader>l :loadview<CR>
 "	toggle line wrapping
-noremap <leader>sr :set wrap<CR>
-noremap <leader>srr :set wrap!<CR>
+noremap <leader>ll :set wrap!<CR>
 "	arrow keys for easier navigation of long lines
 nnoremap <Up> gk
 nnoremap <Down> gj
