@@ -6,13 +6,9 @@ return require('packer').startup(function()
 	use 'wbthomason/packer.nvim'
 
 	-- Cosmetics
-	use 'Nequo/vim-allomancer'
 	use 'arzg/seoul8'
-	use 'fcpg/vim-orbital'
-	use {'dracula/vim', as = 'dracula'}
 	use 'junegunn/goyo.vim'
 	use 'junegunn/limelight.vim'
-	use 'chrisduerr/vim-undead'
 
 	-- Programming
 	use 'SirVer/ultisnips'
