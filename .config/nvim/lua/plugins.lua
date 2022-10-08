@@ -36,7 +36,15 @@ return require('packer').startup(function()
 		end,
 	}
 	use 'jbyuki/instant.nvim'
-	use 'nvim-treesitter/nvim-treesitter'
+	use {
+		'nvim-treesitter/nvim-treesitter',
+		config = function ()
+			require 'config.nvim-treesitter'
+		end,
+		run = function()
+			require('nvim-treesitter.install').update({ with_sync = true })
+		end,
+	}
 	use {
 		'nvim-telescope/telescope-fzf-native.nvim',
 		run = 'make'
