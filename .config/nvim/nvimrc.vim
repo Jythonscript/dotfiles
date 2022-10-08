@@ -84,7 +84,7 @@ noremap <leader>n :NvimTreeToggle<CR>
 "   Custom bindings
 "	session creating and loading
 nnoremap <leader>sn :exec "mks!" . "~/.config/nvim/sessions/" . substitute(expand("%:p:h"), "/", "_", "g") . ".vim"<CR>
-nnoremap <leader>sl :exec "source" . "~/.config/nvim/sessions/" . substitute(expand("%:p:h"), "/", "_", "g") . ".vim"<CR> | colo mydelek
+nnoremap <leader>sl :exec "source" . "~/.config/nvim/sessions/" . substitute(expand("%:p:h"), "/", "_", "g") . ".vim"<CR> | colo mymolokai
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "	Commands
@@ -116,7 +116,7 @@ endfunction
 "	disable writing mode-specific shortcuts
 function! NoWrite()
 	Goyo!
-	colo mydelek
+	colo mymolokai
 	let &showbreak="> "
 	nnoremap j j
 	nnoremap k k

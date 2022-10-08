@@ -35,7 +35,7 @@ noremap <leader>wr :call Write()<CR>
 noremap <leader>wn :call NoWrite()<CR>
 "	session creating and loading
 nnoremap <leader>sn :exec "mks!" . "~/.vim/sessions/" . substitute(expand("%:p:h"), "/", "_", "g") . ".vim"<CR>
-nnoremap <leader>sl :exec "source" . "~/.vim/sessions/" . substitute(expand("%:p:h"), "/", "_", "g") . ".vim"<CR> | colo mydelek
+nnoremap <leader>sl :exec "source" . "~/.vim/sessions/" . substitute(expand("%:p:h"), "/", "_", "g") . ".vim"<CR> | colo mymolokai
 "	load view
 nnoremap <leader>l :loadview<CR>
 "	toggle line wrapping
@@ -168,12 +168,9 @@ command Q :q
 syntax on
 syntax enable
 set background=dark
+set termguicolors
 "	custom colorscheme
-if &diff
-	colorscheme allomancer
-else
-	colorscheme mydelek
-endif
+colorscheme mymolokai
 
 "	ask the user for a new nesting value
 function! PromptNest()
