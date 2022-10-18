@@ -14,7 +14,6 @@ return require('packer').startup(function()
 	use 'SirVer/ultisnips'
 	use 'lervag/vimtex'
 	use 'vimwiki/vimwiki'
-	use 'tpope/vim-commentary'
 	use 'tpope/vim-surround'
 	use 'tpope/vim-repeat'
 	use 'Konfekt/FastFold'
@@ -67,5 +66,11 @@ return require('packer').startup(function()
 		config = function ()
 			require 'config.nvim-tree'
 		end,
+	}
+	use {
+		'numToStr/Comment.nvim',
+		config = function()
+			require 'config.comment'
+		end
 	}
 end)
