@@ -186,6 +186,11 @@ snippet tl "Tilde" i
 endsnippet
 
 context "math()"
+snippet | "Given" w
+\\mid $0
+endsnippet
+
+context "math()"
 snippet Rn "Real number" iA
 \\mathbb{R} ^{ $1} $0
 endsnippet
@@ -512,7 +517,7 @@ snippet '\[' "Big square brackets" ri
 endsnippet
 
 context "math()"
-snippet '{' "Big curly braces" ri
+snippet '\\{' "Big curly braces" ri
 \\left\\{ $1 \\right\\} $0
 endsnippet
 
@@ -553,6 +558,11 @@ endsnippet
 context "math()"
 snippet vd "vdots" iA
 \\vdots $0
+endsnippet
+
+context "math()"
+snippet dd "ddots" iA
+\\ddots $0
 endsnippet
 
 context "math()"
