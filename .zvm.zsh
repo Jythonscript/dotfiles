@@ -4,6 +4,7 @@ function my_exit() {
 
 function zvm_config() {
 	ZVM_KEYTIMEOUT=0.04
+	ZVM_VI_EDITOR="nvim"
 }
 
 function zvm_after_init() {
