@@ -97,7 +97,7 @@ function chpwd() {
 }
 
 function pdf-merge() {
-	env gs -sDEVICE=pdfwrite -sOutputFile=$1 -dNOPAUSE -dBATCH -q ${@:2}
+	env gs -sDEVICE=pdfwrite -sOutputFile=$1 -dNOPAUSE -dBATCH -q ${@:2} -c "[ /Title () /DOCINFO pdfmark" -f
 }
 
 # print ^C
