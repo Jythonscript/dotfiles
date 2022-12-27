@@ -9,6 +9,8 @@ let mapleader = ","
 noremap <leader>w :w<CR>
 "	quit without saving
 noremap <leader>q :q<CR>
+"	quit all
+noremap <leader>a :qa<CR>
 "	quit with saving
 noremap <leader>x ZZ
 "	easier clipboard access
