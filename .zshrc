@@ -142,5 +142,7 @@ stty -ixon
 export PATH="$PATH:/home/avery/usr/local/bin:/home/avery/.local/bin"
 #export PROMPT="${PROMPT//\$fg\[red\]/$(vim_session_color)}"
 
+autoload -U compinit; compinit
+
 source ~/.func.zsh
 source ~/.extra.zsh
