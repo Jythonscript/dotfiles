@@ -422,6 +422,17 @@ function dsc() {
 	fi
 }
 
+function tdir() {
+	DSTR=""
+	if [ $# -gt 0 ]
+	then
+		DSTR=$(date "+%Y-%m-%d_$1")
+	else
+		DSTR=$(date "+%Y-%m-%d")
+	fi
+	mkdir $DSTR && cd $DSTR && pwd
+}
+
 #	Aliases
 alias l="ls -lAh"
 alias lt="ls -lAthr"
@@ -441,7 +452,6 @@ alias vim="nvim"
 alias de="disown && exit"
 alias truestudio="/opt/truestudio/ide/TrueSTUDIO"
 alias R="R --quiet"
-alias tdir='mkdir $(date "+%Y-%m-%d") && ls'
 alias b='time zsh -i -c "exit"'
 alias feh="feh --scale-down --auto-zoom --auto-rotate --image-bg \"#000102\""
 alias ffprobe='ffprobe -hide_banner'
