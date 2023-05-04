@@ -15,7 +15,7 @@ local on_attach = function(client, bufnr)
 	vim.keymap.set('n', '<leader>sf', vim.diagnostic.open_float)
 end
 
-vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
 	vim.lsp.diagnostic.on_publish_diagnostics, {
 		underline = true,
 		virtual_text = false,
@@ -27,3 +27,34 @@ local servers = { "clangd", "pyright" }
 for _, lsp in ipairs(servers) do
 	lspconfig[lsp].setup { on_attach = on_attach }
 end
+
+require("lspconfig").lua_ls.setup {
+	on_attach = on_attach,
+	settings = {
+		Lua = {
+			runtime = {
+				-- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+				version = "Lua 5.3",
+			},
+			diagnostics = {
+				-- Get the language server to recognize the `vim` global
+				globals = {"vim"},
+			},
+			workspace = {
+				checkThirdParty = false,
+				library = vim.list_extend(
+					{
+						"/usr/share/lua/5.3",
+						"/usr/share/awesome/lib",
+						vim.fn.expand("~/.config/awesome/lame/?.lua"),
+					},
+					vim.api.nvim_get_runtime_file("", true)
+					),
+			},
+			-- Do not send telemetry data containing a randomized but unique identifier
+			telemetry = {
+				enable = false,
+			},
+		},
+	},
+}
