@@ -433,6 +433,19 @@ function tdir() {
 	mkdir $DSTR && cd $DSTR && pwd
 }
 
+function b() {
+	if [[ $# -eq 0 ]]; then
+		ddcutil getvcp 10 -d 1
+		ddcutil getvcp 10 -d 2
+	elif [[ $# -eq 1 ]]; then
+		ddcutil setvcp 10 $1 -d 1 &
+		ddcutil setvcp 10 $1 -d 2
+	else
+		ddcutil setvcp 10 $1 -d 1 &
+		ddcutil setvcp 10 $2 -d 2
+	fi
+}
+
 #	Aliases
 alias l="ls -lAh"
 alias lt="ls -lAthr"
@@ -440,6 +453,8 @@ alias lt="ls -lAthr"
 alias gs="git status"
 alias glr="git pull --rebase"
 alias gadp="git add -p"
+alias gsmu="git submodule update --init --recursive"
+alias gdc="git --no-pager diff --compact-summary"
 alias se="sudo -e"
 alias igrep="grep -i"
 alias isv='if [[ $VIMRUNTIME != "" ]]; then; echo "Vim session found"; else; echo "No Vim session found"; fi;'
@@ -452,7 +467,7 @@ alias vim="nvim"
 alias de="disown && exit"
 alias truestudio="/opt/truestudio/ide/TrueSTUDIO"
 alias R="R --quiet"
-alias b='time zsh -i -c "exit"'
+alias bench='time zsh -i -c "exit"'
 alias feh="feh --scale-down --auto-zoom --auto-rotate --image-bg \"#000102\""
 alias ffprobe='ffprobe -hide_banner'
 alias ffmpeg='ffmpeg -hide_banner'
@@ -473,3 +488,4 @@ alias bt='bsdtar'
 alias nc='ncat'
 alias noa='setarch x86_64 -R'
 alias beep='mpv --really-quiet --keep-open=no ~/sync/beep.wav'
+alias watch='watch -n1'
