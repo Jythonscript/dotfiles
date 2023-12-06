@@ -455,6 +455,7 @@ alias glr="git pull --rebase"
 alias gadp="git add -p"
 alias gsmu="git submodule update --init --recursive"
 alias gdc="git --no-pager diff --compact-summary"
+alias gdcs="git --no-pager diff --compact-summary --staged"
 alias se="sudo -e"
 alias igrep="grep -i"
 alias isv='if [[ $VIMRUNTIME != "" ]]; then; echo "Vim session found"; else; echo "No Vim session found"; fi;'
