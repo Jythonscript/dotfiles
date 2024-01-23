@@ -6,6 +6,8 @@
 	<movement name="Down-Up" value="DU" />
 	<movement name="Circle" value="L?DRUL?" />
 	<movement name="Circle2" value="R?ULDR?" />
+	<movement name="Right" value="R" />
+	<movement name="Left" value="L" />
 
 	<context name="Firefox" windowclass="firefox" windowtitle=".*">
 		<gesture name="Toggle tree" movement="Down">
@@ -25,6 +27,12 @@
 		</gesture>
 		<gesture name="Refresh" movement="Circle2">
 			<do action="keypress" value="Control_L+R" />
+		</gesture>
+		<gesture name="Escape" movement="Right" >
+			<do action="keypress" value="Escape" />
+		</gesture>
+		<gesture name="Delete" movement="Left" >
+			<do action="keypress" value="Delete" />
 		</gesture>
 	</context>
 </mygestures>
