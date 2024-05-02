@@ -3,6 +3,7 @@
 	<movement name="Down" value="D" />
 	<movement name="Up" value="U" />
 	<movement name="Up-Down" value="UD" />
+	<movement name="Up-Down-Up" value="UDU" />
 	<movement name="Down-Up" value="DU" />
 	<movement name="Circle" value="L?DRUL?" />
 	<movement name="Circle2" value="R?ULDR?" />
@@ -18,6 +19,9 @@
 		</gesture>
 		<gesture name="Close Tab" movement="Up-Down">
 			<do action="keypress" value="Control_L+W" />
+		</gesture>
+		<gesture name="Undo Close Tab" movement="Up-Down-Up">
+			<do action="keypress" value="Control_L+Shift_L+T" />
 		</gesture>
 		<gesture name="Show Bookmarks" movement="Down-Up">
 			<do action="keypress" value="Control_L+B" />
