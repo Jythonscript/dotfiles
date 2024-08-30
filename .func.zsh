@@ -449,6 +449,14 @@ function b() {
 	fi
 }
 
+function freq() {
+	if [[ $# -gt 0 && $1 -eq "off" ]]; then
+		sudo cpupower frequency-set -g performance
+	else
+		sudo cpupower frequency-set -g schedutil
+	fi
+}
+
 #	Aliases
 alias l="ls -lAh"
 alias lt="ls -lAthr"
