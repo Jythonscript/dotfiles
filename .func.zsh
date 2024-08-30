@@ -432,6 +432,10 @@ function tdir() {
 	mkdir $DSTR && cd $DSTR && pwd
 }
 
+function carbonyl() {
+	podman run -ti --rm fathyb/carbonyl $*
+}
+
 function b() {
 	if [[ $# -eq 0 ]]; then
 		ddcutil getvcp 10 -d 1
