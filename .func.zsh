@@ -459,6 +459,7 @@ function freq() {
 
 #	Aliases
 alias l="ls -lAh"
+alias la="ls -lah"
 alias lt="ls -lAthr"
 #Prevents accidental running of ghostscript command
 alias gs="git status"
@@ -480,9 +481,10 @@ alias de="disown && exit"
 alias truestudio="/opt/truestudio/ide/TrueSTUDIO"
 alias R="R --quiet"
 alias bench='time zsh -i -c "exit"'
-alias feh="feh --scale-down --auto-zoom --auto-rotate --image-bg \"#000102\""
+alias feh="feh --scale-down --auto-zoom --auto-rotate --auto-reload"
 alias ffprobe='ffprobe -hide_banner'
 alias ffmpeg='ffmpeg -hide_banner'
+alias ffmpeg-vaapi='ffmpeg -hide_banner -hwaccel vaapi -hwaccel_output_format vaapi'
 alias lsofstat='lsof | tail -n "+2" | grep -oP "^[^\s]+" | sort | uniq -c | sort -n'
 alias bat='bat -p'
 alias histo='sort | uniq -c | sort -n'
@@ -501,3 +503,5 @@ alias nc='ncat'
 alias noa='setarch x86_64 -R'
 alias beep='mpv --really-quiet --keep-open=no ~/sync/beep.wav'
 alias watch='watch -n1'
+alias xxd='xxd -R never'
+alias ncdu='ncdu --color dark'
