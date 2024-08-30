@@ -319,10 +319,9 @@ function ocr() {
 	tesseract =(import png:-) - 2> /dev/null | xclip -selection clipboard 1>&- 2>&-
 }
 
-# vsync function
 function vsync() {
-	nvidia-settings --assign CurrentMetaMode="nvidia-auto-select @1920x1080 +0+0 {ViewPortIn=1920x1080, ViewPortOut=1920x1080+0+0, ForceFullCompositionPipeline = $1}, DPY-2:
-	nvidia-auto-select @1920x1080 +1920+0 {ViewPortIn=1920x1080, ViewPortOut=1920x1080+0+0, ForceFullCompositionPipeline = $2}"
+	xrandr --output DisplayPort-0 --set TearFree $1
+	xrandr --output HDMI-A-0 --set TearFree $2
 }
 
 function gamer() {
