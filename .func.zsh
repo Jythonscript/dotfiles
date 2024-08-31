@@ -354,7 +354,7 @@ function jpc() {
 }
 
 function tw() {
-	local CHANNELS="canteven msushi m1a2d3i4n5 wirtual distortion2 gamesdonequick zfg1 az_axe waezone slipperynip maltemller blue_sr_ skurrypls moistcr1tikal maciejay btssmash btssmash2 btssmash3 btssmash4 armadaugs muty71 zweek zach777 unity_b lilstressball klooger plup hungrybox portal2speedruns zainnaghmi racehans fastfox73 mew2king spammiej"
+	local CHANNELS="canteven msushi m1a2d3i4n5 wirtual distortion2 gamesdonequick zfg1 az_axe waezone slipperynip maltemller blue_sr_ skurrypls moistcr1tikal maciejay btssmash btssmash2 btssmash3 btssmash4 armadaugs muty71 zweek zach777 zachruns unity_b lilstressball klooger plup hungrybox portal2speedruns zainnaghmi racehans fastfox73 mew2king spammiej ssbmhax rattlery zoasty pewpewu"
 
 	local QUALITY="best"
 
@@ -383,7 +383,7 @@ function tw() {
 					TITLE=$(curl $1 | grep -oP '<[^<>]+property="og:description"[^<>]+>' | grep -oP 'content="\K([^"]+)')
 				fi
 				echo "Quality: $QUALITY"
-				streamlink --player mpv --title "$TITLE" --twitch-low-latency $1 $QUALITY &
+				streamlink --player mpv --title "$TITLE" --twitch-disable-ads --twitch-low-latency $1 $QUALITY &
 				chromium --new-window "https://www.twitch.tv/popout/$CHANNEL/chat?popout="
 				;;
 			*)
