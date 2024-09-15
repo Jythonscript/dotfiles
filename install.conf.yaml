@@ -1,0 +1,18 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.tmux.conf:
+    ~/.vimrc: .config/nvim/vimrc.vim
+    ~/.zshrc:
+    ~/.func.zsh:
+    ~/.zvm.zsh:
+    ~/.config/mygestures: .config/mygestures
+    ~/.abcde.conf:
+
+- create:
+    - ~/.config
+
