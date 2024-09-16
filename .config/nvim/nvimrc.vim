@@ -31,6 +31,7 @@ augroup END
 filetype plugin on
 let g:vimwiki_list = [{'path':'~/.vimwiki/wiki/', 'path_html':'~/.vimwiki/html'}]
 let g:vimwiki_folding="custom"
+let g:vimwiki_url_maxsave=0
 "	ultisnips
 noremap <leader>se :UltiSnipsEdit<CR>
 let g:UltiSnipsExpandTrigger="<tab>"
