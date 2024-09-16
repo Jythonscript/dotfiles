@@ -441,10 +441,10 @@ function b() {
 		ddcutil getvcp 10 -d 1
 		ddcutil getvcp 10 -d 2
 	elif [[ $# -eq 1 ]]; then
-		ddcutil setvcp 10 $1 -d 1 &
+		ddcutil setvcp 10 $1 -d 1
 		ddcutil setvcp 10 $1 -d 2
 	else
-		ddcutil setvcp 10 $1 -d 1 &
+		ddcutil setvcp 10 $1 -d 1
 		ddcutil setvcp 10 $2 -d 2
 	fi
 }
