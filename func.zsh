@@ -321,7 +321,7 @@ function ocr() {
 
 function vsync() {
 	xrandr --output DisplayPort-0 --set TearFree $1
-	xrandr --output HDMI-A-0 --set TearFree $2
+	xrandr --output DisplayPort-1 --set TearFree $2
 }
 
 function gamer() {
