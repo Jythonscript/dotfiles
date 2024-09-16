@@ -55,12 +55,6 @@ return require('packer').startup(function()
 	use 'quangnguyen30192/cmp-nvim-ultisnips'
 	use 'tpope/vim-fugitive'
 	use {
-		'windwp/nvim-autopairs',
-		config = function ()
-			require 'config.autopairs'
-		end,
-	}
-	use {
 		'kyazdani42/nvim-tree.lua',
 		requires =  'kyazdani42/nvim-web-devicons',
 		config = function ()
