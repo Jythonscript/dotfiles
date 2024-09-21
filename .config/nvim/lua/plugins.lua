@@ -72,10 +72,4 @@ return {
 			require 'config.nvim-tree'
 		end,
 	},
-	{
-		'numToStr/Comment.nvim',
-		config = function()
-			require 'config.comment'
-		end
-	},
 }
