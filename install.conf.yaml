@@ -11,6 +11,7 @@
     ~/.func.zsh:
     ~/.zvm.zsh:
     ~/.config/mygestures: .config/mygestures
+    ~/.config/mpv: .config/mpv
     ~/.abcde.conf:
 
 - create:
