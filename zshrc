@@ -108,6 +108,7 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR=nvim
 export VISUAL=nvim
 export PAGER=less
+export LESS="-j4 -R"
 export HISTSIZE=1000000000
 export SAVEHIST=$HISTSIZE
 export FZF_TMUX_HEIGHT='15%'
