@@ -353,9 +353,9 @@ function jpc() {
 	jupyter console --existing --ZMQTerminalInteractiveShell.banner= --ZMQTerminalInteractiveShell.image_handler=None --no-confirm-exit
 }
 
+# Twitch function
+# relies on TWITCH_CHANNELS, a string of space-separated channel names, to be sourced from .extra1.zsh
 function tw() {
-	local CHANNELS="canteven msushi m1a2d3i4n5 wirtual distortion2 gamesdonequick zfg1 az_axe waezone slipperynip maltemller blue_sr_ skurrypls moistcr1tikal maciejay btssmash btssmash2 btssmash3 btssmash4 armadaugs muty71 zweek zach777 zachruns unity_b lilstressball klooger plup hungrybox portal2speedruns zainnaghmi racehans fastfox73 mew2king spammiej ssbmhax rattlery zoasty pewpewu"
-
 	local QUALITY="best"
 
 	while getopts ":q:" o; do
@@ -395,7 +395,7 @@ function tw() {
 				;;
 		esac
 	else
-		local OUTPUT=$(echo $CHANNELS | tr ' ' '\n' | \
+		local OUTPUT=$(echo $TWITCH_CHANNELS | tr ' ' '\n' | \
 			parallel 'OUT=$(curl https://www.twitch.tv/{} 2>/dev/null) \
 			&& echo $OUT | grep isLiveBroadcast > /dev/null \
 			&& TITLE=$(echo $OUT | grep -oP '"'"'<[^<>]+property="og:description"[^<>]+>'"'"' | \

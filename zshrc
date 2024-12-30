@@ -104,6 +104,12 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #export PATH=$HOME/brew/bin:$PATH
 
+function source_if_exists() {
+	if [[ -f $1 ]]; then
+		source $1
+	fi
+}
+
 #	Environment
 export EDITOR=nvim
 export VISUAL=nvim
@@ -145,5 +151,6 @@ export PATH="$PATH:/home/avery/usr/local/bin:/home/avery/.local/bin"
 
 autoload -U compinit; compinit
 
+source_if_exists ~/.extra1.zsh
 source ~/.func.zsh
-source ~/.extra.zsh
+source_if_exists ~/.extra2.zsh
