@@ -115,7 +115,7 @@ function source_if_exists() {
 export EDITOR=nvim
 export VISUAL=nvim
 export PAGER=less
-export LESS="-j4 -R"
+export LESS="-j4 -iR"
 export HISTSIZE=1000000000
 export SAVEHIST=$HISTSIZE
 export FZF_TMUX_HEIGHT='15%'
