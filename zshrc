@@ -70,6 +70,7 @@ plugins=(
   colored-man-pages
   fzf
   zsh-vi-mode
+  terraform
 )
 
 source $ZSH/oh-my-zsh.sh
