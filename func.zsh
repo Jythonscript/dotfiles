@@ -457,6 +457,10 @@ function freq() {
 	fi
 }
 
+function ext() {
+	find . -type f | grep -oP '\K\.[^\.]+$' | sort | uniq -c | sort -n
+}
+
 #	Aliases
 alias l="ls -lAh"
 alias la="ls -lah"
