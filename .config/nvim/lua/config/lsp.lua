@@ -23,7 +23,7 @@ vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
 	}
 )
 
-local servers = { "clangd", "pyright" }
+local servers = { "clangd", "pyright", "nixd" }
 for _, lsp in ipairs(servers) do
 	lspconfig[lsp].setup { on_attach = on_attach }
 end
