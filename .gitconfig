@@ -15,3 +15,5 @@
 	dt = difftool
 [core]
 	editor = nvim
+[tag]
+	sort = v:refname
