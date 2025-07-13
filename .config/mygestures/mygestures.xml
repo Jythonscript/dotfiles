@@ -9,6 +9,7 @@
 	<movement name="Circle2" value="R?ULDR?" />
 	<movement name="Right" value="R" />
 	<movement name="Left" value="L" />
+	<movement name="Left-Right" value="LR" />
 	<movement name="Right-Left" value="RL" />
 
 	<context name="Firefox" windowclass="firefox" windowtitle=".*">
@@ -39,8 +40,11 @@
 		<gesture name="Delete" movement="Left" >
 			<do action="keypress" value="Delete" />
 		</gesture>
-		<gesture name="Home" movement="Right-Left" >
+		<gesture name="Home" movement="Left-Right" >
 			<do action="keypress" value="Home" />
+		</gesture>
+		<gesture name="End" movement="Right-Left" >
+			<do action="keypress" value="End" />
 		</gesture>
 	</context>
 </mygestures>
