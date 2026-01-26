@@ -5,6 +5,7 @@ local servers = {
 	"nixd",
 	"gopls",
 	"lua_ls",
+	"rust_analyzer",
 }
 
 vim.diagnostic.config({

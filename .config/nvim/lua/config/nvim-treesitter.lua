@@ -14,6 +14,7 @@ configs.setup {
 		"nix",
 		"python",
 		"query",
+		"rust",
 		"terraform",
 		"vim",
 		"vimdoc"
