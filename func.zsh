@@ -320,8 +320,10 @@ function ocr() {
 }
 
 function vsync() {
-	xrandr --output DisplayPort-0 --set TearFree $1
-	xrandr --output DisplayPort-1 --set TearFree $2
+	# left secondary display
+	xrandr --output DisplayPort-1 --set TearFree $1
+	# right main display
+	xrandr --output DisplayPort-2 --set TearFree $2
 }
 
 function gamer() {
