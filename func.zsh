@@ -463,12 +463,17 @@ function ext() {
 	find . -type f | grep -oP '\K\.[^\.]+$' | sort | uniq -c | sort -n
 }
 
+function vncs() {
+	x11vnc -display :0 -listen $(tailscale ip -4) -nopw -forever -clip 2560x1440+2560+0
+}
+
 #	Aliases
 alias l="ls -lAh"
 alias la="ls -lah"
 alias lt="ls -lAthr"
 #Prevents accidental running of ghostscript command
 alias gs="git status"
+alias gclb="git clone --filter=blob:none"
 alias glr="git pull --rebase"
 alias gadp="git add -p"
 alias gsm="git submodule"
@@ -492,6 +497,7 @@ alias feh="feh --scale-down --auto-zoom --auto-rotate --auto-reload"
 alias ffprobe='ffprobe -hide_banner'
 alias ffmpeg='ffmpeg -hide_banner'
 alias ffmpeg-vaapi='ffmpeg -hide_banner -hwaccel vaapi -hwaccel_output_format vaapi'
+alias ffmpeg-vulkan='ffmpeg -hide_banner -hwaccel vulkan -hwaccel_output_format vulkan'
 alias lsofstat='lsof | tail -n "+2" | grep -oP "^[^\s]+" | sort | uniq -c | sort -n'
 alias bat='bat -p'
 alias histo='sort | uniq -c | sort -n'
@@ -513,3 +519,5 @@ alias watch='watch -n1'
 alias xxd='xxd -R never'
 alias ncdu='ncdu --color dark'
 alias cpi='xclip -selection clipboard -target image/png -i'
+alias crp='openssl x509 -text -noout -in'
+alias unimported="beet unimported | grep -oP '^$HOME/Music/[^\/]+' | sort | uniq -c | sort -n"
